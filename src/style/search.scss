@@ -1,0 +1,17 @@
+.search{
+  display: flex;
+  background-color: #fff;
+  padding-left: 16px;
+  &__field{
+    height: 48px;
+    background: none!important;
+    margin: 0;
+    border: none;
+    max-width: 240px;
+  }
+  &__btn{
+    height: 48px;
+    width: 96px;
+    margin-left: auto;
+  }
+}

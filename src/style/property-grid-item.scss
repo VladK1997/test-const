@@ -1,0 +1,28 @@
+.property-grid-item {
+  &--top {
+    overflow: hidden;
+    position: relative;
+
+    .property-grid-image {
+      &:before {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 48px;
+        left: -12px;
+        font-size: 12px;
+        width: 100px;
+        transform-origin: left;
+        transform: rotate(-45deg) translateY(-50%);
+        height: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: $main-green;
+        color: #fff;
+        content: "TOП";
+        z-index: 20;
+      }
+    }
+  }
+}

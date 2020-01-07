@@ -1,0 +1,118 @@
+.nav{
+  width: 100%;
+  background-color: $main-blue;
+  z-index: 9999;
+  position: relative;
+  &__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    width: 100%;
+  }
+  &__item{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child){
+      margin-right: 16px;
+    }
+    a{
+      padding: 16px 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__item a:hover{
+    color: #fff;
+  }
+  &__sub-list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    list-style: none;
+    opacity: 0;
+    transition: 0.3s;
+    padding-top: 10px;
+    &:after{
+      position: absolute;
+      top:0;
+      left: 16px;
+      content:"";
+
+      border-bottom: 10px solid $main-blue;
+      border-left:   8px solid transparent;
+      border-right:  8px solid transparent;
+    }
+  }
+  &__sub-item{
+    a{
+      padding: 16px 24px;
+      background-color: $main-blue;
+    }
+
+    a{
+      color: #fff;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+  }
+  &__item:hover &__sub-list{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media all and(min-width: $tablet-width){
+  .nav{
+    &__sub-item{
+      &:hover{
+        a{
+          background-color: $main-blueHover;
+        }
+      }
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .nav{
+    &__item{
+      height: auto;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &__sub-list{
+      position: static;
+      width: 100%;
+      transition: opacity 0.5s;
+      max-height: 0;
+    }
+    &__sub-item {
+      position: relative;
+      a {
+        padding: 16px 16px;
+        justify-content: flex-start;
+      }
+      &:not(:last-child){
+        &:after{
+          width: 90%;
+          position: absolute;
+          bottom: 0;
+          border-bottom: 1px solid rgba(#fff,0.2);
+          left: 50%;
+          transform: translateX(-50%);
+          content: "";
+        }
+      }
+
+    }
+    &__item:hover &__sub-list{
+      max-height: none;
+    }
+  }
+}

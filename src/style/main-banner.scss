@@ -1,0 +1,57 @@
+.main-banner{
+  margin-top: 80px;
+  &__item{
+    height: 100%;
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &--big{
+      height: 320px;
+    }
+    &--small{
+      height: 220px;
+    }
+  }
+}
+@media all and (max-width:  $tablet-width) {
+  .main-banner{
+    &__item{
+      max-height: 320px;
+      &--small{
+        height: 320px;
+      }
+      &--tall{
+        margin-top: 32px;
+        min-height: 320px;
+      }
+    }
+  }
+}
+@media all and (max-width:  $small-tablet-width) {
+  .main-banner {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    &__item {
+      &--small,&--big{
+        &:not(:first-child){
+          margin-top: 32px;
+        }
+
+      }
+      &--small{
+        height: 208px;
+      }
+      &--tall{
+        margin-top: 32px;
+        height: 208px;
+      }
+      &--big{
+        height: 208px;
+      }
+    }
+  }
+}

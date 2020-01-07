@@ -1,0 +1,19 @@
+.cust-features{
+  text-align: center;
+  &__logo{
+    display: flex;
+    justify-content: center;
+  }
+  &__title{
+    color: $main-blue;
+    text-align: center;
+  }
+}
+@media all and(max-width:$mobileXsWidth){
+  .cust-features {
+    &__logo {
+     max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.promotion{
+  position: relative;
+  .promotion__pag{
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    z-index: 2;
+  }
+}

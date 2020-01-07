@@ -1,0 +1,67 @@
+.text{
+  color: inherit;
+  &-xs{
+    font-size: 12px;
+  }
+  &-sm{
+    font-size: 14px;
+  }
+  &-md{
+    font-size: 18px;
+  }
+  &-lg{
+    font-size: 20px;
+  }
+  &-xl{
+    font-size: 22px;
+  }
+  &-h1{
+    font-size: 40px;
+  }
+  &-h2{
+    font-size: 36px;
+  }
+  &-h3{
+    font-size: 32px;
+  }
+  &-h4{
+    font-size: 28px;
+  }
+  &-h5{
+    font-size: 26px;
+  }
+  &-h6{
+    font-size: 24px;
+  }
+  &-xs{
+    font-size: 12px;
+  }
+  &-sm{
+    font-size: 14px;
+  }
+  &-md{
+    font-size: 18px;
+  }
+  &-lg{
+    font-size: 20px;
+  }
+  &-xl{
+    font-size: 24px;
+  }
+  &--up{
+    text-transform: uppercase;
+  }
+  &--white{
+    color: #fff;
+  }
+}
+p.inherit{
+  color: inherit;
+}
+@media all and(max-width: $mobile-Width){
+  .text{
+    &-h1{
+      font-size: 32px;
+    }
+  }
+}
