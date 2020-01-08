@@ -8,11 +8,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+  &--soft-round{
+    border-radius: 3px;
+  }
+  &--md{
+    max-width: 200px;
+    min-height: 40px;
+  }
   &--img{
     padding: 0;
   }
   &--primary{
     background-color: $main-blue;
     color: #fff;
+  }
+  &--secondary{
+    background-color: $main-green;
+    color: #fff;
+    &:hover{
+      background-color: $main-greenHover;
+      color: #fff;
+    }
   }
 }
