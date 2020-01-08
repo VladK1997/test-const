@@ -39,7 +39,7 @@
 (function(){
     const animationTime = 1000;
     const animationFrameCount = 1;
-    let jon = document.getElementById("toOffer");
+    let btn = document.getElementById("toOffer");
     let scroll = document.querySelector("[data-scrolloffer]");
     let SmothScroll = function (elementScrollFrom,elementScrollTo) {
         let self = this;
@@ -61,5 +61,32 @@
             ,timer);
         })
     }
-    let btn = new SmothScroll(jon,scroll)
+    let smoth = new SmothScroll(btn,scroll)
+})();
+(function() {
+    let btn = document.getElementById("lightModeBtn");
+    let body = document.getElementsByTagName("html")[0];
+    console.log(body[0]);
+    darkMode = false;
+    btn.addEventListener("click",function(){
+        btn.classList.toggle("light-mode--night");
+        setTimeout(function () {
+            body.classList.add("body-dark");
+            setTimeout(function () {
+                body.classList.remove("body-dark");
+            }, 1000);
+            if(!darkMode) {
+
+                DarkReader.enable({
+                    brightness: 100,
+                    contrast: 90,
+                    sepia: 10
+                });
+                darkMode=true;
+            }else{
+                darkMode=false;
+                DarkReader.disable();
+            }
+        },300)
+    })
 })();

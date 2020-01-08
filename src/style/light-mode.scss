@@ -1,0 +1,9 @@
+.light-mode{
+  border-radius: 50%;
+  transition: 0.3s;
+  outline-color: transparent!important;
+  -webkit-tap-highlight-color: transparent;
+  &--night{
+    transform: rotate(-180deg);
+  }
+}
