@@ -10212,7 +10212,9 @@ form.advance-search-form.ajax_load .af-estate-search-btn-holder {
   width: 100%;
   margin-bottom: 60px;
 }
-
+.property-share,.casaroyal-property-documents{
+    max-width: 624px;
+}
 .property-gallery-wrapper {
   padding: 30px;
   background-color: #fff;

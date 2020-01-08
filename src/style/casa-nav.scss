@@ -1,0 +1,45 @@
+.casaroyal-property-nav,.casaroyal-property-nav ul {
+  width: 100%;
+  display: inline-block
+}
+
+.casaroyal-property-nav {
+  margin-bottom: 60px
+}
+
+.casaroyal-property-nav ul {
+  border-bottom: solid 1px rgba(0,0,0,.05);
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  margin: 0;
+  padding: 0
+}
+
+.casaroyal-property-nav ul li {
+  display: inline-block
+}
+
+.casaroyal-property-nav ul li a {
+  display: inline-block;
+  padding: 30px;
+  color: #626d7b;
+  border-bottom: solid 2px transparent
+}
+
+.casaroyal-property-nav ul li a svg {
+  height: 25px;
+  width: auto;
+  float: left;
+  margin-right: 10px;
+  fill: #626d7b
+}
+
+.casaroyal-property-nav ul li a.active,.casaroyal-property-nav ul li a:hover {
+  border-bottom: solid 2px #2a41e8;
+  color: #2a41e8
+}
+
+.casaroyal-property-nav ul li a.active svg,.casaroyal-property-nav ul li a:hover svg {
+  fill: #2a41e8
+}
