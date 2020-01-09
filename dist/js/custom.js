@@ -70,8 +70,10 @@
     darkMode = false;
     btn.addEventListener("click",function(){
         btn.classList.toggle("light-mode--night");
+        body.classList.toggle("body-night");
         setTimeout(function () {
             body.classList.add("body-dark");
+
             setTimeout(function () {
                 body.classList.remove("body-dark");
             }, 1000);
