@@ -40,8 +40,10 @@
     const animationTime = 1000;
     const animationFrameCount = 1;
     let btn = document.getElementById("toOffer");
+    let toCateg = document.getElementById("toCateg");
+    let category = document.getElementById("category");
     let scroll = document.querySelector("[data-scrolloffer]");
-    let SmothScroll = function (elementScrollFrom,elementScrollTo) {
+    let SmothScroll = function (elementScrollFrom,elementScrollTo,direction) {
         let self = this;
         self.elTo = elementScrollTo;
         self.elFrom = elementScrollFrom;
@@ -49,19 +51,30 @@
             let startY = window.scrollY;
             let stopY = self.elTo.offsetTop - 140;
             let timer = animationTime/(stopY - startY);
+            console.log(startY,stopY);
             let currentPos = startY;
             let interval = setInterval(function () {
-                    if (currentPos >= stopY) {
-                        clearInterval(interval)
-                        return
+                    if (direction == "down") {
+                        if (currentPos >= stopY) {
+                            clearInterval(interval)
+                            return
+                        }
+                        currentPos = currentPos + 20;
+                        window.scrollTo(0, currentPos);
+                    }else if(direction == "up"){
+                        if (currentPos <= stopY) {
+                            clearInterval(interval)
+                            return
+                        }
+                        currentPos = currentPos - 20;
+                        window.scrollTo(0, currentPos);
                     }
-                    currentPos = currentPos + 20;
-                    window.scrollTo(0, currentPos);
-                }
-            ,timer);
-        })
+                },timer);
+            })
+
     }
-    let smoth = new SmothScroll(btn,scroll)
+    let smoth = new SmothScroll(btn,scroll,"down")
+    let smoth2 = new SmothScroll(toCateg,category,"up")
 })();
 (function() {
     let btn = document.getElementById("lightModeBtn");
