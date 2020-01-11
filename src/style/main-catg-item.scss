@@ -1,7 +1,7 @@
 .main-catg{
   &-item {
     position: relative;
-
+    display: block;
     &:nth-of-type(n+3) {
       margin-bottom: 16px;
     }
@@ -17,6 +17,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: 1;
+    margin-left: 15px;
     transition: 0.1s;
     background-color: lighten($main-light-grey,10);
     max-height: 400px;
@@ -42,8 +43,9 @@
     -ms-overflow-style: none;// IE
   }
   &__sub-item{
-  display: block;
+    display: block;
     padding: 16px 16px;
+
     transition: 0.3s;
     color: #000;
     position: relative;
@@ -52,7 +54,6 @@
     }
     &:last-child{
       margin-bottom: 20px;
-
     }
     &:hover{
       background-color: $main-light-grey;
