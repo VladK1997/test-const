@@ -51,12 +51,22 @@
     }
   }
 }
+@media all and(max-width: $small-tablet-width){
+
+}
+@media all and(max-width: $mobile-Width){
+  .main-img {
+    &__search {
+      width: 100%;
+      position: static;
+      transform: none;
+    }
+  }
+}
 @media all and(max-width: $mobileXsWidth){
   .main-img{
     &__search{
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
+
     }
     &__btn{
       max-width: 48px;
