@@ -82,16 +82,15 @@
     console.log(body[0]);
     darkMode = false;
     btn.addEventListener("click",function(){
-        btn.classList.toggle("light-mode--night");
-        body.classList.toggle("body-night");
+        btn.classList.toggle("active");
+
         setTimeout(function () {
             body.classList.add("body-dark");
-
+            body.classList.toggle("body-night");
             setTimeout(function () {
                 body.classList.remove("body-dark");
-            }, 1000);
+            }, 500);
             if(!darkMode) {
-
                 DarkReader.enable({
                     brightness: 100,
                     contrast: 90,

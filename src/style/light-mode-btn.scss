@@ -1,0 +1,93 @@
+.light-mode-btn{
+  background-color: $main-grey;
+  display: flex;
+  align-items: center;
+  padding: 2px 16px;
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid $main-medium-grey;
+  position: relative;
+  overflow: hidden;
+  padding-right: 32px;
+  outline: none!important;
+  cursor: pointer;
+  &__thumb-wrap{
+    width: calc(100% - 36px);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s linear;
+    transform: translate3d(0,0,0);
+  }
+  &__thumb{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $main-light-grey;
+    position: relative;
+  }
+  &__icon{
+    transition: 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    &--night{
+      opacity: 0;
+    }
+  }
+  &__text{
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+    letter-spacing: 1px;
+    color: #fff;
+    &--day{
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--day{
+      opacity: 0;
+    }
+    &--night{
+      transform: translateX(24px);
+    }
+  }
+  &.active{
+    filter: invert(100%);
+  }
+  &.active &__thumb-wrap{
+    transform: translate3d(100%,0,0);
+  }
+  .active &__thumb{
+    filter: invert(100%);
+  }
+  &.active &__icon{
+    //filter: invert(100%);
+    &--night{
+      opacity: 0;
+    }
+    &--day{
+      opacity: 1;
+    }
+  }
+  &.active &__text{
+    transition: opacity 0.3s;
+    &--night{
+      opacity: 0;
+    }
+    &--day{
+      opacity: 1;
+    }
+  }
+}

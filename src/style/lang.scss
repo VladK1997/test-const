@@ -1,0 +1,17 @@
+.lang{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.body-night{
+  .lang{
+    border: 1px solid #fff!important;
+    img{
+      filter: invert(100%);
+    }
+  }
+}
