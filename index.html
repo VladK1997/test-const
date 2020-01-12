@@ -300,7 +300,7 @@
     <main>
         <div class="container">
             <div class="u-margin-fly-24 d-flex">
-                <button type="button" class="lang u-margin-right-16">
+                <button type="button" class="lang u-margin-right-16" id="openLang">
                     <img src="dist/img/lang.png">
                 </button>
                 <button type="button" class="light-mode-btn" id="lightModeBtn">
@@ -2238,6 +2238,73 @@
         </div>
     </footer>
  </div>
+     <div class="popup" id="lang-popup">
+         <div class="popup__back" data-closepopup></div>
+         <div class="popup__wrap lang-popup">
+             <div class="lang-popup__top">
+                 <p class="lang-popup__title">Выбор языка</p>
+                 <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+             </div>
+             <div class="lang-popup__body">
+                 <a href="#" class="lang-popup__item"><i class="lang-popup__flag">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100">
+                         <rect width="150" height="100" fill="#005BBB"/>
+                         <rect width="150" height="50" y="50" fill="#FFD500"/>
+                     </svg>
+                 </i>украинский</a>
+                 <a href="#" class="lang-popup__item">
+                     <i class="lang-popup__flag">
+                         <svg viewBox="0 0 310.09174 203.5294" xmlns="http://www.w3.org/2000/svg">
+                             <g transform="matrix(2.8449 0 0 2.9076 -1524.9 -966.36)">
+                                 <path d="m585 332.36h11v70h-11z" fill="#f10002"/>
+                                 <path d="m536 361.36h109v12h-109z" fill="#f10002"/>
+                                 <g transform="translate(61,-105)">
+                                     <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                     <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                     <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                                 </g>
+                                 <g transform="matrix(-1,0,0,1,1120,-105)">
+                                     <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                     <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                     <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                                 </g>
+                                 <g transform="matrix(-1 0 0 -1 1120 839.72)">
+                                     <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                     <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                     <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                                 </g>
+                                 <g transform="matrix(-1,0,0,1,1058,-62)">
+                                     <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                     <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                     <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                                 </g>
+                             </g>
+                         </svg>
+                 </i>английский</a>
+                 <a href="#" class="lang-popup__item">
+                     <i class="lang-popup__flag">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+                             <rect width="1200" height="800" fill="#E30A17"/>
+                             <circle cx="425" cy="400" r="200" style="fill:#ffffff"/>
+                             <circle cx="475" cy="400" r="160" style="fill:#E30A17"/>
+                             <polygon style="fill:#ffffff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/>
+                         </svg>
+                    </i>
+                     турецкий
+                 </a>
+                 <a href="#" class="lang-popup__item lang-popup__item--active">
+                     <i class="lang-popup__flag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                            <rect fill="#fff" width="9" height="3"/>
+                            <rect fill="#d52b1e" y="3" width="9" height="3"/>
+                            <rect fill="#0039a6" y="2" width="9" height="2"/>
+                        </svg>
+                     </i>русский
+                 </a>
+                 <button type="button" class="u-margin-top-32 text-sm u-margin-left-auto cust-btn--sm cust-btn--primary cust-btn" data-closepopup>Закрыть</button>
+             </div>
+         </div>
+     </div>
 <script src="dist/swiper.min.js"></script>
 <script src="dist/js/darkmode.js"></script>
 <script src="dist/js/custom.js"></script>

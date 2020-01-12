@@ -104,3 +104,30 @@
         },300)
     })
 })();
+(function () {
+    let lang = document.getElementById("lang-popup");
+    let langBtn = document.getElementById("openLang");
+    let PopUp = function (popupArray) {
+        let self = this;
+        console.log(popupArray.popup );
+        if(popupArray.popup && popupArray.btn){
+            self.popup = popupArray.popup;
+            self.btn = popupArray.btn;
+            self.btn.addEventListener("click", function(){
+                self.popup.classList.add("active");
+
+            });
+            self.popup.addEventListener("click", function(e){
+                console.log(e.target);
+                if(e.target.hasAttribute("data-closepopup")){
+                    self.popup.classList.remove("active");
+                }
+            })
+        }
+    }
+
+    let lanhPopup = new PopUp({
+        popup:lang,
+        btn:langBtn
+    })
+})();

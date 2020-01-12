@@ -12,12 +12,23 @@
   &--soft-round{
     border-radius: 3px;
   }
+  &--sm{
+    max-width: 148px;
+    width: 100%;
+  }
   &--md{
     max-width: 200px;
     min-height: 40px;
   }
   &--img{
     padding: 0;
+  }
+  &--clear{
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    outline: none;
   }
   &--primary{
     background-color: $main-blue;
