@@ -2,17 +2,8 @@
   position: relative;
   width: 100%;
   max-width: 450px;
-  &__top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 32px;
-    background-color: $main-blue;
-  }
-  &__body{
-    background-color:  $main-light-grey;
-    padding:24px 32px;
-  }
+
+
   &__item{
     display: flex;
     align-items: center;
@@ -39,9 +30,7 @@
       }
     }
   }
-  &__title{
-    color: #fff;
-  }
+
   &__flag{
     overflow: hidden;
     margin-right: 16px;
@@ -49,18 +38,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-@media all and(max-width:$mobile-Width){
-  .lang-popup{
-    &__title{
-      font-size: 14px;
-    }
-    &__top{
-      padding: 16px;
-    }
-    &__body{
-      padding: 16px;
-    }
   }
 }

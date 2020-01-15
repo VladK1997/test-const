@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  width: 100%;
   &--soft-round{
     border-radius: 3px;
   }
@@ -18,6 +19,10 @@
   }
   &--md{
     max-width: 200px;
+    min-height: 40px;
+  }
+  &--xl{
+    max-width: 240px;
     min-height: 40px;
   }
   &--img{

@@ -1,0 +1,38 @@
+.auth-popup{
+  max-width: 500px;
+  &__input{
+    margin-bottom: 16px;
+  }
+  &__social{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    color: $main-blue;
+    transition: 0.3s;
+    &:hover{
+      color: $main-green;
+    }
+  }
+  &__body{
+    &--registr{
+      padding: 24px 48px;
+    }
+  }
+  &__check{
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    margin-bottom: 8px;
+    span,a{
+      line-height: 1.5;
+    }
+    input{
+      margin-right: 16px;
+      vertical-align: text-bottom;
+    }
+  }
+  &__btn{
+    margin: 16px auto 0;
+  }
+}

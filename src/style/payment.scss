@@ -1,17 +1,21 @@
 .payment{
   display: flex;
+  margin: auto 0;
   &__item{
     max-height: 24px;
+    height: 30px;
     display: flex;
-    max-width: 200px;
+    flex-shrink: 0;
     img{
-      max-height: 100%;
       object-fit: contain;
-      height: 100%;
-      object-position: center;
     }
     &:not(:last-child){
       margin-right: 16px;
     }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .payment{
+    margin: 16px 0 0 auto;
   }
 }

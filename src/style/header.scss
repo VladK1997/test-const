@@ -21,16 +21,33 @@
   &__profile{
     margin: auto 0 auto 40px;
   }
+  &__lang{
+    margin: auto 0 auto 24px;
+    flex-shrink: 0;
+    &--mob{
+      display: none;
+    }
+  }
 }
 @media all and(max-width: $small-tablet-width){
   .header {
     max-height: 56px;
     background-color: $main-blue;
+
     &__logo{
       margin:0 auto;
     }
+    &__lang{
+      margin-left: auto;
+      &--desktop{
+        display: none;
+      }
+      &--mob{
+        display: flex;
+      }
+    }
     &__profile{
-      font-size: 0;
+
       margin: auto 0 auto 0;
       padding: 8px 0;
     }

@@ -21,6 +21,9 @@
   &-h2{
     font-size: 36px;
   }
+  &-h{
+    font-weight: 600;
+  }
   &-h3{
     font-size: 32px;
   }
@@ -53,6 +56,26 @@
   }
   &--white{
     color: #fff;
+  }
+  &--primary{
+    color: $main-blue;
+  }
+  &-lh{
+    &-xs{
+      line-height: 1.1;
+    }
+    &-sm{
+      line-height: 1.2;
+    }
+    &-md{
+      line-height: 1.5;
+    }
+    &-lg{
+      line-height: 1.7;
+    }
+    &-xl{
+      line-height: 2;
+    }
   }
 }
 p.inherit{

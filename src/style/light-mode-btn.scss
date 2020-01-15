@@ -11,6 +11,12 @@
   padding-right: 32px;
   outline: none!important;
   cursor: pointer;
+  &--mob{
+    display: none;
+  }
+  span{
+    pointer-events: none;
+  }
   &__thumb-wrap{
     width: calc(100% - 36px);
     position: absolute;
@@ -38,7 +44,7 @@
     align-items: center;
     width: 24px;
     height: 24px;
-    &--night{
+    &--day{
       opacity: 0;
     }
   }
@@ -69,7 +75,7 @@
   &.active &__thumb-wrap{
     transform: translate3d(100%,0,0);
   }
-  .active &__thumb{
+  &.active &__thumb{
     filter: invert(100%);
   }
   &.active &__icon{
@@ -88,6 +94,36 @@
     }
     &--day{
       opacity: 1;
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .light-mode-btn{
+    width: 80px;
+    height: 32px;
+    &--mob{
+      display: flex;
+    }
+    &--desktop{
+      display: none;
+    }
+    &__text{
+      display: none;
+    }
+    &__icon{
+      width: 20px;
+      height: 20px;
+    }
+    &__thumb-wrap {
+      width: calc(100% - 26px);
+    }
+    &__thumb{
+      display: flex;
+      width:  24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $main-light-grey;
+      position: relative;
     }
   }
 }

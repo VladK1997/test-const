@@ -43,6 +43,9 @@ a{
 .d-flex {
     display: flex;
 }
+.align-items-center{
+  align-items: center;
+}
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -58,8 +61,13 @@ a{
 
 
 .logo{
+  display: flex;
   img{
     object-fit: contain;
+  }
+  &--sm{
+    height: 70px;
+    max-height: 56px;
   }
   &--md{
     height: 70px;

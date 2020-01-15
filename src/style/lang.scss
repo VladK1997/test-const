@@ -6,6 +6,9 @@
   cursor: pointer;
   border-radius: 50%;
   overflow: hidden;
+  img{
+    pointer-events: none;
+  }
 }
 .body-night{
   .lang{

@@ -21,6 +21,7 @@
     align-items: center;
     height: 100%;
     padding: 0 4px 0 8px;
+    display: flex;
     input{
       height: 80%;
       width: 100%;
@@ -29,6 +30,7 @@
       border-radius: 3px;
       font-size: 14px;
       text-align: center;
+      flex-shrink: 0;
     }
   }
   &__radio-wrap{
@@ -91,6 +93,7 @@
       select{
         color: #fff;
         min-width: 100px;
+        width: 100%;
       }
       option{
         color: #000;

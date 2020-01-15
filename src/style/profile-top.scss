@@ -24,7 +24,17 @@
       border-right: 8px solid transparent;
       content:"";
     }
-
+  }
+  &__icon{
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    img{
+      object-fit: contain;
+    }
   }
   &__exit{
     background-color: transparent;
@@ -92,6 +102,13 @@
 }
 @media all and(max-width: $small-tablet-width) {
   .profile-top{
+
+    &__btn{
+      font-size: 0;
+    }
     display: flex;
+    &__icon{
+      display: flex;
+    }
   }
 }

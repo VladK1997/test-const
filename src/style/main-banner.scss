@@ -1,5 +1,5 @@
 .main-banner{
-  margin-top: 80px;
+  margin-top: 40px;
   &__item{
     height: 100%;
     width: 100%;
@@ -15,6 +15,9 @@
     &--small{
       height: 220px;
     }
+  }
+  &__slider{
+    display: none;
   }
 }
 @media all and (max-width:  $tablet-width) {
@@ -33,14 +36,19 @@
 }
 @media all and (max-width:  $small-tablet-width) {
   .main-banner {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    &__slider{
+      display: flex;
+    }
+    &__desktop{
+      display: none;
+    }
     &__item {
       &--small,&--big{
         &:not(:first-child){
           margin-top: 32px;
         }
-
       }
       &--small{
         height: 208px;
