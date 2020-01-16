@@ -10,15 +10,21 @@
 @import "style/utilites";
 @import "style/nav";
 @import "style/infoBox";
-@import "style/burger";
+
 @import "style/profile-top";
-@import "style/cust-select";
 @import "style/lang";
 @import "style/popup";
-@import "style/pag-bul";
-@import "style/pagin";
-@import "style/cust-input";
 
+@import "style/pagin";
+@import "style/before-footer";
+
+
+@import "style/ui/cust-select";
+@import "style/ui/cust-input";
+@import "style/ui/cust-check";
+@import "style/ui/btn";
+@import "style/ui/burger";
+@import "style/ui/pag-bul";
 
 @import "style/lang-popup";
 @import "style/auth-popup";
@@ -29,7 +35,6 @@
 @import "style/main-catg-item";
 @import "style/main-img";
 @import "style/light-mode-btn";
-@import "style/btn";
 @import "style/search";
 @import "style/features";
 @import "style/features-card";

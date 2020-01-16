@@ -204,6 +204,28 @@
     }
     let lanhPopup = new ClosePopup(lang);
     let authPopup = new ClosePopup(auth);
+
+    let authPopupSections = auth.querySelectorAll(".auth-popup__body");
+    let swiched = false;
+    auth.addEventListener("click",function (e) {
+        if(e.target.hasAttribute("data-switch") && !swiched){
+            for(let i = 0, l = authPopupSections.length; i < l; i++){
+                setTimeout(function () {
+                    authPopupSections[i].classList.toggle("active");
+                }, i*400)
+            }
+            swiched = true;
+        }else if(e.target.hasAttribute("data-switch")){
+            let time = 0;
+            for(let i = authPopupSections.length, l = 0; i >= l; --i){
+                setTimeout(function () {
+                    authPopupSections[i].classList.toggle("active");
+                }, time*400);
+                time++
+            }
+            swiched = false;
+        }
+    })
 })();
 (function(){
     let currentItem = null;
@@ -228,101 +250,114 @@
 (function () {
     let registrForm = document.getElementById("registrForm");
     let formCheckArray =[];// if length of formCheckArray will be equal to all inputs which are included in form form will be sent
-    console.log(registrForm);
     const emailReg =/[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]*/;
     const telReg = /\+*[0-9]*/
-    registrForm.addEventListener("submit", function(e){
-        e.preventDefault();
-        let inputTextArray = registrForm.querySelectorAll("input[type='text'");
-        let inputemail = registrForm.querySelector("input[type='email'");
-        let inputeTel = registrForm.querySelector("input[type='tel'");
-        let password = registrForm.querySelectorAll("input[type='password'");
-        let checkboxArray = registrForm.querySelectorAll("input[type='checkbox'");
-        let inputArray = registrForm.querySelectorAll(".cust-input");
-        let message = registrForm.querySelectorAll(".cust-input__mesg");
-        //clear all msg and remove class from each item
-        formCheckArray = [];
-        for(let i = 0, l = inputArray.length; i < l; i++){
-            inputArray[i].classList.remove("err");
-            inputArray[i].classList.remove("suc");
-        }
-        for(let i = 0, l = message.length; i < l; i++){
-            message[i].innerText = "";
-        }
-        //end of clearing
+    const InvalidEmail = "Вы ввели некорректный E-mail";
+    const InvalidTel = "Провепте корректность номера";
+    const EmptyField = "Заполните поле";
+    const InvalidPassword = {
+        sybolAm: "Минимальное количество символов 8",
+        validSymb: "Не испрользуйте символы % $ : ' \" ^ & * ( ! ) ? \\/",
+        nonSame: "Пароли не соответствуют"
 
-        //beginin of validation inputs
-        //email validation
-        if(inputemail.value.match(emailReg) && inputemail.value.match(emailReg).index > -1){
-            inputemail.parentNode.classList.add("suc");
-            formCheckArray.push = inputemail;
-        }else{
-            let text = inputemail.parentNode.querySelector(".cust-input__mesg");
-            text.innerText = "Вы ввели некорректный E-mail";
-            inputemail.parentNode.classList.add("err");
-        }
-        //end of email validation
-        //text fields validation
-        for(let i = 0, l = inputTextArray.length; i < l; i++){
-            let msgField = inputTextArray[i].parentNode.querySelector(".cust-input__mesg");
-            if(inputTextArray[i].value.length == 0){
-                inputTextArray[i].parentNode.classList.add("err");
-                msgField.innerText= "Заполните поле"
-            }else{
-                inputTextArray[i].parentNode.classList.add("suc");
-                formCheckArray.push(inputTextArray[i]);
+    }
+     let FormValid = function(form) {
+        let self = this;
+        self.thisForm = form;
+        self.thisForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            self.inputTextArray = self.thisForm.querySelectorAll("input[type='text'");
+            self.inputemail = self.thisForm.querySelector("input[type='email'");
+            self.inputeTel = self.thisForm.querySelector("input[type='tel'");
+            self.passwordArray = self.thisForm.querySelectorAll("input[type='password'");
+            self.checkboxArray = self.thisForm.querySelectorAll("input[type='checkbox'");
+            self.inputArray = self.thisForm.querySelectorAll("input");
+            self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
+            //clear all msg and remove class from each item
+            formCheckArray = [];
+            for (let i = 0, l = self.inputArray.length; i < l; i++) {
+                let item = self.inputArray[i].parentNode;
+                item.classList.remove("err");
+                item.classList.remove("suc");
             }
-        }
-        //end text fields validation
-        if(inputeTel.value.length > 9 && inputeTel.value.length <= 14 && inputeTel.value.match(telReg)){
-            inputeTel.parentNode.classList.add("suc");
-            formCheckArray.push(inputeTel);
-        }else{
-            let msgField = inputeTel.parentNode.querySelector(".cust-input__mesg");
-            inputeTel.parentNode.classList.add("err");
-            msgField.innerText = "Провепте корректность номера"
-        }
-        //start validation password
-        for(let i = 0, l = password.length; i < l; i++){
-            let msgField = password[i].parentNode.querySelector(".cust-input__mesg");
-            if(i == 0){
-                if(password[i].value.length < 8){
-                    //error message from length
-                    msgField.innerText = "Минимальное количество символов 8";
-                    password[i].parentNode.classList.add("err");
+            for (let i = 0, l = self.message.length; i < l; i++) {
+                self.message[i].innerText = "";
+            }
+            //end of clearing
+
+            //beginin of validation inputs
+            //email validation
+            if (self.inputemail.value.match(emailReg) && self.inputemail.value.match(emailReg).index > -1) {
+                self.inputemail.parentNode.classList.add("suc");
+                formCheckArray.push(self.inputemail);
+            } else {
+                let text = self.inputemail.parentNode.querySelector(".cust-input__mesg");
+                text.innerText = InvalidEmail;
+                self.inputemail.parentNode.classList.add("err");
+            }
+            //end of email validation
+            //text fields validation
+            for (let i = 0, l = self.inputTextArray.length; i < l; i++) {
+                let msgField = self.inputTextArray[i].parentNode.querySelector(".cust-input__mesg");
+                if (self.inputTextArray[i].value.length == 0) {
+                    self.inputTextArray[i].parentNode.classList.add("err");
+                    msgField.innerText = "Заполните поле"
+                } else {
+                    self.inputTextArray[i].parentNode.classList.add("suc");
+                    formCheckArray.push(self.inputTextArray[i]);
+                }
+            }
+            //end text fields validation
+            if (self.inputeTel.value.length > 9 && self.inputeTel.value.length <= 14 && self.inputeTel.value.match(telReg)) {
+                self.inputeTel.parentNode.classList.add("suc");
+                formCheckArray.push(self.inputeTel);
+            } else {
+                let msgField = self.inputeTel.parentNode.querySelector(".cust-input__mesg");
+                self.inputeTel.parentNode.classList.add("err");
+                msgField.innerText = InvalidTel
+            }
+            //start validation password
+            for (let i = 0, l = self.passwordArray.length; i < l; i++) {
+                let msgField = self.passwordArray[i].parentNode.querySelector(".cust-input__mesg");
+                if (i == 0) {
+                    if (self.passwordArray[i].value.length < 8) {
+                        //error self.message from length
+                        msgField.innerText = InvalidPassword.sybolAm;
+                        self.passwordArray[i].parentNode.classList.add("err");
+                        break
+                    }
+                    if (self.passwordArray[i].value.match(/[%$:'"^&*(!)?\/]/) && self.passwordArray[i].value.match(/%/).index > -1) {
+                        self.passwordArray[i].parentNode.classList.add("err");
+                        msgField.innerText = InvalidPassword.validSymb;
+                        break
+                    }
+                    self.passwordArray[i].parentNode.classList.add("suc");
+                }
+                if (i == 1 && self.passwordArray[0].value != self.passwordArray[1].value) {
+                    msgField.innerText = InvalidPassword.nonSame;
+                    self.passwordArray[i].parentNode.classList.add("err");
                     break
+                } else {
+                    self.passwordArray[i].parentNode.classList.add("suc");
+                    formCheckArray.push(true);
                 }
-                if(password[i].value.match(/[%$:'"^&*(!)?\/]/) && password[i].value.match(/%/).index > -1){
-                    password[i].parentNode.classList.add("err");
-                    msgField.innerText = "Не испрользуйте символы % $ : ' \" ^ & * ( ! ) ? \\/";
-                    break
+            }
+            //end of validation  password
+            for (let i = 0, l = self.checkboxArray.length; i < l; i++) {
+                if (self.checkboxArray[i].hasAttribute("data-checkrequired")) {
+                    if (self.checkboxArray[i].checked) {
+                        formCheckArray.push(self.checkboxArray[i])
+                    } else {
+                        self.checkboxArray[i].parentNode.classList.add("err");
+                    }
+                } else {
+                    formCheckArray.push(self.checkboxArray[i]);
                 }
-                password[i].parentNode.classList.add("suc");
             }
-            if(i == 1 && password[0].value != password[1].value ){
-                msgField.innerText = "Пароли не соответствуют";
-                password[i].parentNode.classList.add("err");
-                break
-            }else{
-                password[i].parentNode.classList.add("suc");
-                formCheckArray.push(password[i]);
+            if (formCheckArray.length == self.inputArray.length) {
+                alert("congratulations");
             }
-        }
-        //end of validation  password
-        for(let i = 0, l = checkboxArray.length; i < l; i++){
-            if (checkboxArray[i].hasAttribute("data-checkrequired")){
-                if(checkboxArray[i].checked) {
-                    formCheckArray.push(checkboxArray[i])
-                }else{
-                    checkboxArray[i].parentNode.classList.add("err");
-                }
-            }else{
-                formCheckArray.push(checkboxArray[i]);
-            }
-        }
-        console.log(formCheckArray,formCheckArray.length , inputArray.length);
-        if(formCheckArray.length == inputArray.length){
-            alert("congratulations");
-        }
-    })
+        })
+    }
+    new FormValid(registrForm);
 })();

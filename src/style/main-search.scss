@@ -140,8 +140,27 @@
 }
 @media all and(max-width: $mobile-Width){
   .main-search{
+    padding: 0;
+    background: none;
     &__radio {
       width: 49%;
+    }
+    &__body &__select{
+      background-color: $main-blue;
+      color: #fff;
+      select{
+        color:#fff;
+        option{
+          color: #000;
+        }
+      }
+      &:after{
+        border-top-color: #fff;
+      }
+    }
+    &__body{
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 }

@@ -1,0 +1,22 @@
+.before-footer{
+  &__logo{
+    height: 70px;
+    max-height: 56px;
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .before-footer{
+    &__logo{
+      height: 56px;
+      max-height: 40px;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .before-footer{
+    &__logo{
+      height: 56px;
+      max-height: 24px;
+    }
+  }
+}

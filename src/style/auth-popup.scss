@@ -15,7 +15,23 @@
     }
   }
   &__body{
-    &--registr{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: 0.3s;
+    &.active{
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      max-height: 100%;
+      padding: 24px 32px;
+      transform: scaleY(1);
+    }
+    &.active &--reg{
       padding: 24px 48px;
     }
   }
@@ -27,9 +43,8 @@
     span,a{
       line-height: 1.5;
     }
-    input{
-      margin-right: 16px;
-      vertical-align: text-bottom;
+    .text{
+      margin-left: 16px;
     }
   }
   &__btn{

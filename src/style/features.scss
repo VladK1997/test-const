@@ -9,8 +9,9 @@
     text-align: center;
   }
 }
-@media all and(max-width:$mobileXsWidth){
+@media all and(max-width:$mobile-Width){
   .cust-features {
+    display: none;
     &__logo {
      max-width: 70%;
       margin: 0 auto;

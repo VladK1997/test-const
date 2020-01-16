@@ -2231,7 +2231,7 @@
             </div>
             <div class="d-flex u-margin-fly-40 flex-wrap">
                 <div class="u-margin-right-auto">
-                    <a href="#" class="logo logo--sm"><img src="dist/img/logo3.png"></a>
+                    <a href="#" class="before-footer__logo logo logo--sm"><img src="dist/img/logo3.png"></a>
                 </div>
                 <div class="payment">
                     <div class="payment__item"><img src="dist/img/pay1.png"></div>
@@ -2401,14 +2401,14 @@
          </div>
      </div>
  </div>
- <div class="popup " id="auth-popup">
+ <div class="popup active" id="auth-popup">
      <div class="popup__back" data-closepopup></div>
      <div class="popup__wrap auth-popup">
          <div class="popup__top">
              <p class="popup__title">Авторизация</p>
              <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
          </div>
-         <!--<div class="popup__body auth-popup__body&#45;&#45;enter">
+         <form class="popup__body auth-popup__body active">
             <label class="auth-popup__input cust-input">
                 <span class="cust-input__title">E-mail</span>
                 <input type="email" class="cust-input__field" placeholder="E-mail">
@@ -2419,9 +2419,9 @@
                  <input type="password" class="cust-input__field" placeholder="Password">
                  <span class="cust-input__mesg"></span>
              </label>
-             <button class="cust-btn cust-btn&#45;&#45;primary">Войти</button>
+             <button class="cust-btn cust-btn--primary">Войти</button>
              <div class="d-flex flex-center">
-                 <button class="text text&#45;&#45;sm text&#45;&#45;primary text-lh-xl cust-btn&#45;&#45;clear">Зарегестрироваться</button>
+                 <button type="button" class="text text--sm text--primary text-lh-xl cust-btn--clear" data-switch>Зарегестрироваться</button>
              </div>
              <div class="">
                  <p class="text text-sm d-flex flex-center">Или войти через</p>
@@ -2443,15 +2443,15 @@
                      </a>
                  </div>
              </div>
-         </div>-->
-         <form action="/" class="popup__body auth-popup__body--registr" id="registrForm">
-             <label class="auth-popup__input cust-input cust-input--required suc">
+         </form>
+         <form action="/" class="popup__body auth-popup__body auth-popup__body--reg" id="registrForm">
+             <label class="auth-popup__input cust-input cust-input--required">
                  <span class="cust-input__title">E-mail</span>
                  <input type="email" class="cust-input__field" name="E-mail" required placeholder="E-mail">
                  <span class="cust-input__mesg"></span>
              </label>
 
-             <label class="auth-popup__input cust-input cust-input--required">
+             <label class="auth-popup__input cust-input cust-input--required active">
                  <span class="cust-input__title">ФИО</span>
                  <input type="text" class="cust-input__field" name="name"  placeholder="ФИО">
                  <span class="cust-input__mesg"></span>
@@ -2462,34 +2462,32 @@
                  <input type="tel" class="cust-input__field" name="tel" maxlength="13" placeholder="Введите номер">
                  <span class="cust-input__mesg"></span>
              </label>
-
              <label class="auth-popup__input cust-input cust-input--required">
                  <span class="cust-input__title">Пароль</span>
                  <input type="password" class="cust-input__field" name="password" required placeholder="Пароль">
                  <span class="cust-input__mesg"></span>
              </label>
-
              <label class="auth-popup__input cust-input cust-input--required">
                  <span class="cust-input__title">Повторите пароль</span>
                  <input type="password" class="cust-input__field" name="password" required placeholder="Повторите пароль">
                  <span class="cust-input__mesg"></span>
              </label>
-
-             <label class="auth-popup__check">
-                 <input type="checkbox" data-checkrequired>
-                 <span class="text text-xs text-lh-xs">Уведомлять о скидках:
-                 </span>
+             <label class="auth-popup__check cust-check">
+                 <input class="cust-check__nat" type="checkbox">
+                 <span class="cust-check__cust"></span>
+                 <span class="text text-xs text-lh-xs">Уведомлять о скидках:</span>
              </label>
-
-             <label class="auth-popup__check">
-                 <input class="" type="checkbox" data-checkrequired>
+             <label class="auth-popup__check cust-check cust-check--required">
+                 <input class="cust-check__nat" type="checkbox" data-checkrequired>
+                 <span class="cust-check__cust"></span>
                  <span class="text text-xs">
                      Я ознакомился(-ась) с
                      <a href="#">Cоглашением пользователя OLZ</a>
                      и согласен(-на) со всеми условиями
                  : </span>
              </label>
-             <button type="submit" class="auth-popup__btn u-margin-side-auto cust-btn cust-btn--secondary cust-btn--xl">Войти</button>
+             <button type="submit" class="auth-popup__btn u-margin-side-auto cust-btn cust-btn--secondary cust-btn--xl">Зарегестрироваться</button>
+             <p class="text text-sm d-flex flex-center text--primary" data-switch>Войти</p>
          </form>
      </div>
  </div>

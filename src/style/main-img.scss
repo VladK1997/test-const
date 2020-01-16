@@ -56,8 +56,12 @@
 }
 @media all and(max-width: $mobile-Width){
   .main-img {
+    &__img{
+      display: none;
+    }
     &__search {
       width: 100%;
+
       position: static;
       transform: none;
     }

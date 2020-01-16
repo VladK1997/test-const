@@ -16,6 +16,11 @@
 }
 @media all and(max-width: $mobileXsWidth){
   .payment{
-    margin: 16px 0 0 auto;
+    align-items: flex-end;
+    &__item{
+      height: 24px;
+      max-height: 16px;
+    }
+    margin: 0 0 0 auto;
   }
 }
