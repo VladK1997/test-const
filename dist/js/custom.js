@@ -208,23 +208,15 @@
     let authPopupSections = auth.querySelectorAll(".auth-popup__body");
     let swiched = false;
     auth.addEventListener("click",function (e) {
-        if(e.target.hasAttribute("data-switch") && !swiched){
-            for(let i = 0, l = authPopupSections.length; i < l; i++){
+            if(e.target.hasAttribute("data-switch") && !swiched){
+                auth.classList.add("changing");
                 setTimeout(function () {
-                    authPopupSections[i].classList.toggle("active");
-                }, i*400)
+                    for(let i = 0, l = authPopupSections.length; i < l; i++){
+                        authPopupSections[i].classList.toggle("active");
+                    }
+                },300)
+                setTimeout(function(){auth.classList.remove("changing");},500);
             }
-            swiched = true;
-        }else if(e.target.hasAttribute("data-switch")){
-            let time = 0;
-            for(let i = authPopupSections.length, l = 0; i >= l; --i){
-                setTimeout(function () {
-                    authPopupSections[i].classList.toggle("active");
-                }, time*400);
-                time++
-            }
-            swiched = false;
-        }
     })
 })();
 (function(){
@@ -264,62 +256,75 @@
      let FormValid = function(form) {
         let self = this;
         self.thisForm = form;
-        self.thisForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            self.inputTextArray = self.thisForm.querySelectorAll("input[type='text'");
-            self.inputemail = self.thisForm.querySelector("input[type='email'");
-            self.inputeTel = self.thisForm.querySelector("input[type='tel'");
-            self.passwordArray = self.thisForm.querySelectorAll("input[type='password'");
-            self.checkboxArray = self.thisForm.querySelectorAll("input[type='checkbox'");
-            self.inputArray = self.thisForm.querySelectorAll("input");
-            self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
+        self.passwordArray = self.thisForm.querySelectorAll("input[type='password'");
+        self.inputArray = self.thisForm.querySelectorAll("input[data-required]");
+        self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
+        self.clearAll = function(){
             //clear all msg and remove class from each item
             formCheckArray = [];
             for (let i = 0, l = self.inputArray.length; i < l; i++) {
-                let item = self.inputArray[i].parentNode;
-                item.classList.remove("err");
-                item.classList.remove("suc");
+                let wrap = self.inputArray[i].parentNode;
+                wrap.classList.remove("err");
+                wrap.classList.remove("suc");
             }
             for (let i = 0, l = self.message.length; i < l; i++) {
                 self.message[i].innerText = "";
             }
             //end of clearing
-
-            //beginin of validation inputs
+        }
+        self.clearItem = function(item){
+            let wrap = item.parentNode
+            wrap.classList.remove("err");
+            wrap.classList.remove("suc");
+            formCheckArray = formCheckArray.filter(function(thisItem){
+                thisItem != item;
+            });
+        }
+        self.checkEmail = function(item){
             //email validation
-            if (self.inputemail.value.match(emailReg) && self.inputemail.value.match(emailReg).index > -1) {
-                self.inputemail.parentNode.classList.add("suc");
-                formCheckArray.push(self.inputemail);
+            self.clearItem(item);
+            if (item.value.match(emailReg) && item.value.match(emailReg).index > -1) {
+                item.parentNode.classList.add("suc");
+                formCheckArray.push(item);
             } else {
-                let text = self.inputemail.parentNode.querySelector(".cust-input__mesg");
+                let text = item.parentNode.querySelector(".cust-input__mesg");
                 text.innerText = InvalidEmail;
-                self.inputemail.parentNode.classList.add("err");
+                item.parentNode.classList.add("err");
             }
             //end of email validation
+        }
+        self.checkEmpty = function(item){
             //text fields validation
-            for (let i = 0, l = self.inputTextArray.length; i < l; i++) {
-                let msgField = self.inputTextArray[i].parentNode.querySelector(".cust-input__mesg");
-                if (self.inputTextArray[i].value.length == 0) {
-                    self.inputTextArray[i].parentNode.classList.add("err");
-                    msgField.innerText = "Заполните поле"
-                } else {
-                    self.inputTextArray[i].parentNode.classList.add("suc");
-                    formCheckArray.push(self.inputTextArray[i]);
-                }
+            self.clearItem(item)
+            let msgField = item.parentNode.querySelector(".cust-input__mesg");
+            if (item.value.length == 0) {
+                item.parentNode.classList.add("err");
+                msgField.innerText = "Заполните поле"
+            } else {
+                item.parentNode.classList.add("suc");
+                formCheckArray.push(item);
             }
             //end text fields validation
-            if (self.inputeTel.value.length > 9 && self.inputeTel.value.length <= 14 && self.inputeTel.value.match(telReg)) {
-                self.inputeTel.parentNode.classList.add("suc");
-                formCheckArray.push(self.inputeTel);
+        }
+        self.checkTel = function(item){
+            self.clearItem(item)
+            if (item.value.length > 9 && item.value.length <= 14 && item.value.match(telReg)) {
+
+                item.parentNode.classList.add("suc");
+                formCheckArray.push(item);
             } else {
-                let msgField = self.inputeTel.parentNode.querySelector(".cust-input__mesg");
-                self.inputeTel.parentNode.classList.add("err");
+                let msgField = item.parentNode.querySelector(".cust-input__mesg");
+                item.parentNode.classList.add("err");
                 msgField.innerText = InvalidTel
             }
+        }
+        self.checkPassword = function(item){
             //start validation password
             for (let i = 0, l = self.passwordArray.length; i < l; i++) {
                 let msgField = self.passwordArray[i].parentNode.querySelector(".cust-input__mesg");
-                if (i == 0) {
+
+                if (i == 0 && self.passwordArray[i] == item) {
+                    self.clearItem(item)
                     if (self.passwordArray[i].value.length < 8) {
                         //error self.message from length
                         msgField.innerText = InvalidPassword.sybolAm;
@@ -331,33 +336,62 @@
                         msgField.innerText = InvalidPassword.validSymb;
                         break
                     }
+
                     self.passwordArray[i].parentNode.classList.add("suc");
                 }
-                if (i == 1 && self.passwordArray[0].value != self.passwordArray[1].value) {
-                    msgField.innerText = InvalidPassword.nonSame;
-                    self.passwordArray[i].parentNode.classList.add("err");
-                    break
-                } else {
-                    self.passwordArray[i].parentNode.classList.add("suc");
-                    formCheckArray.push(true);
+                if(i == 1 && self.passwordArray[1] == item) {
+                    self.clearItem(item);
+                    if ( self.passwordArray[0].value != self.passwordArray[1].value) {
+                        msgField.innerText = InvalidPassword.nonSame;
+                        self.passwordArray[i].parentNode.classList.add("err");
+                        break
+
+                    } else {
+                        self.passwordArray[i].parentNode.classList.add("suc");
+                        formCheckArray.push(item);
+                    }
                 }
             }
             //end of validation  password
-            for (let i = 0, l = self.checkboxArray.length; i < l; i++) {
-                if (self.checkboxArray[i].hasAttribute("data-checkrequired")) {
-                    if (self.checkboxArray[i].checked) {
-                        formCheckArray.push(self.checkboxArray[i])
-                    } else {
-                        self.checkboxArray[i].parentNode.classList.add("err");
-                    }
-                } else {
-                    formCheckArray.push(self.checkboxArray[i]);
+        }
+        self.checkCheck = function(item){
+            self.clearItem(item);
+            for (let i = 0, l = item.length; i < l; i++) {
+                if (item.checked && item.hasAttribute("data-required")) {
+                    self.clearItem("item");
+                    formCheckArray.push(item);
+                    item.parentNode.classList.add("suc");
+                } else if(item.hasAttribute("data-required")){
+                    item.parentNode.classList.add("err");
                 }
             }
-            if (formCheckArray.length == self.inputArray.length) {
-                alert("congratulations");
-            }
-        })
+
+        }
+
+        self.thisForm.addEventListener("change", function (e) {
+            //beginin of validation inputs
+            if(e.target.type == 'email')self.checkEmail(e.target);
+            if(e.target.type == 'text')self.checkEmpty(e.target);
+            if(e.target.type == 'tel')self.checkTel(e.target);
+            if(e.target.type == 'password')self.checkPassword(e.target);
+            if(e.target.type == 'checkbox')self.checkCheck(e.target);
+        });
+         self.thisForm.addEventListener("submit", function (e) {
+             e.preventDefault();
+             let checks = self.thisForm.querySelector("input[type='checkbox']");
+             for(let i = 0,l = checks.length; i < l ; i++){
+                 self.checkCheck(checks[i])
+             }
+             for (let i = 0, l = self.inputArray.length; i < l; i++){
+                 if(!self.inputArray[i].parentNode.classList.contains("suc")){
+                     self.checkEmpty(self.inputArray[i]);
+                     self.inputArray[i].parentNode.classList.add('err');
+                 }
+             }
+             if (formCheckArray.length == self.inputArray.length) {
+                 alert("congratulations");
+             }
+         })
     }
     new FormValid(registrForm);
 })();

@@ -609,28 +609,9 @@ blockquote p:last-child {
 /* -------------------------------------------------------------------------------- */
 /*	1. Document setup
 /* -------------------------------------------------------------------------------- */
-body {
-  margin: 0;
-  padding: 0;
-  border: none;
-  color: #111;
-  background: #fafafa;
-  font-family: 'Rubik', sans-serif;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
 
-body a {
-  color: #0015d3;
-  text-decoration: none;
-}
 
-body a:hover {
-  color: #2842cd;
-  text-decoration: none;
-}
+
 
 * {
   box-sizing: border-box;

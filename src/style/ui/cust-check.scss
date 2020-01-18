@@ -4,6 +4,7 @@
   }
   &__cust{
     display: flex;
+    pointer-events: none;
     width:  18px;
     height: 18px;
     position: relative;
@@ -23,6 +24,9 @@
       transform: translate(-50%,-70%) rotate(45deg) scale(0);
       content:"";
     }
+  }
+  .text{
+    pointer-events: none;
   }
   &--required &__cust{
     &:before{

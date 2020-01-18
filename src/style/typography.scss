@@ -1,5 +1,6 @@
 .text{
   color: inherit;
+  font-family: "SourceSansPro", Arial,sans-serif;
   &-xs{
     font-size: 12px;
   }
@@ -22,6 +23,7 @@
     font-size: 36px;
   }
   &-h{
+    font-family: "aFuturaOrto",Arial, sans-serif;
     font-weight: 600;
   }
   &-h3{

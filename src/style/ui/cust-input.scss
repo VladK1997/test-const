@@ -5,14 +5,14 @@
     width: 100%;
     border-radius: 2px;
     padding: 0 8px;
-    height: 32px;
+    height: 40px;
     border: 1px solid rgba($main-medium-grey,0.6);
   }
   &--required{
     &:before{
       position: absolute;
       color: red;
-      bottom: 0;
+      bottom: 3px;
       right: 100%;
       margin-right: 8px;
       content:"*"
