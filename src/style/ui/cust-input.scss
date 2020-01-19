@@ -23,6 +23,21 @@
     font-size: 12px;
     margin-bottom: 4px;
   }
+  &__show{
+    width:  32px;
+    height: 32px;
+    padding: 8px;
+    position: absolute;
+    right:  0;
+    bottom: 8px;
+    cursor: pointer;
+    &.active{
+      color: $main-blue;
+    }
+    svg{
+      pointer-events: none;
+    }
+  }
   &__mesg{
     position: absolute;
     z-index: 1;

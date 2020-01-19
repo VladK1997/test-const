@@ -241,7 +241,9 @@
 })();
 (function () {
     let registrForm = document.getElementById("registrForm");
-    let formCheckArray =[];// if length of formCheckArray will be equal to all inputs which are included in form form will be sent
+    let authForm = document.getElementById("auth-form");
+
+    let passShow = false;
     const emailReg =/[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]*/;
     const telReg = /\+*[0-9]*/
     const InvalidEmail = "Вы ввели некорректный E-mail";
@@ -256,9 +258,11 @@
      let FormValid = function(form) {
         let self = this;
         self.thisForm = form;
+
         self.passwordArray = self.thisForm.querySelectorAll("input[type='password'");
         self.inputArray = self.thisForm.querySelectorAll("input[data-required]");
         self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
+        self.formCheckArray =[];// if length of formCheckArray will be equal to all inputs which are included in form form will be sent
         self.clearAll = function(){
             //clear all msg and remove class from each item
             formCheckArray = [];
@@ -276,7 +280,7 @@
             let wrap = item.parentNode
             wrap.classList.remove("err");
             wrap.classList.remove("suc");
-            formCheckArray = formCheckArray.filter(function(thisItem){
+            self.formCheckArray = self.formCheckArray.filter(function(thisItem){
                 thisItem != item;
             });
         }
@@ -285,7 +289,7 @@
             self.clearItem(item);
             if (item.value.match(emailReg) && item.value.match(emailReg).index > -1) {
                 item.parentNode.classList.add("suc");
-                formCheckArray.push(item);
+                self.formCheckArray.push(item);
             } else {
                 let text = item.parentNode.querySelector(".cust-input__mesg");
                 text.innerText = InvalidEmail;
@@ -302,7 +306,7 @@
                 msgField.innerText = "Заполните поле"
             } else {
                 item.parentNode.classList.add("suc");
-                formCheckArray.push(item);
+                self.formCheckArray.push(item);
             }
             //end text fields validation
         }
@@ -311,7 +315,7 @@
             if (item.value.length > 9 && item.value.length <= 14 && item.value.match(telReg)) {
 
                 item.parentNode.classList.add("suc");
-                formCheckArray.push(item);
+                self.formCheckArray.push(item);
             } else {
                 let msgField = item.parentNode.querySelector(".cust-input__mesg");
                 item.parentNode.classList.add("err");
@@ -348,7 +352,7 @@
 
                     } else {
                         self.passwordArray[i].parentNode.classList.add("suc");
-                        formCheckArray.push(item);
+                        self.formCheckArray.push(item);
                     }
                 }
             }
@@ -359,7 +363,7 @@
             for (let i = 0, l = item.length; i < l; i++) {
                 if (item.checked && item.hasAttribute("data-required")) {
                     self.clearItem("item");
-                    formCheckArray.push(item);
+                    self.formCheckArray.push(item);
                     item.parentNode.classList.add("suc");
                 } else if(item.hasAttribute("data-required")){
                     item.parentNode.classList.add("err");
@@ -388,10 +392,24 @@
                      self.inputArray[i].parentNode.classList.add('err');
                  }
              }
-             if (formCheckArray.length == self.inputArray.length) {
+             if (self.formCheckArray.length == self.inputArray.length) {
                  alert("congratulations");
              }
          })
     }
     new FormValid(registrForm);
+    window.addEventListener("click", function (e) {
+        if(e.target.hasAttribute("data-showpass")){
+            let wrap = e.target.parentNode;
+            let input = wrap.querySelector("input");
+            e.target.classList.toggle("active");
+            if(!passShow){
+                input.type = "text";
+                passShow = true;
+            }else{
+                input.type = "password";
+                passShow = false;
+            }
+        }
+    })
 })();
