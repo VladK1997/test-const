@@ -17,6 +17,9 @@
     font-size: 16px;
     font-weight: 400;
     color: inherit;
+    &:hover{
+      color: $main-green;
+    }
   }
   &__bottom{
     display: flex;
