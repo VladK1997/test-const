@@ -1,13 +1,13 @@
 .before-footer{
   &__logo{
-    height: 70px;
+    height: 48px;
     max-height: 56px;
   }
 }
 @media all and(max-width: $mobile-Width){
   .before-footer{
     &__logo{
-      height: 56px;
+      height: 40px;
       max-height: 40px;
     }
   }

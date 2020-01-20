@@ -1,0 +1,96 @@
+.user-packages-item{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 88px;
+  &__title{
+    position: relative;
+    border-radius: 5px 0 0 5px;
+    min-width: 250px;
+    padding-right: 32px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    p{
+
+      padding:4px 16px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    &:after{
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 3px;
+      height: 100%;
+      border-right:  44px solid #fff;
+      border-bottom: 40px solid transparent;
+      border-top:    44px solid transparent;
+      content:"";
+    }
+  }
+  &__content{
+    flex-grow: 1;
+    border: 1px solid $main-medium-grey;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  &__top{
+    display: flex;
+    border-bottom: 1px solid $main-medium-grey;
+    p{
+      color: $main-grey;
+      font-size: 14px;
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+      span{
+        color: $main-medium-grey;
+      }
+    }
+  }
+  &__body{
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    padding: 8px 0;
+    p{
+      &:not(:last-child){
+        margin-right: 24px;
+      }
+      font-size: 16px;
+      span{
+        color: $main-medium-grey;
+      }
+    }
+  }
+  &__del{
+    background-color: $main-light-grey;
+    color: $main-grey;
+    margin-left: auto;
+    transition: 0.3s;
+    &:hover{
+      background-color: $main-red;
+      color: #fff;
+    }
+  }
+  &--active &__title{
+    background-color: $main-green;
+    p{
+      background-color: darken($main-green,10);
+    }
+  }
+  &--off &__title{
+    background-color: $main-red;
+    p{
+      background-color: darken($main-red,10);
+    }
+  }
+}

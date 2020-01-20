@@ -1,0 +1,45 @@
+.user-menu{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $main-medium-grey;
+  width: 100%;
+  border-radius: 3px;
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 16px 24px;
+    color: $main-grey;
+    p{
+      font-size: 14px;
+    }
+    .icon{
+      margin-right: 24px;
+      width: 24px;
+      height: 24px;
+    }
+    &--main{
+      justify-content: space-between;
+      .icon{
+        margin-right: 0;
+      }
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid $main-grey;
+    }
+  }
+  &__exit{
+    margin-top: 24px;
+    margin-left: auto;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  a.user-nav__item{
+    &:hover{
+      color: $main-blue;
+    }
+  }
+}

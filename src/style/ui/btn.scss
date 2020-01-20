@@ -10,6 +10,9 @@
   align-items: center;
   transition: 0.3s;
   width: 100%;
+  &--rounded{
+    border-radius: 50px;
+  }
   &--soft-round{
     border-radius: 3px;
   }

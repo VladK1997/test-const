@@ -1,0 +1,21 @@
+.user-content{
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  &__user-menu{
+    max-width: 320px;
+    margin-right: 40px;
+    width: 100%;
+  }
+  &__content{
+    flex-grow: 1;
+  }
+  &__user-packages{
+    padding: 40px 0;
+  }
+  &__user-pack{
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+  }
+}
