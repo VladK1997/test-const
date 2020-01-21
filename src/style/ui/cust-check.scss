@@ -27,6 +27,9 @@
   }
   .text{
     pointer-events: none;
+    a{
+      pointer-events: auto;
+    }
   }
   &--required &__cust{
     &:before{

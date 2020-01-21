@@ -239,10 +239,17 @@
         };
     })
 })();
+function generatePassword() {
+    var buf = new Uint8Array(800);
+    window.crypto.getRandomValues(buf);
+    return btoa(String.fromCharCode.apply(null, buf));
+}
 (function () {
     let registrForm = document.getElementById("registrForm");
     let authForm = document.getElementById("auth-form");
-
+    let regpassword = document.getElementById("regPassword");
+    let passGenBtn = document.getElementById("passGen");
+    let genPassword;
     let passShow = false;
     const emailReg =/[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]*/;
     const telReg = /\+*[0-9]*/
@@ -253,7 +260,6 @@
         sybolAm: "Минимальное количество символов 8",
         validSymb: "Не испрользуйте символы % $ : ' \" ^ & * ( ! ) ? \\/",
         nonSame: "Пароли не соответствуют"
-
     }
      let FormValid = function(form) {
         let self = this;
@@ -276,13 +282,15 @@
             }
             //end of clearing
         }
-        self.clearItem = function(item){
-            let wrap = item.parentNode
+        self.clearItem = function(block){
+            let wrap = block.parentNode
             wrap.classList.remove("err");
             wrap.classList.remove("suc");
-            self.formCheckArray = self.formCheckArray.filter(function(thisItem){
-                thisItem != item;
+            console.log(block);
+            self.formCheckArray = self.formCheckArray.filter(function (thisItem) {
+                return thisItem != block;
             });
+            console.log(self.formCheckArray);
         }
         self.checkEmail = function(item){
             //email validation
@@ -300,20 +308,22 @@
         self.checkEmpty = function(item){
             //text fields validation
             self.clearItem(item)
-            let msgField = item.parentNode.querySelector(".cust-input__mesg");
-            if (item.value.length == 0) {
-                item.parentNode.classList.add("err");
-                msgField.innerText = "Заполните поле"
-            } else {
-                item.parentNode.classList.add("suc");
-                self.formCheckArray.push(item);
-            }
-            //end text fields validation
+            setTimeout(function () {
+                let msgField = item.parentNode.querySelector(".cust-input__mesg");
+                if (item.value.length == 0) {
+                    item.parentNode.classList.add("err");
+                    msgField.innerText = "Заполните поле"
+                } else {
+                    item.parentNode.classList.add("suc");
+                    self.formCheckArray.push(item);
+                    console.log(self.formCheckArray);
+                }
+                //end text fields validation
+            },500)
         }
         self.checkTel = function(item){
             self.clearItem(item)
             if (item.value.length > 9 && item.value.length <= 14 && item.value.match(telReg)) {
-
                 item.parentNode.classList.add("suc");
                 self.formCheckArray.push(item);
             } else {
@@ -342,6 +352,7 @@
                     }
 
                     self.passwordArray[i].parentNode.classList.add("suc");
+                    self.formCheckArray.push(item);
                 }
                 if(i == 1 && self.passwordArray[1] == item) {
                     self.clearItem(item);
@@ -360,18 +371,20 @@
         }
         self.checkCheck = function(item){
             self.clearItem(item);
-            for (let i = 0, l = item.length; i < l; i++) {
                 if (item.checked && item.hasAttribute("data-required")) {
-                    self.clearItem("item");
                     self.formCheckArray.push(item);
                     item.parentNode.classList.add("suc");
                 } else if(item.hasAttribute("data-required")){
                     item.parentNode.classList.add("err");
                 }
-            }
 
         }
-
+         self.thisForm.addEventListener("click", function (e) {
+             if(e.target.hasAttribute("data-check-required")){
+                 console.log(e.target);
+                 self.checkCheck(e.target);
+             }
+         })
         self.thisForm.addEventListener("change", function (e) {
             //beginin of validation inputs
             if(e.target.type == 'email')self.checkEmail(e.target);
@@ -382,6 +395,7 @@
         });
          self.thisForm.addEventListener("submit", function (e) {
              e.preventDefault();
+
              let checks = self.thisForm.querySelector("input[type='checkbox']");
              for(let i = 0,l = checks.length; i < l ; i++){
                  self.checkCheck(checks[i])
@@ -392,12 +406,15 @@
                      self.inputArray[i].parentNode.classList.add('err');
                  }
              }
+             console.log(self.formCheckArray, self.inputArray.length);
              if (self.formCheckArray.length == self.inputArray.length) {
                  alert("congratulations");
              }
          })
     }
-    new FormValid(registrForm);
+    if(registrForm){
+        new FormValid(registrForm);
+    }
     window.addEventListener("click", function (e) {
         if(e.target.hasAttribute("data-showpass")){
             let wrap = e.target.parentNode;
@@ -412,4 +429,40 @@
             }
         }
     })
+    if(regpassword && registrForm && passGenBtn){
+        let passwordInputs = registrForm.querySelectorAll("input[type='password']");
+        regpassword.addEventListener("mouseover",function (e) {
+            if(e.target.value == 0){
+                regpassword.classList.add("showGen");
+            }
+            if(!genPassword){
+                genPassword = generatePassword().match(/[a-zA-Z0-9\+\.]*/g)[0].slice(0,8);
+                passGenBtn.insertAdjacentHTML("beforeend",' <strong>'+genPassword+'</strong>');
+            }
+        })
+        regpassword.addEventListener("mouseout",function (e) {
+            regpassword.classList.remove("showGen");
+        })
+        passGenBtn.addEventListener("click",function () {
+            for(let i = 0, l = passwordInputs.length;i < l; i++){
+                passwordInputs[i].value = genPassword;
+            }
+            setTimeout(function () {
+                regpassword.classList.remove("showGen");
+            },0)
+
+        })
+        /*regpassword.addEventListener("blur",function () {
+            regpassword.classList.remove("showGen");
+        })*/
+        regpassword.addEventListener("input",function (e) {
+            if(e.target.value.length > 0){
+                regpassword.classList.remove("showGen");
+            }
+            if(e.target.value.length == 0){
+                regpassword.classList.add("showGen");
+            }
+        })
+
+    }
 })();

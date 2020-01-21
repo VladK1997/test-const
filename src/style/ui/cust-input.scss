@@ -18,6 +18,7 @@
       content:"*"
     }
   }
+
   &__title{
     display: block;
     font-size: 12px;
@@ -37,6 +38,30 @@
     svg{
       pointer-events: none;
     }
+  }
+
+  &__passgen{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-height: 24px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background-color: $main-light-grey;
+    color: #000;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .showGen~&__passgen, &__passgen:hover{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   &__mesg{
     position: absolute;
