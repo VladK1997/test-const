@@ -1,7 +1,7 @@
 .user-content{
   padding: 40px 0;
   display: flex;
-  flex-wrap: wrap;
+
   &__user-menu{
     max-width: 320px;
     margin-right: 56px;
@@ -12,6 +12,9 @@
   }
   &__user-packages{
     padding: 40px 0;
+  }
+  &__packages{
+    padding-top: 40px;
   }
   &__user-pack{
     &:not(:last-child){

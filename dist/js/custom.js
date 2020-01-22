@@ -173,11 +173,17 @@
     })
 })();
 (function () {
+    const userAgreeText = document.getElementById("userAgreeText");
+    let added;
+
     const lang = document.getElementById("lang-popup");
     const langOpenBtnAttr = "data-langopen";
 
     const auth = document.getElementById("auth-popup");
     const authOpenBtnAttr = "data-authopen";
+
+    const userAgree = document.getElementById("user-agree");
+    const userAgreeOpenBtnAttr = "data-userAgree";
 
     let ClosePopup = function (popup) {
         let self = this;
@@ -197,6 +203,14 @@
         if (e.target.hasAttribute(authOpenBtnAttr)){
             openPopup(auth);
         }
+        if(e.target.hasAttribute(userAgreeOpenBtnAttr)){
+            e.preventDefault();
+            openPopup(userAgree);
+            if(!added){
+                added="true";
+                userAgreeText.innerHTML = userAgrrementText;
+            }
+        }
 
     })
     function openPopup(popup){
@@ -204,7 +218,7 @@
     }
     let lanhPopup = new ClosePopup(lang);
     let authPopup = new ClosePopup(auth);
-
+    let userAgreePopup = new ClosePopup(userAgree)
     let authPopupSections = auth.querySelectorAll(".auth-popup__body");
     let swiched = false;
     auth.addEventListener("click",function (e) {

@@ -21,6 +21,7 @@
     padding: 0;
     transform-origin: top;
     background-color: #fff;
+    @extend %scrollBarSecond;
     &.active{
       visibility: visible;
       opacity: 1;
@@ -45,5 +46,13 @@
   }
   &__btn{
     margin: 16px auto 0;
+  }
+}
+@media (max-height: 760px){
+  .auth-popup{
+    &__body--reg{
+      flex-shrink: 1;
+      overflow-y: scroll;
+    }
   }
 }
