@@ -10,6 +10,7 @@
            clickable: true,
        },
    });
+
    if(window.innerWidth < 994) {
        let banner1Swiper = new Swiper(".banner1-swiper", {
            slidesPerView: 1,
@@ -34,7 +35,21 @@
            },
        })
    }
+    let itemSlider = new Swiper(".item-slider", {
+        slidesPerView: 1,
+        initialSlide: 0,
+    });
+    let itemPreview = new Swiper(".item-slider-preview__slider", {
+        slidesPerView: 5,
+    });
 })();
+(function () {
+    let ide = document.getElementById("test");
+    ide.addEventListener("click", function (e) {
+        console.log(e);
+    })
+})();
+
 (function () {
     let itemsWrapper = document.getElementById("itemsWrap");
     window.addEventListener("click", function (e) {
@@ -480,3 +495,7 @@ function generatePassword() {
 
     }
 })();
+function auto_grow(element) {
+    element.style.height = '5px';
+    element.style.height = element.scrollHeight+2+"px";
+}

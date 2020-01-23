@@ -2384,7 +2384,7 @@
                              </g>
                          </g>
                      </svg>
-             </i>английский</a>
+                 </i>английский</a>
              <a href="#" class="lang-popup__item">
                  <i class="lang-popup__flag">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
@@ -2393,16 +2393,16 @@
                          <circle cx="475" cy="400" r="160" style="fill:#E30A17"/>
                          <polygon style="fill:#ffffff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/>
                      </svg>
-                </i>
+                 </i>
                  турецкий
              </a>
              <a href="#" class="lang-popup__item lang-popup__item--active">
                  <i class="lang-popup__flag">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
-                        <rect fill="#fff" width="9" height="3"/>
-                        <rect fill="#d52b1e" y="3" width="9" height="3"/>
-                        <rect fill="#0039a6" y="2" width="9" height="2"/>
-                    </svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                         <rect stroke-width="0.5px" stroke="#7d7c7c" fill="#fff" width="9" height="3"/>
+                         <rect fill="#d52b1e" y="3" width="9" height="3"/>
+                         <rect fill="#0039a6" y="2" width="9" height="2"/>
+                     </svg>
                  </i>русский
              </a>
              <button type="button" class="u-margin-top-32 text-sm u-margin-left-auto cust-btn--sm cust-btn--primary cust-btn" data-closepopup>Закрыть</button>
@@ -2495,7 +2495,7 @@
                  <span class="cust-check__cust"></span>
                  <span class="text text-xs">
                      Я ознакомился(-ась) с
-                     <a href="dist/userAreement.docx">Cоглашением пользователя OLZ</a>
+                     <a href="#" data-userAgree>Cоглашением пользователя OLZ</a>
                      и согласен(-на) со всеми условиями
                  : </span>
              </label>
@@ -2508,6 +2508,18 @@
              <button type="submit" class="auth-popup__btn u-margin-side-auto cust-btn cust-btn--secondary cust-btn--xl">Зарегистрироваться</button>
              <p class="text text-sm d-flex flex-center text--primary" data-switch>Войти</p>
          </form>
+     </div>
+ </div>
+ <div class="popup" id="user-agree">
+     <div class="popup__back" data-closepopup></div>
+     <div class="popup__wrap user-agree">
+         <div class="popup__top">
+             <p class="popup__title">Пользовательское соглашение сервисов OLZ.ua</p>
+             <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+         </div>
+         <div class="popup__body user-agree__body">
+             <p id="userAgreeText"></p>
+         </div>
      </div>
  </div>
  <!-- js-скрипт гугл капчи -->
