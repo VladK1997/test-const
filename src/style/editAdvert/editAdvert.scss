@@ -42,6 +42,9 @@
   &__slider{
     height: 512px;
     max-height: 512px;
+    .swiper-slide{
+      background-color: $main-light-grey;
+    }
     img{
       width: 100%;
       max-height: 512px;
@@ -219,7 +222,6 @@
       color: #fff;
     }
     span{
-      max-width: 80px;
       pointer-events: none;
       text-align: center;
       &:not(:last-child){
@@ -232,5 +234,15 @@
     input{
       display: none;
     }
+  }
+  &__slider-pag{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    top: 64px;
+    right: 32px;
+    left: auto;
+    z-index: 1;
   }
 }

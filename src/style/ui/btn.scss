@@ -41,6 +41,9 @@
   &--primary{
     background-color: $main-blue;
     color: #fff;
+    &:hover{
+      background-color: lighten($main-blue,5);
+    }
   }
   &--secondary{
     background-color: $main-green;

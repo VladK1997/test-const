@@ -14,18 +14,9 @@
 </head>
 <body>
 <div class="d-none">
-    <svg id="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="currentColor" d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path>
-    </svg>
-    <svg id="reload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path>
-    </svg>
-    <svg id="del-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path fill="currentColor" d="M268 416h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12zM432 80h-82.41l-34-56.7A48 48 0 0 0 274.41 0H173.59a48 48 0 0 0-41.16 23.3L98.41 80H16A16 16 0 0 0 0 96v16a16 16 0 0 0 16 16h16v336a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128h16a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16zM171.84 50.91A6 6 0 0 1 177 48h94a6 6 0 0 1 5.15 2.91L293.61 80H154.39zM368 464H80V128h288zm-212-48h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12z"></path>
-    </svg>
-    <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+    <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path stroke-width="8px" stroke="currentColor" fill="none" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>
 </div>
-<div class="page page-editAvert">
+<div class="page page--newAdvert">
     <div class="header">
         <nav class="nav header__nav">
             <div class="container d-flex">
@@ -136,15 +127,16 @@
                             <li class="nav__sub-item"><a href="#">Руководство</a></li>
                         </ul>
                     </li>
+
                 </ul>
                 <!--<a href="#" class="header__mobile-logo">
                     <img src="dist/img/logo2.png">
                 </a>-->
-                <div class="header__profile profile-top ">
+                <div class="header__profile profile-top">
                     <p class="text--white profile-top__btn" href="#" data-authopen>Личный кабинет
                         <span class="profile-top__icon">
-                            <svg>
-                                <use xlink:href="#user-icon"></use>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path>
                             </svg>
                         </span>
                     </p>
@@ -164,189 +156,337 @@
             </div>
         </nav>
     </div>
+    <main class="container container--md">
+        <div class="newAdvert__top">
+            <p class="text text--md">Создать обьявление из 4 шагов</p>
+            <div class="newAdvert__steps steps-wrap">
+                <div class="steps-wrap__item"><p>1</p></div>
+                <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
+                <div class="steps-wrap__item"><p>2</p></div>
+                <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
+                <div class="steps-wrap__item"><p>3</p></div>
+                <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
+                <div class="steps-wrap__item"><p>4</p></div>
+            </div>
+        </div>
+        <div class="newAdvert__step-item step-item">
+            <div class="step-item__title">
+                <p class="step-item__number"><span>1</span></p>
+                <p class="step-item__title-text">Lorem ipsum</p>
+            </div>
+            <div class="step-item__body">
+                <div class="step-item__column">
+                    <label class="form-selected">
+                        <span>Категория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" maxlength="70" type="text" oninput="maxSymbols(this)">
+                        <span class="maxSymb">Осталость <span> 70 </span> знаков</span>
+                    </label>
+                    <label class="form-area">
+                        <span>Описание</span>
+                        <textarea oninput="auto_grow(this);maxSymbols(this)" maxlength="100000" data-onload="auto_grow(this)"></textarea>
+                        <span class="maxSymb">Осталость <span> 100000 </span> знаков</span>
+                    </label>
+                </div>
+                <div class="step-item__column"></div>
+            </div>
+        </div>
+        <div class="newAdvert__step-item step-item">
+            <div class="step-item__title">
+                <p class="step-item__number"><span>3</span></p>
+                <p class="step-item__title-text">Lorem ipsum</p>
+            </div>
+            <div class="step-item__body">
+                <div class="step-item__column">
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="form-selected">
+                        <span>Категория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                </div>
+                <div class="step-item__column">
+                    <label class="form-selected">
+                        <span>Категория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                </div>
+                <div class="step-item__map">
+                    <div class="googleMap" id="map"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="newAdvert__step-item step-item">
+            <div class="step-item__title">
+                <p class="step-item__number"><span>4</span></p>
+                <p class="step-item__title-text">Lorem ipsum</p>
+            </div>
+            <div class="step-item__body">
+                <div class="step-item__column">
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="form-selected">
+                        <span>Категория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                </div>
+                <div class="step-item__column">
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="form-selected">
+                        <span>Категория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Подкатегория</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </main>
     <div class="container container--lg">
-        <div class="editAdvert">
-            <div class="editAdvert__top">
-                <div class="editAdvert__timeInfo">
-                    <p>455<i class="icon icon--md"><svg><use xlink:href="#eye-icon"></use></svg></i></p>
-                    <p>Дата публикации: <span> 01.02.2020</span></p>
-                </div>
-                <p class="editAdvert__number">Обьявление <span>№ 276</span></p>
+        <div class="d-flex u-margin-fly-40 flex-wrap">
+            <div class="u-margin-right-auto">
+                <a href="#" class="before-footer__logo logo logo--sm"><img src="dist/img/logo3.png"></a>
             </div>
-            <div class="editAdvert__content">
-                <div class="editAdvert__sidebar">
-                    <label class="editAdvert__title">
-                        <span>Заголовок</span>
-                        <textarea id="editTitle" oninput="auto_grow(this)" type="text">Аренда Виллы в Одессе Аренда Виллы в Одессе</textarea>
-                    </label>
-                    <label class="editAdvert__label">
-                        <span>Стоимость</span>
-                        <input type="text">
-                    </label>
-                    <label class="editAdvert__label">
-                        <span>Валюта</span>
-                        <span class="select">
-                            <select>
-                                <option>UAH</option>
-                                <option>USD</option>
-                                <option>TurkLira</option>
-                            </select>
-                        </span>
-                    </label>
-                    <label class="editAdvert__label">
-                        <span>Период аренды</span>
-                        <span class="select">
-                            <select>
-                                <option>Сутки</option>
-                                <option>Месяц</option>
-                            </select>
-                        </span>
-
-                    </label>
-                    <label class="editAdvert__label editAdvert__extraInfo">
-                        <span>Дополнительная информация</span>
-                        <textarea onclick="auto_grow(this)" oninput="auto_grow(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi dolores exercitationem harum iste nemo nostrum optio porro quos sit.</textarea>
-                    </label>
-                </div>
-                <div class="editAdvert__photo">
-                    <div class="swiper-container editAdvert__slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                            <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                            <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                        </div>
-                        <div class="editAdvert__slider-pag pagin-fract"></div>
-                    </div>
-                    <div class="editAdvert__slider-preview item-slider-preview">
-                        <label class="item-slider-preview__file-photo file-photo" ondragover="fileOver(this)" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
-                            <input id="filePhoto" type="file" multiple>
-                            <span class="file-photo__plus">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
-                                            </svg>
-                                        </span>
-                            <span class="msg"></span>
-                            <span class="text text--sm">Добавить файл</span>
-                        </label>
-                        <div class="swiper-container item-slider-preview__slider">
-                            <div class="swiper-wrapper" id="test">
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="payment">
+                <div class="payment__item"><img src="dist/img/pay1.png"></div>
+                <div class="payment__item"><img src="dist/img/pay2.png"></div>
+                <div class="payment__item"><img src="dist/img/pay3.svg"></div>
             </div>
-            <div class="editAdvert__desc">
-                <p class="text text-sm">Описание</p>
-                <div class="hr"></div>
-                <label>
-                    <textarea oninput="auto_grow(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur deleniti dolorem doloribus earum, eius et eveniet facilis ipsa ipsum magni neque possimus praesentium quasi, qui quidem repudiandae temporibus unde vero voluptate? Alias aut distinctio eligendi, esse exercitationem nostrum sed tempore tenetur? Dolor facilis obcaecati officiis optio quisquam repellendus rerum sapiente soluta tenetur. Aspernatur fugiat ipsam minus nihil placeat quidem repellat? Adipisci aut, delectus dolorem esse explicabo molestiae recusandae vitae! Amet animi corporis, culpa eius expedita id impedit labore, molestias nam pariatur quaerat quod velit vitae. Accusantium adipisci, alias aperiam cumque, distinctio et, quod rem reprehenderit rerum unde vitae voluptates!</textarea>
-                </label>
-            </div>
-            <div class="d-flex flex-center">
-                <label class="editAdvert__attach">
-                    <span class="text text-sm">Прикрепить документ</span>
-                    <input type="file">
-                    <i class="icon icon--lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"></path></svg>
-                    </i>
-
-                </label>
-                <button type="button" class="cust-btn cust-btn--md cust-btn--primary">Предпросмотр</button>
-            </div>
-            <button class="editAdvert__save-btn"><span>Сохранить изменения</span></button>
         </div>
     </div>
     <footer class="footer">
-        <div class="container container--lg">
-            <div class="footer__wrap">
-                <div class="footer__top-line">
-                    <p class="text-h6 text">Сервис аренды и услуг</p>
-                    <div class="socials">
-                        <a href="https://www.facebook.com/olzagency" target="_blank" class="socials__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                            </svg>
-                        </a>
-                        <div class="socials__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
-                            </svg>
-                        </div>
-                        <a href=" https://www.instagram.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-                            </svg>
-                        </a>
-                        <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-                            </svg>
-                        </a>
-                        <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
-                                </svg>
-                            </svg>
-                        </a>
+    <div class="container container--lg">
+        <div class="footer__wrap">
+            <div class="footer__top-line">
+                <p class="text-h6 text">Сервис аренды и услуг</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/olzagency" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </a>
+                    <div class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
                     </div>
+                    <a href=" https://www.instagram.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a>
+                    <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                        </svg>
+                    </a>
+                    <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                            </svg>
+                        </svg>
+                    </a>
                 </div>
-                <div class="footer__body">
-                    <div class="d-flex flex-wrap">
-                        <div>
+            </div>
+            <div class="footer__body">
+                <div class="d-flex flex-wrap">
+                    <div>
 
-                            <div class="d-flex flex-wrap">
-                                <div class="footer__column">
-                                    <a href="#" class="footer__sub-title">Карта сайта</a>
-                                    <a href="#" class="footer__link text text-sm">Договора об аренде</a>
-                                    <a href="#" class="footer__link text text-sm">Руководство пользователя</a>
-                                    <a href="#" class="footer__link text text-sm">Пользовательское соглашение</a>
-                                    <a href="#" class="footer__link text text-sm">Помощь</a>
-                                    <a href="#" class="footer__link text text-sm">По вопросам о рекламе</a>
-                                </div>
-                                <div class="footer__column">
-                                    <a href="#" class="footer__sub-title">О нас</a>
-                                    <a href="#" class="footer__link text text-sm">Ценности компании</a>
-                                    <a href="#" class="footer__link text text-sm">ПOLZbot</a>
-                                    <a href="#" class="footer__link text text-sm">Рассылка писем</a>
-                                    <a href="#" class="footer__link text text-sm">Вакансии</a>
-                                </div>
-                                <div class="footer__column">
-                                    <p class="footer__sub-title">Партнерам</p>
-                                    <a href="#" class="footer__link text text-sm">Наши партнёры</a>
-                                    <a href="#" class="footer__link text text-sm">Партнёрские программы</a>
-                                </div>
-                                <div class="footer__column">
-                                    <p class="footer__sub-title">Стоимость пакетов</p>
-                                    <a href="#" class="footer__link text text-sm">Главная</a>
-                                    <a href="#" class="footer__link text text-sm">Блог</a>
-                                </div>
+                        <div class="d-flex flex-wrap">
+                            <div class="footer__column">
+                                <a href="#" class="footer__sub-title">Карта сайта</a>
+                                <a href="#" class="footer__link text text-sm">Договора об аренде</a>
+                                <a href="#" class="footer__link text text-sm">Руководство пользователя</a>
+                                <a href="#" class="footer__link text text-sm">Пользовательское соглашение</a>
+                                <a href="#" class="footer__link text text-sm">Помощь</a>
+                                <a href="#" class="footer__link text text-sm">По вопросам о рекламе</a>
+                            </div>
+                            <div class="footer__column">
+                                <a href="#" class="footer__sub-title">О нас</a>
+                                <a href="#" class="footer__link text text-sm">Ценности компании</a>
+                                <a href="#" class="footer__link text text-sm">ПOLZbot</a>
+                                <a href="#" class="footer__link text text-sm">Рассылка писем</a>
+                                <a href="#" class="footer__link text text-sm">Вакансии</a>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Партнерам</p>
+                                <a href="#" class="footer__link text text-sm">Наши партнёры</a>
+                                <a href="#" class="footer__link text text-sm">Партнёрские программы</a>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Стоимость пакетов</p>
+                                <a href="#" class="footer__link text text-sm">Главная</a>
+                                <a href="#" class="footer__link text text-sm">Блог</a>
                             </div>
                         </div>
-                        <div class="footer__tel">
-                            <p class="footer__sub-title">
-                                Отдел рекламы:
-                            </p>
-                            <a class="footer__link text text-lg tel" href="tel:+380506568756">+380 506568756</a>
-                            <a class="footer__link text text-lg tel" href="tel:+380681702284">+380 681702284</a>
-                        </div>
                     </div>
-                </div>
-                <div class="footer__bottom">
-                    <div>
-                        <p class="text text-xs">OLZ.com.ua 2019</p>
-                        <p class="text text-xs">ТОВ "Коляда Софт". Все права защишены</p>
-                    </div>
-                    <div class="footer__logo-boy">
-                        <img src="dist/img/olzboy.png">
+                    <div class="footer__tel">
+                        <p class="footer__sub-title">
+                            Отдел рекламы:
+                        </p>
+                        <a class="footer__link text text-lg tel" href="tel:+380506568756">+380 506568756</a>
+                        <a class="footer__link text text-lg tel" href="tel:+380681702284">+380 681702284</a>
                     </div>
                 </div>
             </div>
+            <div class="footer__bottom">
+                <div>
+                    <p class="text text-xs">OLZ.com.ua 2019</p>
+                    <p class="text text-xs">ТОВ "Коляда Софт". Все права защишены</p>
+                </div>
+                <div class="footer__logo-boy">
+                    <img src="dist/img/olzboy.png">
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </div>
 <div class="popup" id="lang-popup">
     <div class="popup__back" data-closepopup></div>
@@ -425,12 +565,12 @@
         <form id="auth-form" class="popup__body auth-popup__body active">
             <label class="auth-popup__input cust-input">
                 <span class="cust-input__title">E-mail</span>
-                <input type="email" class="cust-input__field" placeholder="E-mail" autocomplete="username">
+                <input type="email" class="cust-input__field" placeholder="E-mail">
                 <span class="cust-input__mesg"></span>
             </label>
             <label class="auth-popup__input cust-input">
                 <span class="cust-input__title">Password</span>
-                <input type="password" class="cust-input__field" placeholder="Password" autocomplete="current-password">
+                <input type="password" class="cust-input__field" placeholder="Password">
                 <span class="cust-input__show" data-showpass>
                      <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
                  </span>
@@ -464,7 +604,7 @@
         <form action="/" class="popup__body auth-popup__body auth-popup__body--reg" id="registrForm">
             <label class="auth-popup__input cust-input cust-input--required">
                 <span class="cust-input__title">E-mail</span>
-                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail" autocomplete="username">
+                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail">
                 <span class="cust-input__mesg"></span>
             </label>
 
@@ -481,7 +621,7 @@
             </label>
             <label class="auth-popup__input cust-input cust-input--required">
                 <span class="cust-input__title">Пароль</span>
-                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль" autocomplete="new-password">
+                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль">
                 <span class="cust-input__show" data-showpass><svg><use xlink:href="#eye-icon"></use> </svg></span>
                 <span id="passGen" class="cust-input__passgen">Введите пароль или использовать:</span>
                 <span class="cust-input__mesg"></span>
@@ -528,8 +668,17 @@
         </div>
     </div>
 </div>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+
+        });
+    }
+    initMap();
+</script>
 <!-- js-скрипт гугл капчи -->
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKQW38syN7mHd8Xc0ymacZjACLYNhfQo8&callback=initMap" defer></script>
 <script src="dist/swiper.min.js"></script>
 <script src="dist/js/darkmode.js"></script>
 <script src="dist/doc/userAreement.js"></script>

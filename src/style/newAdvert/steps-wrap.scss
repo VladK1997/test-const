@@ -1,0 +1,32 @@
+.steps-wrap{
+  display: flex;
+  align-items: center;
+  &__item{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $main-border-color;
+    &.passed{
+      background-color: $main-green;
+    }
+    p{
+      width: 90%;
+      height: 90%;
+      background-color: #fff;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid $main-border-color;
+    }
+  }
+  &__arrow{
+    height: 32px;
+    width: 32px;
+    margin: 0 8px;
+  }
+}

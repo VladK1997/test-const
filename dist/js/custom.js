@@ -33,16 +33,26 @@
                el: '.banner2__pag',
                clickable: true,
            },
+
        })
 
    }
     let itemSlider = new Swiper(".editAdvert__slider", {
         slidesPerView: 1,
         initialSlide: 0,
+        pagination: {
+            el: '.editAdvert__slider-pag',
+            type: 'fraction',
+        },
     });
     let itemPreview = new Swiper(".item-slider-preview__slider", {
         slidesPerView: 4,
         spaceBetween: 8,
+        on:{
+            click: function(){
+                itemSlider.slideTo(this.clickedIndex);
+            }
+        }
     });
     let filePhoto = document.getElementById("filePhoto");
     if(filePhoto) {
@@ -559,9 +569,16 @@ function generatePassword() {
 
     }
 })();
+
 function auto_grow(element) {
     element.style.height = '5px';
-    element.style.height = element.scrollHeight+2+"px";
+    element.style.height = element.scrollHeight+8+"px";
+}
+function maxSymbols(item) {
+    let wrap = item.parentNode;
+    let maxSymbfiled = wrap.querySelector(".maxSymb span");
+    let maxLength = item.maxLength;
+    maxSymbfiled.innerText = +item.maxLength - item.value.length;
 }
 (function () {
     let title = document.getElementById("editTitle");

@@ -1,0 +1,22 @@
+.form-area{
+  width: 100%;
+  span{
+    font-size: 12px;
+    font-weight: 600;
+  }
+  textarea{
+    display: block;
+    width: 100%;
+    resize: none;
+    min-height: 40px;
+  }
+  .maxSymb{
+    display: block;
+    text-align: right;
+    width: 100%;
+    font-weight: 400;
+    span{
+      font-weight: 400;
+    }
+  }
+}
