@@ -8,7 +8,6 @@
   }
   &__timeInfo{
     display: flex;
-
     p{
       display: flex;
       padding: 4px 12px;
@@ -204,6 +203,34 @@
       position: static;
       border-bottom: 1px solid $main-grey;
       content:"";
+    }
+  }
+  &__attach{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid $main-border-color;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 40px;
+    &:hover{
+      background-color: $main-blue;
+      color: #fff;
+    }
+    span{
+      max-width: 80px;
+      pointer-events: none;
+      text-align: center;
+      &:not(:last-child){
+        margin-right: 8px;
+      }
+    }
+    i{
+      pointer-events: none;
+    }
+    input{
+      display: none;
     }
   }
 }
