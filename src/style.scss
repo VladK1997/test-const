@@ -15,22 +15,15 @@
 
 @import "style/profile-top";
 @import "style/lang";
-@import "style/popup";
+@import "style/popup/popup";
 
 @import "style/pagin";
 @import "style/before-footer";
 
-@import "style/ui/cust-select";
-@import "style/ui/cust-input";
-@import "style/ui/cust-check";
-@import "style/ui/btn";
-@import "style/ui/burger";
-@import "style/ui/pag-bul";
-@import "style/ui/toggleOnOff";
+@import "style/ui/ui";
 
 
-@import "style/lang-popup";
-@import "style/auth-popup";
+@import "style/popup/popupAll";
 
 @import "style/profile";
 @import "style/neon";
@@ -58,6 +51,7 @@
 @import "style/packages-item";
 
 @import "style/editAdvert/editAdvertStyle";
+@import "style/item/item";
 
 
 

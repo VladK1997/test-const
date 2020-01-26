@@ -44,6 +44,11 @@ a{
     height: 32px;
   }
 }
+.hr{
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid $main-border-color;
+}
 .container{
   max-width: 1332px;
   margin: 0 auto;
@@ -58,6 +63,9 @@ a{
 }
 .align-items-center{
   align-items: center;
+}
+.justify-between{
+  justify-content: space-between;
 }
 .flex-wrap{
   flex-wrap: wrap;

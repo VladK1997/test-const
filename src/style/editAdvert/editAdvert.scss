@@ -1,4 +1,5 @@
 .editAdvert{
+  padding: 16px 0 40px 0;
   &__top{
     display: flex;
     align-items: center;
@@ -29,6 +30,41 @@
       }
     }
   }
+  &__content{
+    display: flex;
+    padding: 40px 0;
+  }
+  &__photo{
+    flex-grow: 1;
+    max-width: 70%;
+    margin-left: auto;
+
+  }
+  &__slider{
+    height: 512px;
+    max-height: 512px;
+    img{
+      width: 100%;
+      max-height: 512px;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &__desc{
+    width: 100%;
+    textarea{
+      min-height: 300px;
+      width: 100%;
+      resize: none;
+      padding: 16px;
+      border: none;
+      border-bottom: 1px solid $main-border-color;
+      outline: none;
+    }
+  }
+
   &__number{
     font-size: 18px;
     text-align: center;
@@ -43,6 +79,8 @@
   &__title{
     width: 100%;
     display: block;
+    border-bottom : 1px solid $main-border-color;
+    margin-bottom: 16px;
     span{
       font-size: 14px;
       color: $main-medium-grey;
@@ -51,15 +89,17 @@
       border-bottom: 1px solid $main-border-color;
     }
     textarea{
+      padding-top: 8px;
       width: 100%;
       font-size: 24px;
       display: block;
       background: none;
       resize: initial;
       overflow: visible;
-      min-height: 60px;
       border: none;
       outline: none;
+      min-height: 48px;
+      line-height: 24px;
     }
   }
   &__extraInfo{
@@ -70,6 +110,7 @@
       outline: none;
       background-color: transparent;
       resize: none;
+
       &:focus{
         max-height: none;
       }
@@ -96,6 +137,7 @@
       width: 100%;
       display: block;
       min-height: 40px;
+      padding: 0 8px;
       border-radius: 4px;
       border: 1px solid $main-border-color;
     }
@@ -124,6 +166,44 @@
         position: relative;
         min-height: 40px;
       }
+    }
+  }
+  &__slider-preview{
+    margin-top: 24px;
+  }
+  &__save-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 100%;
+    max-width: 282px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 85%;
+      padding: 0 16px;
+      background-color: $main-grey;
+      color: #fff;
+      height: 40px;
+      font-size: 18px;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover{
+        background-color: $main-blue;
+      }
+    }
+    &:after{
+      width: 100%;
+      display: flex;
+      position: static;
+      border-bottom: 1px solid $main-grey;
+      content:"";
     }
   }
 }

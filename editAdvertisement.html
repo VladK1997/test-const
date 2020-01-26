@@ -177,8 +177,8 @@
             <div class="editAdvert__content">
                 <div class="editAdvert__sidebar">
                     <label class="editAdvert__title">
-                        <span>Название</span>
-                        <textarea oninput="auto_grow(this)" type="text">Аренда Виллы в Одессе</textarea>
+                        <span>Заголовок</span>
+                        <textarea id="editTitle" oninput="auto_grow(this)" type="text">Аренда Виллы в Одессе Аренда Виллы в Одессе</textarea>
                     </label>
                     <label class="editAdvert__label">
                         <span>Стоимость</span>
@@ -210,19 +210,26 @@
                     </label>
                 </div>
                 <div class="editAdvert__photo">
-                    <div class="swiper-container item-slider">
+                    <div class="swiper-container editAdvert__slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                         </div>
                     </div>
-                    <div class="item-slider-preview">
-                        <label>
-                            <input id="test" type="file">
+                    <div class="editAdvert__slider-preview item-slider-preview">
+                        <label class="item-slider-preview__file-photo file-photo" ondragover="fileOver(this)" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
+                            <input id="filePhoto" type="file" multiple>
+                            <span class="file-photo__plus">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
+                                            </svg>
+                                        </span>
+                            <span class="msg"></span>
+                            <span class="text text--sm">Добавить файл</span>
                         </label>
                         <div class="swiper-container item-slider-preview__slider">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" id="test">
                                 <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                                 <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                                 <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
@@ -231,6 +238,18 @@
                     </div>
                 </div>
             </div>
+            <div class="editAdvert__desc">
+                <p class="text text-sm">Описание</p>
+                <div class="hr"></div>
+                <label>
+                    <textarea oninput="auto_grow(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur deleniti dolorem doloribus earum, eius et eveniet facilis ipsa ipsum magni neque possimus praesentium quasi, qui quidem repudiandae temporibus unde vero voluptate? Alias aut distinctio eligendi, esse exercitationem nostrum sed tempore tenetur? Dolor facilis obcaecati officiis optio quisquam repellendus rerum sapiente soluta tenetur. Aspernatur fugiat ipsam minus nihil placeat quidem repellat? Adipisci aut, delectus dolorem esse explicabo molestiae recusandae vitae! Amet animi corporis, culpa eius expedita id impedit labore, molestias nam pariatur quaerat quod velit vitae. Accusantium adipisci, alias aperiam cumque, distinctio et, quod rem reprehenderit rerum unde vitae voluptates!</textarea>
+                </label>
+            </div>
+            <div class="d-flex align-items-center justify-between">
+                <input type="file">
+                <button type="button" class="cust-btn cust-btn--md cust-btn--primary">Предпросмотр</button>
+            </div>
+            <button class="editAdvert__save-btn"><span>Сохранить изменения</span></button>
         </div>
     </div>
     <footer class="footer">
@@ -399,12 +418,12 @@
         <form id="auth-form" class="popup__body auth-popup__body active">
             <label class="auth-popup__input cust-input">
                 <span class="cust-input__title">E-mail</span>
-                <input type="email" class="cust-input__field" placeholder="E-mail">
+                <input type="email" class="cust-input__field" placeholder="E-mail" autocomplete="username">
                 <span class="cust-input__mesg"></span>
             </label>
             <label class="auth-popup__input cust-input">
                 <span class="cust-input__title">Password</span>
-                <input type="password" class="cust-input__field" placeholder="Password">
+                <input type="password" class="cust-input__field" placeholder="Password" autocomplete="current-password">
                 <span class="cust-input__show" data-showpass>
                      <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
                  </span>
@@ -438,7 +457,7 @@
         <form action="/" class="popup__body auth-popup__body auth-popup__body--reg" id="registrForm">
             <label class="auth-popup__input cust-input cust-input--required">
                 <span class="cust-input__title">E-mail</span>
-                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail">
+                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail" autocomplete="username">
                 <span class="cust-input__mesg"></span>
             </label>
 
@@ -455,7 +474,7 @@
             </label>
             <label class="auth-popup__input cust-input cust-input--required">
                 <span class="cust-input__title">Пароль</span>
-                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль">
+                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль" autocomplete="new-password">
                 <span class="cust-input__show" data-showpass><svg><use xlink:href="#eye-icon"></use> </svg></span>
                 <span id="passGen" class="cust-input__passgen">Введите пароль или использовать:</span>
                 <span class="cust-input__mesg"></span>

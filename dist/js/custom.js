@@ -34,22 +34,86 @@
                clickable: true,
            },
        })
+
    }
-    let itemSlider = new Swiper(".item-slider", {
+    let itemSlider = new Swiper(".editAdvert__slider", {
         slidesPerView: 1,
         initialSlide: 0,
     });
     let itemPreview = new Swiper(".item-slider-preview__slider", {
-        slidesPerView: 5,
+        slidesPerView: 4,
+        spaceBetween: 8,
     });
+    let filePhoto = document.getElementById("filePhoto");
+    if(filePhoto) {
+        var photoRead = new FileReader();
+        let msg = filePhoto.parentNode.querySelector(".msg");
+        let SliderPhotoArray
+        filePhoto.addEventListener("change", function (e) {
+            SliderPhotoArray = "";
+            let fileAllowed = true;
+            let files = e.target.files;
+
+            console.log(e.target.files[0])
+            for (let i = 0, l = files.length; i < l; i++) {
+                if (files[i].type.match(/image\/[a-zA-Z]*/)) {
+                    continue
+                } else {
+                    fileAllowed = false;
+                    msg.innerHTML = "Вы загружаете <strong>" + files[i].type.split('/')[0] + "</strong><br> Загружайте изображение";
+                    break
+                }
+            }
+            if (fileAllowed) {
+                for (let i = 0, l = files.length; i < l; i++) {
+                    setTimeout(function(){
+                        photoRead.readAsDataURL(files[i]);
+                        photoRead.onload = function(){
+                            let img = photoRead.result;
+
+                            SliderPhotoArray += '<div class="swiper-slide">' +
+                                '<img src="'+ img +'">' +
+                                '</div>'
+                            console.log(photoRead);
+                            updateSlider();
+                        }
+                    },i * 50)
+
+                }
+
+            }
+
+
+        })
+        function updateSlider() {
+            itemPreview.wrapperEl.insertAdjacentHTML("beforeEnd", SliderPhotoArray)
+            itemSlider.wrapperEl.insertAdjacentHTML("beforeEnd", SliderPhotoArray)
+            itemPreview.updateSlides();
+            itemSlider.updateSlides();
+        }
+    }
 })();
-(function () {
-    let ide = document.getElementById("test");
-    ide.addEventListener("click", function (e) {
-        console.log(e);
-    })
+(function(){
+
 })();
 
+
+function fileOver(item){
+    item.classList.add("active");
+}
+function fileLeave(item) {
+    item.classList.remove("active");
+}
+/*function imagedrop(item){
+    input = item.querySelector("input");
+    setTimeout(function () {
+        let files = input.files;
+        for(let i = 0, l = files.length; i < l; i++){
+            files[i].
+        }
+    },0)
+
+}*/
 (function () {
     let itemsWrapper = document.getElementById("itemsWrap");
     window.addEventListener("click", function (e) {
@@ -499,3 +563,9 @@ function auto_grow(element) {
     element.style.height = '5px';
     element.style.height = element.scrollHeight+2+"px";
 }
+(function () {
+    let title = document.getElementById("editTitle");
+    if(title){
+        auto_grow(editTitle);
+    }
+})();
