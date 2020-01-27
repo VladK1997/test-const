@@ -63,8 +63,6 @@
             SliderPhotoArray = "";
             let fileAllowed = true;
             let files = e.target.files;
-
-            console.log(e.target.files[0])
             for (let i = 0, l = files.length; i < l; i++) {
                 if (files[i].type.match(/image\/[a-zA-Z]*/)) {
                     continue
@@ -579,6 +577,41 @@ function maxSymbols(item) {
     let maxSymbfiled = wrap.querySelector(".maxSymb span");
     let maxLength = item.maxLength;
     maxSymbfiled.innerText = +item.maxLength - item.value.length;
+}
+function delPhotos(item) {
+    event.preventDefault();
+    let wrap = item.parentNode;
+    let msg = wrap.querySelector(".msg");
+    let file = wrap.querySelector("input[type='file']");
+    wrap.classList.remove('loaded');
+    wrap.style.backgroundImage = "";
+    msg.innerText ="";
+    file.files[0] = "";
+}
+function addPhotos(item) {
+    var photoRead = new FileReader();
+    let wrap = item.parentNode;
+    let msg = wrap.querySelector(".msg");
+    let fileAllowed = true;
+    let files = item.files;
+    if(!files[0]) return
+    if (files[0].type.match(/image\/[a-zA-Z]*/)) {
+    } else {
+        fileAllowed = false;
+        msg.innerHTML = "Вы загружаете <strong>" + files[0].type.split('/')[0] + "</strong><br> Загружайте изображение";
+    }
+    console.log("photo");
+    if (fileAllowed) {
+        console.log("photo");
+        setTimeout(function(){
+            photoRead.readAsDataURL(files[0]);
+            photoRead.onload = function(){
+                let img = photoRead.result;
+                wrap.style.backgroundImage = 'url('+ img +')';
+                wrap.classList.add("loaded");
+            }
+        },0)
+    }
 }
 (function () {
     let title = document.getElementById("editTitle");

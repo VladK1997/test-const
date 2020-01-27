@@ -1,0 +1,65 @@
+.add-photos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & &__item{
+    color: $main-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+    height: 72px;
+    border: 1px solid $main-border-color;
+    border-radius: 5px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+    &:nth-of-type(n+4){
+      margin-top: auto;
+    }
+    input{
+      display: none;
+    }
+    &--main{
+      height: 160px;
+      width: 200px;
+    }
+
+
+    .msg{
+      font-size: 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      left: 8px;
+      padding: 0 4px;
+      color: $main-red;
+    }
+  }
+  & &__item.loaded &__plus,&__item.loaded .msg{
+    display: none;
+  }
+  &__item.loaded &__del{
+    display: flex;
+  }
+  &__wrap{
+    margin-left: 24px;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__del{
+    display: none;
+    width:  24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    color: $main-red;
+    cursor: pointer;
+  }
+}
