@@ -24,9 +24,13 @@
     max-width: 200px;
     min-height: 40px;
   }
+  &--lg{
+    max-width: 220px;
+    min-height: 48px;
+  }
   &--xl{
     max-width: 240px;
-    min-height: 40px;
+    min-height: 48px;
   }
   &--img{
     padding: 0;
@@ -45,6 +49,10 @@
       background-color: lighten($main-blue,5);
     }
   }
+  &--primaryHover:hover{
+    background-color: lighten($main-blue,5);
+    color: #fff;
+  }
   &--secondary{
     background-color: $main-green;
     color: #fff;
@@ -52,6 +60,9 @@
       background-color: $main-greenHover;
       color: #fff;
     }
+  }
+  &--bordered{
+    border: 1px solid $main-border-color;
   }
   &--third{
     background-color: $main-grey;
