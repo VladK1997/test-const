@@ -1,7 +1,12 @@
 .newAdvert{
+  &__title{
+    font-size: 24px;
+    text-shadow: rgba(#000,0.35) 3px 5px 0px;
+    font-weight: 600;
+  }
   &__top{
     align-items: center;
-
+    padding-top: 24px;
     p{
       text-align: right;
     }
