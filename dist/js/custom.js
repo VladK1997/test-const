@@ -619,3 +619,20 @@ function addPhotos(item) {
         auto_grow(editTitle);
     }
 })();
+(function(){
+    let items = document.querySelectorAll("[data-stepItem]");
+    window.addEventListener("click",function(e){
+        let item = e.target;
+        for(let i = items.length, l = 0; i > l; i--){
+            console.log(item == items[i]);
+            if(item.hasAttribute("data-stepItem") && !item.classList.contains('active')){
+                console.log(items[i - 1]);
+                if(item == items[i] && items[i-1].classList.contains('active')){
+                    item.classList.add("active");
+                }
+
+            }
+        }
+
+    })
+})();

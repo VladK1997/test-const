@@ -1,6 +1,5 @@
 .add-photos{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   & &__item{
     color: $main-green;
@@ -14,6 +13,7 @@
     position: relative;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 
     &:nth-of-type(n+4){
       margin-top: auto;
@@ -22,8 +22,8 @@
       display: none;
     }
     &--main{
-      height: 160px;
-      width: 200px;
+      height: 150px;
+      width: 127px;
     }
 
 
@@ -61,5 +61,27 @@
     transform: translate(50%,-50%);
     color: $main-red;
     cursor: pointer;
+  }
+}
+@media all and(max-width: $tablet-width){
+  .add-photos{
+    flex-wrap: wrap;
+    &__wrap{
+      transition: 0.3s;
+      width: 100%;
+      max-width: 100%;
+      margin: 16px 0 0 0;
+    }
+    & &__item{
+      width: 32%;
+      &:nth-of-type(n+4){
+        margin-top: 16px;
+      }
+      &--main{
+        width: 100%;
+        height: 160px;
+
+      }
+    }
   }
 }

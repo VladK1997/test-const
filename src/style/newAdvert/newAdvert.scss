@@ -1,9 +1,21 @@
 .newAdvert{
   &__top{
-    display: flex;
     align-items: center;
+
+    p{
+      text-align: right;
+    }
   }
   &__steps{
     margin-left: 64px;
+  }
+}
+@media all and(max-width:$mobile-Width){
+  .newAdvert{
+    &__steps{
+      margin-top: 16px;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }

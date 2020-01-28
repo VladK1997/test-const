@@ -11,10 +11,13 @@
     border: 1px solid $main-border-color;
     &.passed{
       background-color: $main-green;
+      p{
+        background-color: $main-green;
+      }
     }
     p{
-      width: 90%;
-      height: 90%;
+      width: 80%;
+      height: 80%;
       background-color: #fff;
       font-size: 18px;
       display: flex;

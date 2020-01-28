@@ -163,17 +163,17 @@
     <main class="container container--md">
         <div class="newAdvert__top">
             <p class="text text--md">Создать обьявление из 4 шагов</p>
-            <div class="newAdvert__steps steps-wrap">
-                <div class="steps-wrap__item"><p>1</p></div>
+            <!--<div class="newAdvert__steps steps-wrap">
+                <div class="steps-wrap__item passed"><p>1</p></div>
                 <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
                 <div class="steps-wrap__item"><p>2</p></div>
                 <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
                 <div class="steps-wrap__item"><p>3</p></div>
                 <div class="steps-wrap__arrow"><svg><use xlink:href="#arrow-icon"></use></svg></div>
                 <div class="steps-wrap__item"><p>4</p></div>
-            </div>
+            </div>-->
         </div>
-        <div class="newAdvert__step-item step-item">
+        <div class="newAdvert__step-item step-item active" data-stepItem>
             <div class="step-item__title">
                 <p class="step-item__number"><span>01</span></p>
                 <p class="step-item__title-text">Определите категорию, дайте описание и добавьте изображения</p>
@@ -300,8 +300,8 @@
                 </div>
             </div>
         </div>
-        <div class="newAdvert__step-item step-item">
-            <div class="step-item__title">
+        <div class="newAdvert__step-item step-item" data-stepItem>
+            <div class="step-item__title step-item__title--2">
                 <p class="step-item__number"><span>02</span></p>
                 <p class="step-item__title-text">Укажите цены и сроки аренды/услуг</p>
             </div>
@@ -348,11 +348,11 @@
                         </label>
                     </div>
                     <div class="row">
-                        <div class="d-flex align-items-center col-md-12">
+                        <div class="d-flex align-items-center col-md-12 u-margin-top-16">
                             <span class="text text-sm u-margin-right-8">
                                     Договорная
                                 </span>
-                            <label class=" cust-check">
+                            <label class="cust-check ">
                                 <input class="cust-check__nat" type="checkbox" data-required data-check-required>
                                 <span class="cust-check__cust"></span>
                             </label>
@@ -369,77 +369,70 @@
                 </div>
             </div>
         </div>
-        <div class="newAdvert__step-item step-item">
-            <div class="step-item__title">
+        <div class="newAdvert__step-item step-item" data-stepItem>
+            <div class="step-item__title step-item__title--3">
                 <p class="step-item__number"><span>03</span></p>
                 <p class="step-item__title-text">Укажите актуальные контакты и корректный адрес</p>
             </div>
             <div class="step-item__body">
                 <div class="step-item__column">
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
-                        <input class="cust-input__field" type="text">
-                    </label>
-                    <label class="form-selected">
-                        <span>Категория</span>
-                        <span class="form-selected__select">
-                            <select>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                            </select>
-                        </span>
-                    </label>
-                    <label class="form-selected">
-                        <span>Подкатегория</span>
-                        <span class="form-selected__select">
-                            <select>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                            </select>
-                        </span>
-                    </label>
-                    <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Имя</span>
                         <input class="cust-input__field" type="text">
                     </label>
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">E-mail</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Телефон</span>
+                        <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="cust-input">
+                        <span class="cust-input__title">Доп. номер телефона</span>
                         <input class="cust-input__field" type="text">
                     </label>
                 </div>
                 <div class="step-item__column">
-                    <label class="form-selected">
-                        <span>Категория</span>
-                        <span class="form-selected__select">
-                            <select>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                            </select>
-                        </span>
-                    </label>
-                    <label class="form-selected">
-                        <span>Подкатегория</span>
-                        <span class="form-selected__select">
-                            <select>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                                <option>lorem</option>
-                            </select>
-                        </span>
-                    </label>
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Страна</span>
                         <input class="cust-input__field" type="text">
                     </label>
+                    <label class="form-selected">
+                        <span>Область</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Город</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
+                    <label class="form-selected">
+                        <span>Район</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
+                    </label>
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Улица</span>
                         <input class="cust-input__field" type="text">
                     </label>
                 </div>
@@ -449,19 +442,19 @@
 
             </div>
         </div>
-        <div class="newAdvert__step-item step-item">
-            <div class="step-item__title">
+        <div class="newAdvert__step-item step-item" data-stepItem>
+            <div class="step-item__title step-item__title--4">
                 <p class="step-item__number"><span>04</span></p>
-                <p class="step-item__title-text">Lorem ipsum</p>
+                <p class="step-item__title-text">Характеристики</p>
             </div>
             <div class="step-item__body">
                 <div class="step-item__column">
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Страна производитель</span>
                         <input class="cust-input__field" type="text">
                     </label>
                     <label class="form-selected">
-                        <span>Категория</span>
+                        <span>Аренда с водителем</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -472,7 +465,7 @@
                         </span>
                     </label>
                     <label class="form-selected">
-                        <span>Подкатегория</span>
+                        <span>Страховка</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -483,7 +476,7 @@
                         </span>
                     </label>
                     <label class="form-selected">
-                        <span>Подкатегория</span>
+                        <span>Тип двигателя</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -494,17 +487,13 @@
                         </span>
                     </label>
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Фирма производитель</span>
                         <input class="cust-input__field" type="text">
                     </label>
                 </div>
                 <div class="step-item__column">
-                    <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
-                        <input class="cust-input__field" type="text">
-                    </label>
                     <label class="form-selected">
-                        <span>Категория</span>
+                        <span>Тип привода</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -515,7 +504,7 @@
                         </span>
                     </label>
                     <label class="form-selected">
-                        <span>Подкатегория</span>
+                        <span>Наличие рамы</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -526,7 +515,7 @@
                         </span>
                     </label>
                     <label class="form-selected">
-                        <span>Подкатегория</span>
+                        <span>Аренда по километражу</span>
                         <span class="form-selected__select">
                             <select>
                                 <option>lorem</option>
@@ -537,8 +526,19 @@
                         </span>
                     </label>
                     <label class="cust-input">
-                        <span class="cust-input__title">Заголовок обьявления</span>
+                        <span class="cust-input__title">Год выпуска</span>
                         <input class="cust-input__field" type="text">
+                    </label>
+                    <label class="form-selected">
+                        <span>_</span>
+                        <span class="form-selected__select">
+                            <select>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                                <option>lorem</option>
+                            </select>
+                        </span>
                     </label>
                 </div>
             </div>
