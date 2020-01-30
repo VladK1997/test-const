@@ -37,17 +37,18 @@
        })
 
    }
-    let itemSlider = new Swiper(".editAdvert__slider", {
+    let itemSlider = new Swiper(".advert-slider", {
         slidesPerView: 1,
         initialSlide: 0,
+        autoHeight: true,
         pagination: {
-            el: '.editAdvert__slider-pag',
+            el: '.advert-slider__pag',
             type: 'fraction',
         },
     });
     let itemPreview = new Swiper(".item-slider-preview__slider", {
         slidesPerView: 4,
-        spaceBetween: 8,
+        spaceBetween: 4,
         on:{
             click: function(){
                 itemSlider.slideTo(this.clickedIndex);

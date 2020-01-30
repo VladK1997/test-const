@@ -1,0 +1,12 @@
+.advert-slider{
+  &__pag{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    top: 32px;
+    right: 32px;
+    left: auto;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/first-style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/font.css">
+    <link rel="stylesheet" href="dist/app.css">
+
+</head>
+<body>
+<div class="d-none">
+    <svg id="cross-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg>
+    <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path stroke-width="8px" stroke="currentColor" fill="none" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>
+</div>
+<div class="page">
+    <div class="header">
+        <nav class="nav header__nav">
+            <div class="container d-flex">
+                <div class="burger" id="headerBurger">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+                <a href="#" class="header__logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 212.8 88.2" style="enable-background:new 0 0 212.8 88.2;" xml:space="preserve">
+                            <path fill="#fff" d="M86.2,45.1c0,24.9-19.3,45.1-43.1,45.1S0,70.1,0,45.1S19.3,0,43.1,0S86.2,20.2,86.2,45.1z M42.1,16.8
+                                c-14.9,0-26.9,12.6-26.9,28.2s12.1,28.2,26.9,28.2s26.9-12.6,26.9-28.2S57,16.8,42.1,16.8z"/>
+                        <polygon fill="#43B64D" class="st1" points="97,3.2 113.9,2.3 114.7,70 143.5,70.9 143.7,88 97.2,87.4 "/>
+                        <polygon fill="#fff" points="154.2,2 215,2.6 181.5,69.4 180.7,71.8 212.8,72.1 212.8,88.2 151.9,88 185.7,20 152.5,20.3 152.8,2.3
+                                "/>
+                        </svg>
+
+                </a>
+                <ul class="nav__list header__nav-list" id="headerList">
+                    <li class="nav__item">
+                        <a class="text--white" href="#">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="text--white" href="#">Руководство<br>пользователя</a>
+                        <ul class="nav__sub-list">
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a class="text--white" href="#">Блог</a>
+                        <ul class="nav__sub-list">
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a class="text--white" href="#">Цены и предложения</a>
+                        <ul class="nav__sub-list">
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a class="text--white" href="#">Помощь</a>
+                        <ul class="nav__sub-list">
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a class="text--white" href="#">Контакты</a>
+                        <ul class="nav__sub-list">
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--<a href="#" class="header__mobile-logo">
+                    <img src="dist/img/logo2.png">
+                </a>-->
+                <div class="header__profile profile-top">
+                    <a class="text--white profile-top__btn" href="#">Личный <br>кабинет
+                        <span class="profile-photo profile-photo--small u-margin-left-8">
+                                <img src="dist/img/olzboy.png">
+                            </span>
+                    </a>
+                    <div class="profile-top__wrap">
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <a class="profile-top__item" href="#">Руководство</a>
+                        <button class="profile-top__exit">Выход</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="container container--lg">
+        <div class="mainAdvert-top">
+            <div class="mainAdvert-top__timeInfo">
+                <p>455<i class="icon icon--md"><svg><use xlink:href="#eye-icon"></use></svg></i></p>
+                <p>Дата публикации: <span> 01.02.2020</span></p>
+            </div>
+            <p class="mainAdvert-top__number">Обьявление <span>№ 276</span></p>
+        </div>
+        <div class="advert">
+            <div class="row">
+                <div class="col col-md-7">
+                    <div class="advert__photo">
+                        <div class="swiper-container advert__slider advert-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                            </div>
+                            <div class="advert-slider__pag pagin-fract"></div>
+                        </div>
+                        <div class="advert__slider-preview item-slider-preview item-slider-preview--static">
+                            <div class="swiper-container item-slider-preview__slider ">
+                                <div class="swiper-wrapper" id="test">
+                                    <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                    <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                    <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                    <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-5">
+                    <p class="advert__title">Cдам виллу в аренду на берегу  моря</p>
+                    <div class="d-flex justify-between align-items-center">
+                        <p class="advert__price">
+                            Стоимость: <span>500 грн/сутки</span>
+                        </p>
+                        <p class="text text-md text-secondary">Договорная</p>
+                    </div>
+                    <div class="advert__extra-info">
+                        <p class="title">Дополнительная информация :</p>
+                        <p>При аренде на максимальный срок  - скидка 10% от  общей стоимсо</p>
+                    </div>
+                    <p class="advert__owner">Анастасия</p>
+                    <div class="row justify-between">
+                        <div class="col col-md-6">
+                            <a href="tel:097651544" class="cust-btn cust-btn--xxl cust-btn--rounded cust-btn--primary">Позвонить</a>
+                        </div>
+                        <div class="col col-md-6">
+                            <a href="tel:097651544" class="cust-btn cust-btn--xxl cust-btn--rounded cust-btn--secondary">Позвонить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="advert__desc text text--md">
+                Новый дом на побережье Коста Бланка в Кальпе. Расположен в 1,5 км до пляжа Ла Фустера с прогулочной
+                дорожкой вдоль моря, яхт клуба Бассетес и в 2,8 км до песчаного пляжа Ла Фоса-Леванте с прогулочной
+                набережной. Дом общей площадью 202,70 м2 построен в два уровня на участке 836 м2. Верхний этаж
+                занимают жилые помещения: прихожая, салон – столовая 50 м2 с оборудованной кухней открытого типа,
+                3 спальни, одна из которых сюит, 2 ванные комнаты, 1 туалет, терраса. На нижнем этаже расположены
+                гараж 42 м2, хозяйственное помещение 12 м2. Оборудование: система кондиционирования холод/тепло,
+                предустановка системы отопления/радиаторы, охранная сигнализация-предустановка, окна -двойное
+                против ударное (6+6) остекление +камера марки Climalit, кухонная электротехника марки BOSH, краны
+                марки Roca, встроенные шкафы, подключение к общей канализационной системе. На участке: сад, паркинг,
+                бассейн с предустановкой для подогрева, душ.
+            </p>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+    <div class="container container--md">
+        <div class="footer__wrap">
+            <div class="footer__top-line">
+                <p class="text-h6 text">Сервис аренды и услуг</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/olzagency" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </a>
+                    <div class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
+                    </div>
+                    <a href=" https://www.instagram.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__body">
+                <div class="d-flex flex-wrap">
+                    <div>
+
+                        <div class="d-flex flex-wrap">
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Карта сайта</p>
+                                <a href="#" class="footer__link text text-sm">О нас</a>
+                                <a href="#" class="footer__link text text-sm">Примеры договоров аренжы</a>
+                                <a href="#" class="footer__link text text-sm">Руководство пользователя</a>
+                                <a href="#" class="footer__link text text-sm">Соглашние пользователя</a>
+                                <a href="#" class="footer__link text text-sm">Служба поддержки</a>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Партнерам</p>
+                                <a href="#" class="footer__link text text-sm">Наши вакансии</a>
+                                <a href="#" class="footer__link text text-sm">Панетв услуг</a>
+                                <a href="#" class="footer__link text text-sm">Контакты</a>
+                                <a href="#" class="footer__link text text-sm">Главная</a>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Партнерам</p>
+                                <a href="#" class="footer__link text text-sm">Наши вакансии</a>
+                                <a href="#" class="footer__link text text-sm">Панетв услуг</a>
+                                <a href="#" class="footer__link text text-sm">Контакты</a>
+                                <a href="#" class="footer__link text text-sm">Главная</a>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Партнерам</p>
+                                <a href="#" class="footer__link text text-sm">Наши вакансии</a>
+                                <a href="#" class="footer__link text text-sm">Панетв услуг</a>
+                                <a href="#" class="footer__link text text-sm">Контакты</a>
+                                <a href="#" class="footer__link text text-sm">Главная</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__tel">
+                        <p class="footer__sub-title">
+                            Отдел рекламы:
+                        </p>
+                        <a class="footer__link text text-lg tel" href="tel:+380506568756">+380 506568756</a>
+                        <a class="footer__link text text-lg tel" href="tel:+380681702284">+380 681702284</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>
+                    <p class="text text-xs">OLZ.com.ua 2019</p>
+                    <p class="text text-xs">ТОВ "Коляда Софт". Все права защишены</p>
+                </div>
+                <div class="footer__logo-boy">
+                    <img src="dist/img/olzboy.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="dist/swiper.min.js"></script>
+<script src="dist/js/darkmode.js"></script>
+<script src="dist/doc/userAreement.js"></script>
+<script src="dist/js/custom.js"></script>
+</body>
+</html>

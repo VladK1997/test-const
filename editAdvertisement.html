@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="dist/font.css">
     <link rel="stylesheet" href="dist/app.css">
 
+
 </head>
 <body>
 <div class="d-none">
@@ -166,12 +167,12 @@
     </div>
     <div class="container container--lg">
         <div class="editAdvert">
-            <div class="editAdvert__top">
-                <div class="editAdvert__timeInfo">
+            <div class="editAdvert__top mainAdvert-top">
+                <div class="mainAdvert-top__timeInfo">
                     <p>455<i class="icon icon--md"><svg><use xlink:href="#eye-icon"></use></svg></i></p>
                     <p>Дата публикации: <span> 01.02.2020</span></p>
                 </div>
-                <p class="editAdvert__number">Обьявление <span>№ 276</span></p>
+                <p class="mainAdvert-top__number">Обьявление <span>№ 276</span></p>
             </div>
             <div class="editAdvert__content">
                 <div class="editAdvert__sidebar">
@@ -209,17 +210,16 @@
                     </label>
                 </div>
                 <div class="editAdvert__photo">
-                    <div class="swiper-container editAdvert__slider">
+                    <div class="swiper-container editAdvert__slider advert-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                             <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
                         </div>
-                        <div class="editAdvert__slider-pag pagin-fract"></div>
+                        <div class="advert-slider__pag pagin-fract"></div>
                     </div>
                     <div class="editAdvert__slider-preview item-slider-preview">
-                        <label class="item-slider-preview__file-photo file-photo" ondragover="fileOver(this)" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
-                            <input id="filePhoto" type="file" multiple>
+                        <label class="item-slider-preview__file-photo file-photo" ondragover="fileOver(this)" accept="image/*" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
                             <span class="file-photo__plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
