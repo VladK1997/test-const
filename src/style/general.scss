@@ -43,6 +43,12 @@ a{
     width: 32px;
     height: 32px;
   }
+  &--mr{
+    margin-right: 8px;
+  }
+  &--ml{
+    margin-left: 8px;
+  }
 }
 .hr{
   width: 100%;

@@ -1,0 +1,30 @@
+.hidden-tel{
+  display: flex;
+  align-items: center;
+  span{
+    font-size: 18px;
+    max-width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-weight: 600;
+    color: $main-blue;
+  }
+  & &__show-text{
+    transform-origin: right;
+    position: absolute;
+    left: 100%;
+    max-width: 160px;
+    font-size: 14px;
+  }
+  input{
+    display: none;
+  }
+  input:checked ~ span{
+    max-width: 200px;
+  }
+  input:checked ~ &__show-text{
+    transform: scaleX(0);
+    max-width: 0;
+  }
+}
