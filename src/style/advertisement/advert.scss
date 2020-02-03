@@ -159,6 +159,9 @@
       line-height: 2;
     }
   }
+  &__articles{
+    margin: 32px 0;
+  }
 }
 @media all and(max-width: $mobile-Width){
   .advert{
@@ -203,5 +206,6 @@
     &__print-document{
       margin:  0 auto;
     }
+
   }
 }

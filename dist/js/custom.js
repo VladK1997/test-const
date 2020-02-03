@@ -1,15 +1,32 @@
 (function() {
-   let promotionSlider = new Swiper('.promotion', {
-       slidesPerView: 1,
+   let promotionSlider = new Swiper('.articles', {
+       slidesPerView: 3,
        initialSlide: 0,
-       autoplay:{
-           delay: 3000,
-       },
-       pagination: {
-           el: '.promotion__pag',
-           clickable: true,
-       },
+       spaceBetween: 20,
+       breakpoints: {
+           1300:{
+               slidesPerView: 2,
+           },
+           768:{
+               slidesPerView: 1,
+           }
+       }
    });
+   let promotion = document.querySelector('.promotion');
+   if(promotion){
+       let promotionSlider = new Swiper('.promotion', {
+           slidesPerView: 1,
+           initialSlide: 0,
+           autoplay:{
+               delay: 3000,
+           },
+           pagination: {
+               el: '.promotion__pag',
+               clickable: true,
+           },
+       });
+   }
+
 
    if(window.innerWidth < 994) {
        let banner1Swiper = new Swiper(".banner1-swiper", {
