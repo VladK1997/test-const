@@ -53,6 +53,21 @@
             click: function(){
                 itemSlider.slideTo(this.clickedIndex);
             }
+        },
+        breakpoints:{
+            980:{
+                slidesPerView: 3
+            },
+            768:{
+                slidesPerView: 4
+            },
+            576:{
+                slidesPerView: 3
+            },
+            444:{
+                slidesPerView: 2
+            }
+
         }
     });
     let filePhoto = document.getElementById("filePhoto");

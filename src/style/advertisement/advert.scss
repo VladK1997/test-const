@@ -20,6 +20,9 @@
     font-weight: 600;
     margin-bottom: 24px;
     color: #565656;
+    &--mob{
+      display: none;
+    }
   }
   &__price{
     font-size: 24px;
@@ -63,8 +66,13 @@
       border-bottom: 1px solid $main-border-color;
     }
   }
+  &__desc-title{
+    margin-top: 16px;
+    color: rgba($main-grey,0.8);
+  }
   &__desc{
-    margin-top: 24px;
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
   &__hidden-tel{
     position: absolute;
@@ -127,6 +135,73 @@
       position: absolute;
       top: 0;
       right: 15px;
+    }
+  }
+  &__favorite{
+    margin-top: 16px;
+    justify-content: flex-end;
+    .icon{
+      margin-left: 8px;
+    }
+  }
+  &__share{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  &__print-document{
+    button{
+      margin: 0 auto;
+    }
+    a{
+      display: block;
+      font-size: 18px;
+      line-height: 2;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .advert{
+    &__title{
+      margin-top: 16px;
+      display: none;
+      &--mob{
+        display: block;
+      }
+    }
+    &__photo{
+      padding-bottom: 16px;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .advert{
+    &__slider{
+      min-height: 0;
+    }
+    &__title{
+      font-size: 24px;
+    }
+    &__owner{
+      margin-bottom: 24px;
+    }
+    &__map{
+      min-height: 260px;
+    }
+    &__map-text{
+      &-bottom ,&-top{
+        font-size: 14px;
+      }
+    }
+    &__price{
+      font-size: 20px;
+    }
+    &__share{
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
+    &__print-document{
+      margin:  0 auto;
     }
   }
 }

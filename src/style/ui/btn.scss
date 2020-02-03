@@ -36,6 +36,11 @@
     max-width: 300px;
     min-height: 48px;
   }
+  &--h{
+    &-xl{
+      min-height: 48px;
+    }
+  }
   &--img{
     padding: 0;
   }

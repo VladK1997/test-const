@@ -6,25 +6,15 @@
   padding: 8px 0;
   &__timeInfo{
     display: flex;
-    p{
-      display: flex;
-      padding: 4px 12px;
-      &:first-child{
-        padding-left: 0;
-      }
-      &:not(:first-child){
-        border-left: 1px solid $main-border-color;
-      }
-      align-items: center;
-      font-size: 16px;
-      line-height: 1;
-      color: $main-medium-grey;
-      .icon{
-        margin-left: 8px;
-      }
-      span{
-        color: $main-grey;
-      }
+    padding: 4px 12px;
+    border-left: 1px solid $main-border-color;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    color: $main-medium-grey;
+
+    span{
+      color: $main-grey;
     }
   }
   &__number{
@@ -33,6 +23,70 @@
     flex-grow: 1;
     span{
       color: $main-green;
+    }
+  }
+  &__visit{
+    display: flex;
+    align-items: center;
+    color: $main-medium-grey;
+    padding-right: 12px;
+    .icon{
+      margin-left: 8px;
+    }
+  }
+  &__favorite{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg{
+      stroke-width: 16px;
+    }
+
+    .icon{
+      margin-left: 8px;
+      position: relative;
+    }
+  }
+}
+
+@media all and(max-width: $mobile-Width){
+  .mainAdvert-top{
+    background-color: rgba($main-green,0.7);
+    &__timeInfo{
+      order:2;
+      border:none;
+      font-size: 0;
+      span{
+        font-size: 16px;
+      }
+    }
+    &__favorite{
+      display: none;
+    }
+    &__visit{
+      line-height: 1;
+      color: $main-grey;
+      padding-left: 8px;
+      .icon{
+        height: 16px;
+        width: 16px;
+      }
+    }
+    &__number{
+      font-size: 18px;
+      span{
+        color: $main-grey;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .mainAdvert-top{
+    &__visit,&__timeInfo span{
+      font-size: 14px;
+    }
+    &__number{
+      font-size: 14px;
     }
   }
 }
