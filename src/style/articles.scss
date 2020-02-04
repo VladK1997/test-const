@@ -1,9 +1,18 @@
 .articles{
+  z-index: 2;
+  position: relative;
   &__item{
     display: flex;
     max-height: 160px;
     overflow: hidden;
     border: 1px solid $main-border-color;
+    position: relative;
+    transition: 0.3s;
+    transform: translateZ(0);
+    &:hover{
+      box-shadow: 0 0 16px 4px $main-border-color;
+      transform: scale(1.005)translateZ(0);
+    }
   }
   &__readMore{
     font-size: 24px;
@@ -27,12 +36,22 @@
     line-height: 1.6;
   }
   &__img{
+    display: block;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     width: 49%;
     padding-top: 40%;
     margin-right: 2%;
+    &:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
   }
   &__info{
     width: 49%;
@@ -40,9 +59,9 @@
     padding: 8px;
     &:after{
       height: 16px;
-      width: 33px;
+      width: 37px;
       position: absolute;
-      bottom: 5px;
+      bottom: 11px;
       font-size: 20px;
       padding-left: 4px;
       padding-right: 4px;
@@ -50,11 +69,21 @@
       background-color: #fff;
       content:'...';
     }
+    &:before{
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: #fff;
+      content:"";
+    }
   }
   &__text{
     position: relative;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.6;
 
   }
 

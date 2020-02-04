@@ -62,6 +62,9 @@
   &--primary{
     color: $main-blue;
   }
+  &--nowrap{
+    white-space: nowrap;
+  }
   &-lh{
     &-xs{
       line-height: 1.1;

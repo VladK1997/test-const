@@ -1,5 +1,6 @@
+let vWidth = window.innerWidth;
 (function() {
-   let promotionSlider = new Swiper('.articles', {
+   let articlesSlider = new Swiper('.articles', {
        slidesPerView: 3,
        initialSlide: 0,
        spaceBetween: 20,
@@ -27,8 +28,10 @@
        });
    }
 
+   if(vWidth < 1301){
 
-   if(window.innerWidth < 994) {
+   }
+   if(vWidth < 994) {
        let banner1Swiper = new Swiper(".banner1-swiper", {
            slidesPerView: 1,
            autoHeight: true,
