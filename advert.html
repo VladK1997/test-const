@@ -485,6 +485,186 @@
         </div>
     </div>
 </footer>
+<div class="popup" id="lang-popup">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap lang-popup">
+        <div class="popup__top">
+            <p class="popup__title">Выбор языка</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <div class="popup__body">
+            <a href="#" class="lang-popup__item"><i class="lang-popup__flag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100">
+                    <rect width="150" height="100" fill="#005BBB"/>
+                    <rect width="150" height="50" y="50" fill="#FFD500"/>
+                </svg>
+            </i>украинский</a>
+            <a href="#" class="lang-popup__item">
+                <i class="lang-popup__flag">
+                    <svg viewBox="0 0 310.09174 203.5294" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="matrix(2.8449 0 0 2.9076 -1524.9 -966.36)">
+                            <path d="m585 332.36h11v70h-11z" fill="#f10002"/>
+                            <path d="m536 361.36h109v12h-109z" fill="#f10002"/>
+                            <g transform="translate(61,-105)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1,0,0,1,1120,-105)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1 0 0 -1 1120 839.72)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1,0,0,1,1058,-62)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                        </g>
+                    </svg>
+                </i>английский</a>
+            <a href="#" class="lang-popup__item">
+                <i class="lang-popup__flag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+                        <rect width="1200" height="800" fill="#E30A17"/>
+                        <circle cx="425" cy="400" r="200" style="fill:#ffffff"/>
+                        <circle cx="475" cy="400" r="160" style="fill:#E30A17"/>
+                        <polygon style="fill:#ffffff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/>
+                    </svg>
+                </i>
+                турецкий
+            </a>
+            <a href="#" class="lang-popup__item lang-popup__item--active">
+                <i class="lang-popup__flag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                        <rect stroke-width="0.5px" stroke="#7d7c7c" fill="#fff" width="9" height="3"/>
+                        <rect fill="#d52b1e" y="3" width="9" height="3"/>
+                        <rect fill="#0039a6" y="2" width="9" height="2"/>
+                    </svg>
+                </i>русский
+            </a>
+            <button type="button" class="u-margin-top-32 text-sm u-margin-left-auto cust-btn--sm cust-btn--primary cust-btn" data-closepopup>Закрыть</button>
+        </div>
+    </div>
+</div>
+<div class="popup" id="auth-popup">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap auth-popup">
+        <div class="popup__top">
+            <p class="popup__title">Авторизация</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <form id="auth-form" class="popup__body auth-popup__body active">
+            <label class="auth-popup__input cust-input">
+                <span class="cust-input__title">E-mail</span>
+                <input type="email" class="cust-input__field" placeholder="E-mail">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input">
+                <span class="cust-input__title">Password</span>
+                <input type="password" class="cust-input__field" placeholder="Password">
+                <span class="cust-input__show" data-showpass>
+                     <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                 </span>
+                <span class="cust-input__mesg"></span>
+            </label>
+            <button class="cust-btn cust-btn--primary">Войти</button>
+            <div class="d-flex flex-center">
+                <button type="button" class="text text--sm text--primary text-lh-xl cust-btn--clear" data-switch>Зарегистрироваться</button>
+            </div>
+            <div class="">
+                <p class="text text-sm d-flex flex-center">Или войти через</p>
+                <div class="d-flex flex-center">
+                    <a href="#" class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </a>
+                    <div class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
+                    </div>
+                    <a href="#" class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </form>
+        <form action="/" class="popup__body auth-popup__body auth-popup__body--reg" id="registrForm">
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">E-mail</span>
+                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail">
+                <span class="cust-input__mesg"></span>
+            </label>
+
+            <label class="auth-popup__input cust-input cust-input--required active">
+                <span class="cust-input__title">ФИО</span>
+                <input type="text" class="cust-input__field" name="name" data-required  placeholder="ФИО">
+                <span class="cust-input__mesg"></span>
+            </label>
+
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Телефон</span>
+                <input type="tel" class="cust-input__field" name="tel" maxlength="13" data-required placeholder="Введите номер">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Пароль</span>
+                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль">
+                <span class="cust-input__show" data-showpass><svg><use xlink:href="#eye-icon"></use> </svg></span>
+                <span id="passGen" class="cust-input__passgen">Введите пароль или использовать:</span>
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Повторите пароль</span>
+                <input type="password" class="cust-input__field" name="password" data-required placeholder="Повторите пароль">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__check cust-check">
+                <input class="cust-check__nat" type="checkbox">
+                <span class="cust-check__cust"></span>
+                <span class="text text-xs text-lh-xs">Уведомлять о скидках:</span>
+            </label>
+            <label class="auth-popup__check cust-check cust-check--required" >
+                <input class="cust-check__nat" type="checkbox" data-required data-check-required>
+                <span class="cust-check__cust"></span>
+                <span class="text text-xs">
+                     Я ознакомился(-ась) с
+                     <a href="#" data-userAgree>Cоглашением пользователя OLZ</a>
+                     и согласен(-на) со всеми условиями
+                 : </span>
+            </label>
+            <!-- добавление элемента div -->
+            <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+            <!-- элемент для вывода ошибок -->
+            <div class="text-danger" id="recaptchaError"></div>
+
+
+            <button type="submit" class="auth-popup__btn u-margin-side-auto cust-btn cust-btn--secondary cust-btn--xl">Зарегистрироваться</button>
+            <p class="text text-sm d-flex flex-center text--primary" data-switch>Войти</p>
+        </form>
+    </div>
+</div>
+<div class="popup" id="user-agree">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap user-agree">
+        <div class="popup__top">
+            <p class="popup__title">Пользовательское соглашение сервисов OLZ.ua</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <div class="popup__body user-agree__body">
+            <p id="userAgreeText"></p>
+        </div>
+    </div>
+</div>
 <script>
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
