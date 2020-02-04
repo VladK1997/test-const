@@ -1,18 +1,21 @@
 let vWidth = window.innerWidth;
 (function() {
-   let articlesSlider = new Swiper('.articles', {
-       slidesPerView: 3,
-       initialSlide: 0,
-       spaceBetween: 20,
-       breakpoints: {
-           1300:{
-               slidesPerView: 2,
-           },
-           768:{
-               slidesPerView: 1,
-           }
-       }
-   });
+    let articles = document.querySelector('.articles');
+    if(articles) {
+        let articlesSlider = new Swiper('.articles', {
+            slidesPerView: 3,
+            initialSlide: 0,
+            spaceBetween: 20,
+            breakpoints: {
+                1300: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    }
    let promotion = document.querySelector('.promotion');
    if(promotion){
        let promotionSlider = new Swiper('.promotion', {
