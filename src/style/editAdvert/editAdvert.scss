@@ -27,6 +27,7 @@
   }
   &__desc{
     width: 100%;
+    margin-bottom: 16px;
     textarea{
       min-height: 300px;
       width: 100%;
@@ -198,6 +199,11 @@
     input{
       display: none;
     }
+  }
+  &__attach-exFiles{
+    margin: 0 auto;
+    display: flex;
+    margin-top: 16px;
   }
   .advert-slider__pag{
     top: 64px;

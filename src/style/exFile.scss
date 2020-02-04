@@ -1,0 +1,59 @@
+.exFile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__item{
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    padding-right: 24px;
+    width: 260px;
+    border: 1px solid $main-border-color;
+    &--overflow{
+      &:after{
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        background-color: #fff;
+        font-size: 18px;
+        transform: translateY(-50%);
+        content:'...';
+      }
+    }
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+    span{
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+    }
+    font-size: 14px;
+    .icon{
+      margin-right: 10px;
+    }
+  }
+  & &__del{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    border: 1px solid $main-red;
+    &:after,&:before{
+      width: 80%;
+      border-bottom: 1px solid $main-red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) rotate(45deg);
+      content:"";
+    }
+    &:before{
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+}

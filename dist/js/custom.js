@@ -73,8 +73,12 @@ let vWidth = window.innerWidth;
         slidesPerView: 4,
         spaceBetween: 4,
         on:{
-            click: function(){
-                itemSlider.slideTo(this.clickedIndex);
+            click: function(e){
+                itemSlider.slideTo(this.clickedIndex-1);
+                if(e.target.hasAttribute('data-del-img')){
+                    deleteImg(this.clickedIndex)
+                }
+
             }
         },
         breakpoints:{
@@ -98,6 +102,7 @@ let vWidth = window.innerWidth;
         var photoRead = new FileReader();
         let msg = filePhoto.parentNode.querySelector(".msg");
         let SliderPhotoArray
+
         filePhoto.addEventListener("change", function (e) {
             SliderPhotoArray = "";
             let fileAllowed = true;
@@ -130,11 +135,16 @@ let vWidth = window.innerWidth;
 
             }
 
-
         })
         function updateSlider() {
             itemPreview.wrapperEl.insertAdjacentHTML("beforeEnd", SliderPhotoArray)
             itemSlider.wrapperEl.insertAdjacentHTML("beforeEnd", SliderPhotoArray)
+            itemPreview.updateSlides();
+            itemSlider.updateSlides();
+        }
+        function deleteImg(index){
+            itemPreview.slides[index].parentNode.removeChild(itemPreview.slides[index])
+            itemSlider.slides[index].parentNode.removeChild(itemSlider.slides[index])
             itemPreview.updateSlides();
             itemSlider.updateSlides();
         }
@@ -163,20 +173,22 @@ function fileLeave(item) {
 }*/
 (function () {
     let itemsWrapper = document.getElementById("itemsWrap");
-    window.addEventListener("click", function (e) {
-        if(e.target.closest("[data-view]") && e.target.closest("[data-view]").hasAttribute("data-view")){
-            let data = e.target.closest("[data-view]").dataset;
-            itemsWrapper.classList.remove("property-"+data.viewremove+"-view");
-            itemsWrapper.classList.add("property-"+data.view+"-view");
-        }
-    })
+    if(itemsWrapper) {
+        window.addEventListener("click", function (e) {
+            if (e.target.closest("[data-view]") && e.target.closest("[data-view]").hasAttribute("data-view")) {
+                let data = e.target.closest("[data-view]").dataset;
+                itemsWrapper.classList.remove("property-" + data.viewremove + "-view");
+                itemsWrapper.classList.add("property-" + data.view + "-view");
+            }
+        })
 
-    window.addEventListener("resize",function(){
-       if(window.innerWidth <= 768){
-           itemsWrapper.classList.remove("property-list-view");
-           itemsWrapper.classList.add("property-grid-view");
-       }
-    });
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 768) {
+                itemsWrapper.classList.remove("property-list-view");
+                itemsWrapper.classList.add("property-grid-view");
+            }
+        });
+    }
 })();
 (function () {
     let burger = document.getElementById("headerBurger");
@@ -621,7 +633,7 @@ function delPhotos(item) {
     event.preventDefault();
     let wrap = item.parentNode;
     let msg = wrap.querySelector(".msg");
-    let file = wrap.querySelector("input[type='file']");
+    let file = item;
     wrap.classList.remove('loaded');
     wrap.style.backgroundImage = "";
     msg.innerText ="";
@@ -675,3 +687,29 @@ function addPhotos(item) {
 
     })
 })();
+let wrapExfiles = document.getElementById('exFiles');
+if(wrapExfiles){
+    function addDoc(item){
+        let wrap = wrapExfiles;
+        let outputHtml = "";
+
+        for(let i = 0,l = item.files.length;i < l; i++){
+            let myClass = "";
+            if(item.files[i].name.length > 25) {
+                myClass = "exFile__item--overflow"
+            }
+            outputHtml += '<p class="exFile__item '+myClass+'"><i class="icon icon--md">' +
+                '<svg><use xlink:href="#doc-icon"></use></svg></i>'+
+                '<span title="'+item.files[i].name+'">'+item.files[i].name+'</span>'+
+                '<input type="hidden" value="'+item.files[i]+'">'+
+                '<span class="exFile__del" onclick="delFile(this)"></span>' +
+                '</p>';
+        }
+        wrap.insertAdjacentHTML("beforeend",outputHtml);
+        item.value = null;
+        console.log(item.files[0])
+    }
+    function delFile(file) {
+        file.parentNode.remove();
+    }
+}

@@ -25,6 +25,8 @@
         <path fill="currentColor" d="M268 416h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12zM432 80h-82.41l-34-56.7A48 48 0 0 0 274.41 0H173.59a48 48 0 0 0-41.16 23.3L98.41 80H16A16 16 0 0 0 0 96v16a16 16 0 0 0 16 16h16v336a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128h16a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16zM171.84 50.91A6 6 0 0 1 177 48h94a6 6 0 0 1 5.15 2.91L293.61 80H154.39zM368 464H80V128h288zm-212-48h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12z"></path>
     </svg>
     <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+    <svg id="doc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
+
 </div>
 <div class="page page-editAvert">
     <div class="header">
@@ -168,10 +170,8 @@
     <div class="container container--lg">
         <div class="editAdvert">
             <div class="editAdvert__top mainAdvert-top">
-                <div class="mainAdvert-top__timeInfo">
-                    <p>455<i class="icon icon--md"><svg><use xlink:href="#eye-icon"></use></svg></i></p>
-                    <p>Дата публикации: <span> 01.02.2020</span></p>
-                </div>
+                <p class="mainAdvert-top__visit">455<i class="icon icon--md"><svg><use xlink:href="#eye-icon"></use></svg></i></p>
+                <p class="mainAdvert-top__timeInfo">Дата публикации: <span> 01.02.2020</span></p>
                 <p class="mainAdvert-top__number">Обьявление <span>№ 276</span></p>
             </div>
             <div class="editAdvert__content">
@@ -219,20 +219,23 @@
                         <div class="advert-slider__pag pagin-fract"></div>
                     </div>
                     <div class="editAdvert__slider-preview item-slider-preview">
-                        <label class="item-slider-preview__file-photo file-photo" ondragover="fileOver(this)" accept="image/*" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
-                            <span class="file-photo__plus">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
-                                </svg>
-                            </span>
-                            <span class="msg"></span>
-                            <span class="text text--sm">Добавить файл</span>
-                        </label>
                         <div class="swiper-container item-slider-preview__slider">
                             <div class="swiper-wrapper" id="test">
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
-                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"></div>
+                                <div class="swiper-slide">
+                                    <label class="item-slider-preview__file-photo file-photo"  >
+                                        <span class="file-photo__plus">
+                                            <input id="filePhoto"  type="file" onchange="addPhotos(this)" accept="image/*" ondrop="imagedrop(this)" ondragleave="fileLeave(this)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="msg"></span>
+                                        <span class="text text--sm">Добавить файл</span>
+                                    </label>
+                                </div>
+                                <div class="swiper-slide"><img src="dist/img/artice.jpg"><div class="item-slider-preview__del" data-del-img></div> </div>
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"><div class="item-slider-preview__del" data-del-img></div> </div>
+                                <div class="swiper-slide"><img src="dist/img/odessa.jpg"><div class="item-slider-preview__del" data-del-img></div> </div>
                             </div>
                         </div>
                     </div>
@@ -245,17 +248,17 @@
                     <textarea oninput="auto_grow(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur deleniti dolorem doloribus earum, eius et eveniet facilis ipsa ipsum magni neque possimus praesentium quasi, qui quidem repudiandae temporibus unde vero voluptate? Alias aut distinctio eligendi, esse exercitationem nostrum sed tempore tenetur? Dolor facilis obcaecati officiis optio quisquam repellendus rerum sapiente soluta tenetur. Aspernatur fugiat ipsam minus nihil placeat quidem repellat? Adipisci aut, delectus dolorem esse explicabo molestiae recusandae vitae! Amet animi corporis, culpa eius expedita id impedit labore, molestias nam pariatur quaerat quod velit vitae. Accusantium adipisci, alias aperiam cumque, distinctio et, quod rem reprehenderit rerum unde vitae voluptates!</textarea>
                 </label>
             </div>
-            <div class="d-flex flex-center">
+            <div class="d-flex flex-center flex-wrap-reverse">
                 <label class="editAdvert__attach">
                     <span class="text text-sm">Прикрепить документ</span>
-                    <input type="file">
+                    <input type="file" onchange="addDoc(this)">
                     <i class="icon icon--lg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"></path></svg>
                     </i>
-
                 </label>
                 <button type="button" class="cust-btn cust-btn--md cust-btn--primary">Предпросмотр</button>
             </div>
+            <div class="editAdvert__attach-exFiles exFile" id="exFiles"></div>
             <button class="editAdvert__save-btn"><span>Сохранить изменения</span></button>
         </div>
     </div>

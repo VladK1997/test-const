@@ -1,0 +1,39 @@
+@media all and(max-width: $tablet-width){
+  .editAdvert{
+    &__content{
+      flex-wrap: wrap;
+    }
+    &__photo{
+      max-width: 100%;
+    }
+    &__sidebar{
+      max-width: 100%;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .editAdvert{
+    &__slider{
+      height: 440px;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .editAdvert{
+    &__sidebar{
+      width: 100%;
+    }
+    &__slider{
+      height: auto;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .editAdvert{
+    &__attach{
+      margin: 16px 0;
+    }
+  }
+}
