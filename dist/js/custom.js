@@ -1,16 +1,18 @@
 let vWidth = window.innerWidth;
 (function() {
     let articles = document.querySelector('.articles');
+    let cardsslider = document.querySelectorAll('[data-cardslider]');
+
     if(articles) {
         let articlesSlider = new Swiper('.articles', {
             slidesPerView: 3,
             initialSlide: 0,
             spaceBetween: 20,
-
+            loop: true,
             breakpoints: {
                 1300: {
                     slidesPerView: 2,
-                    loop: true,
+
                 },
                 768: {
                     slidesPerView: 1,
@@ -32,9 +34,7 @@ let vWidth = window.innerWidth;
            },
        });
    }
-
    if(vWidth < 1301){
-
    }
    if(vWidth < 994) {
        let banner1Swiper = new Swiper(".banner1-swiper", {
@@ -149,6 +149,12 @@ let vWidth = window.innerWidth;
             itemSlider.removeChild(itemSlider.slides[index])
             itemPreview.updateSlides();
             itemSlider.updateSlides();
+        }
+    }
+    if(cardsslider.length > 0){
+        for(let i = 0, l = cardsslider.length; i < l; i++){
+            cardsslider[i].classList.add('swiper-container--'+i);
+            new swiper
         }
     }
 })();
