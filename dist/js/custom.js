@@ -6,10 +6,11 @@ let vWidth = window.innerWidth;
             slidesPerView: 3,
             initialSlide: 0,
             spaceBetween: 20,
-            loop: true,
+
             breakpoints: {
                 1300: {
                     slidesPerView: 2,
+                    loop: true,
                 },
                 768: {
                     slidesPerView: 1,
