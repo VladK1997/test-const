@@ -76,7 +76,7 @@ let vWidth = window.innerWidth;
             click: function(e){
                 itemSlider.slideTo(this.clickedIndex-1);
                 if(e.target.hasAttribute('data-del-img')){
-                    deleteImg(this.clickedIndex)
+                    deleteImg(this.clickedIndex-1)
                 }
 
             }
@@ -143,8 +143,8 @@ let vWidth = window.innerWidth;
             itemSlider.updateSlides();
         }
         function deleteImg(index){
-            itemPreview.slides[index].parentNode.removeChild(itemPreview.slides[index])
-            itemSlider.slides[index].parentNode.removeChild(itemSlider.slides[index])
+            itemPreview.removeChild(itemPreview.slides[index])
+            itemSlider.removeChild(itemSlider.slides[index])
             itemPreview.updateSlides();
             itemSlider.updateSlides();
         }
