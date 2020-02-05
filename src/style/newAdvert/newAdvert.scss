@@ -13,6 +13,11 @@
   &__steps{
     margin-left: 64px;
   }
+  &__attach-exFiles{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media all and(max-width:$mobile-Width){
   .newAdvert{
