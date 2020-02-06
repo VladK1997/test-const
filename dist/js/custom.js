@@ -9,9 +9,14 @@ let vWidth = window.innerWidth;
             initialSlide: 0,
             spaceBetween: 20,
             loop: true,
+            autoplay: true,
             pagination: {
                 el: '.articles__pag',
                 clickable: true,
+            },
+            navigation:{
+                nextEl: '.articles__slider-next',
+                prevEl: '.articles__slider-prev',
             },
             breakpoints: {
                 1300: {
@@ -164,10 +169,20 @@ let vWidth = window.innerWidth;
                 spaceBetween: 16,
                 loop: true,
                 initialSlide: 0,
-
                 pagination: {
                     el: '.swiper-pag--'+i,
                     type: 'bullets',
+                },
+                breakpoints:{
+                    1200:{
+                        slidesPerView:3,
+                    },
+                    900:{
+                        slidesPerView:2,
+                    },
+                    576:{
+                        slidesPerView:1,
+                    }
                 }
             });
 

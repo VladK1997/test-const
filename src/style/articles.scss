@@ -1,6 +1,15 @@
 .articles{
   z-index: 2;
   position: relative;
+  padding: 32px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  .swiper-wrapper{
+    max-height: 160px;
+  }
+  &__slider-wrap{
+    position: relative;
+  }
   &__item{
     display: flex;
     max-height: 160px;
@@ -91,7 +100,26 @@
     position: relative;
     font-size: 16px;
     line-height: 1.6;
-
   }
-
+  &__slider-next,&__slider-prev{
+    position: absolute;
+    right: 100%;
+    top: 32px;
+    bottom:60px;
+    width: 24px;
+    &:hover{
+      background-color: rgba($main-grey,0.1);
+    }
+  }
+  &__slider-next{
+    right: auto;
+    left: 100%;
+  }
+}
+@media all and(max-width: 1365px){
+  .articles{
+    &__slider-next,&__slider-prev{
+      display: none;
+    }
+  }
 }

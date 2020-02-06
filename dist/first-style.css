@@ -4593,7 +4593,7 @@ select {
 /* Compare ---------------------------------------------- */
 
 
-.add-to-compare,
+
 .property-featured,
 .add-to-favorites {
   position: absolute;
@@ -4644,9 +4644,6 @@ select {
   line-height: 28px !important;
 }
 
-.add-to-favorites {
-  right: 65px;
-}
 
 .property-creation-date span.add-to-fav-holder .add-to-compare,
 .property-creation-date span.add-to-fav-holder .add-to-favorites {

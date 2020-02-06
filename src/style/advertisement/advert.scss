@@ -162,18 +162,6 @@
       line-height: 2;
     }
   }
-  &__articles{
-    padding: 32px 10px;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-}
-@media all and(max-width: $desktopXSwidth){
-  .advert {
-    &__articles {
-      overflow: hidden;
-    }
-  }
 }
 @media all and(max-width: $mobile-Width){
   .advert{
