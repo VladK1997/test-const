@@ -9,6 +9,10 @@ let vWidth = window.innerWidth;
             initialSlide: 0,
             spaceBetween: 20,
             loop: true,
+            pagination: {
+                el: '.articles__pag',
+                clickable: true,
+            },
             breakpoints: {
                 1300: {
                     slidesPerView: 2,
@@ -154,7 +158,19 @@ let vWidth = window.innerWidth;
     if(cardsslider.length > 0){
         for(let i = 0, l = cardsslider.length; i < l; i++){
             cardsslider[i].classList.add('swiper-container--'+i);
-            new swiper
+            cardsslider[i].insertAdjacentHTML('beforeend',"<div class='d-flex flex-center cust-bul cust-bul--secondary swiper-pag--"+i+"'></div>");
+            new Swiper('.swiper-container--'+i,{
+                slidesPerView: 4,
+                spaceBetween: 16,
+                loop: true,
+                initialSlide: 0,
+
+                pagination: {
+                    el: '.swiper-pag--'+i,
+                    type: 'bullets',
+                }
+            });
+
         }
     }
 })();

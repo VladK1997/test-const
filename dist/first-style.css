@@ -10384,10 +10384,6 @@ ul.property-agent-contacts-list li span {
 .property-grid-view {
   margin-left: -15px;
   margin-right: -15px;
-  float: left;
-  width: 104% !important;
-  width: -webkit-calc(100% + 31px) !important;
-  width: calc(100% + 31px) !important;
 }
 .owl-demo.property-grid-view {
   margin: 0;

@@ -66,6 +66,9 @@
       border-bottom: 1px solid $main-border-color;
     }
   }
+  &__ownerBtn{
+    margin: 24px 0;
+  }
   &__desc-title{
     margin-top: 16px;
     color: rgba($main-grey,0.8);

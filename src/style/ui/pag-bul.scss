@@ -5,4 +5,9 @@
     width: 12px;
     height: 12px;
   }
+  &--secondary{
+    .swiper-pagination-bullet {
+      background-color: $main-grey;
+    }
+  }
 }
