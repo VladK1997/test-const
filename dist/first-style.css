@@ -11076,10 +11076,6 @@ ul.product_list_widget li a img {
   transition: all 0.5s ease;
 }
 
-.property-grid-view .property-grid-image:hover a:after {
-  opacity: 0.7;
-}
-
 .property-grid-view .property-grid-image img {
   border: none;
   padding: 0;
@@ -11390,7 +11386,11 @@ ul.product_list_widget li a img {
 .property-list-view .property-grid-image:hover > img.property-grid-image-second {
   opacity: 1;
 }
-
+@media all and (min-width: 1100px) {
+  .property-grid-view .property-grid-image:hover a:after {
+    opacity: 0.7;
+  }
+}
 .property-list-view .property-grid-item .property-grid-content {
   padding: 30px;
   background-color: #fff;
@@ -21045,7 +21045,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   }
   .casaroyal-le-chef {
     padding: 0 !important;
-  }`
+  }
 #le-chef .casaroyal-le-chef .vc_column-inner {
   padding: 20px !important;
 }
@@ -23433,6 +23433,11 @@ small, .small {
 
 .property-additional-features li:last-child:after {
   display: none;
-}
+}}
+
+
+
+
+
 
 
