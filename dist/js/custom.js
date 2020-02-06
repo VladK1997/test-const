@@ -763,3 +763,17 @@ if(wrapExfiles){
         file.parentNode.remove();
     }
 }
+(function(){
+    let tel = document.getElementById("showTel");
+    let telShowed = false;
+    window.addEventListener("click",function (e) {
+        console.log(e.target);
+        if(e.target.hasAttribute("data-showTel")){
+            tel.classList.add('active');
+            telShowed = true;
+        }else if(telShowed){
+            tel.classList.remove('active');
+            telShowed = false
+        }
+    })
+})();

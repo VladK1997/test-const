@@ -52,10 +52,11 @@ a{
 }
 .icon-heart{
   position: relative;
-  &:hover,&--checked{
-    .solid-heart{
+  input{
+    display: none;
+  }
+  &:hover .solid-heart,input:checked ~ .solid-heart{
       transform: scale(1);
-    }
   }
   .solid-heart{
     color: red;
