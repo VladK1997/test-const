@@ -80,41 +80,46 @@ let vWidth = window.innerWidth;
             type: 'fraction',
         },
     });
-    let itemPreview = new Swiper(".item-slider-preview__slider", {
-        slidesPerView: 4,
-        spaceBetween: 4,
-        on:{
-            click: function(e){
-                itemSlider.slideTo(this.clickedIndex-1);
-                if(e.target.hasAttribute('data-del-img')){
-                    deleteImg(this.clickedIndex-1)
+   let itemPreviewS = document.querySelector(".item-slider-preview__slider")
+    if(itemPreviewS){
+        var itemPreview = new Swiper(".item-slider-preview__slider", {
+            slidesPerView: 4,
+            spaceBetween: 4,
+            on: {
+                click: function (e) {
+                    itemSlider.slideTo(this.clickedIndex - 1);
+                    if (e.target.hasAttribute('data-del-img')) {
+                        deleteImg(this.clickedIndex)
+                    }
+
+                }
+            },
+            breakpoints: {
+                980: {
+                    slidesPerView: 3
+                },
+                768: {
+                    slidesPerView: 4
+                },
+                576: {
+                    slidesPerView: 3
+                },
+                444: {
+                    slidesPerView: 2
                 }
 
             }
-        },
-        breakpoints:{
-            980:{
-                slidesPerView: 3
-            },
-            768:{
-                slidesPerView: 4
-            },
-            576:{
-                slidesPerView: 3
-            },
-            444:{
-                slidesPerView: 2
-            }
-
-        }
-    });
+        });
+    }
     let filePhoto = document.getElementById("filePhoto");
     if(filePhoto) {
         var photoRead = new FileReader();
-        let msg = filePhoto.parentNode.querySelector(".msg");
+        let wrap = filePhoto.parentNode;
+        let msg = wrap.querySelector(".msg");
         let SliderPhotoArray
 
         filePhoto.addEventListener("change", function (e) {
+            e.preventDefault();
             SliderPhotoArray = "";
             let fileAllowed = true;
             let files = e.target.files;
@@ -133,9 +138,9 @@ let vWidth = window.innerWidth;
                         photoRead.readAsDataURL(files[i]);
                         photoRead.onload = function(){
                             let img = photoRead.result;
-
                             SliderPhotoArray += '<div class="swiper-slide">' +
                                 '<img src="'+ img +'">' +
+                                '<div class="item-slider-preview__del" data-del-img></div>'+
                                 '</div>'
                             console.log(photoRead);
                             updateSlider();
@@ -145,7 +150,11 @@ let vWidth = window.innerWidth;
                 }
 
             }
-
+            console.log(wrap);
+            setTimeout(function(){
+                wrap.style.background = 'none';
+            },0)
+            files.files = [];
         })
         function updateSlider() {
             itemPreview.wrapperEl.insertAdjacentHTML("beforeEnd", SliderPhotoArray)
@@ -154,10 +163,12 @@ let vWidth = window.innerWidth;
             itemSlider.updateSlides();
         }
         function deleteImg(index){
-            itemPreview.removeChild(itemPreview.slides[index])
-            itemSlider.removeChild(itemSlider.slides[index])
+            itemPreview.slides[index].remove();
+            itemSlider.slides[index - 1].remove();
             itemPreview.updateSlides();
             itemSlider.updateSlides();
+            itemSlider.slideTo(index - 1);
+            itemPreview.slideTo(index - 1);
         }
     }
     if(cardsslider.length > 0){
