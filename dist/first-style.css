@@ -102,7 +102,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   color: rgb(17, 17, 17);
   font-variant-ligatures: common-ligatures;
@@ -159,7 +159,7 @@ table tr th {
   vertical-align: middle;
   border: none;
   border-bottom: 2px solid #EFEFEF;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-custom-list li {
@@ -168,7 +168,7 @@ table tr th {
   width: 100%;
   color: rgb(183, 183, 183);
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-custom-list {
@@ -308,7 +308,7 @@ blockquote p:last-child {
 
 .btn-casaroyal,
 .woocommerce a.button {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   border-radius: 100px;
   padding: 20px 40px;
   font-weight: 500;
@@ -510,7 +510,7 @@ blockquote p:last-child {
 }
 
 .property-cat-block-content span.property-cat-block-name {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 32px;
@@ -523,7 +523,7 @@ blockquote p:last-child {
 
 .property-cat-block-content span.property-cat-block-number {
   color: rgba(255,255,255,0.9);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -724,7 +724,7 @@ body a,
 }
 
 .casaroyal-buy-now-buttons {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 13px;
   font-weight: 700;
   right: 60px;
@@ -747,7 +747,7 @@ body a,
 }
 
 .casaroyal-buy-now-buttons .casaroyal-buy-now-inner span {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 400;
   font-style: normal;
   text-transform: none;
@@ -1202,7 +1202,7 @@ body.admin-bar #header.clone-fixed.slideDown {
 
 .post-header .post-meta p {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   line-height: 200%;
   font-weight: 500;
@@ -1246,7 +1246,7 @@ body.admin-bar #header.clone-fixed.slideDown {
 .hero-post-content .post-meta p {
   color: #eee;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   line-height: 200%;
   font-weight: 900;
@@ -1316,7 +1316,7 @@ a.blog-logo-text {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
@@ -1543,7 +1543,7 @@ ul.main-menu {
   line-height: 18px;
   font-weight: 500;
   padding: 20px 24px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #232628;
   -webkit-font-smoothing: antialiased;
 }
@@ -2358,7 +2358,7 @@ table#casaroyal_inventory_table .full-width {
 
 .post-meta p {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   line-height: 200%;
   font-weight: 900;
@@ -2403,7 +2403,7 @@ table#casaroyal_inventory_table .full-width {
 .pagelinks {
   display: inline-block;
   margin-bottom: 15px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   line-height: 1;
   font-weight: 500;
@@ -2435,7 +2435,7 @@ table#casaroyal_inventory_table .full-width {
 .page-links > span:nth-of-type(2),
 .page-links a {
   color: #111;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 13px 15px 10px 15px;
   border: 2px solid #b7b7b7;
   width: 60px;
@@ -2477,7 +2477,7 @@ table#casaroyal_inventory_table .full-width {
   letter-spacing: 1px;
   color: #444;
   position: relative;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -2538,7 +2538,7 @@ table#casaroyal_inventory_table .full-width {
   padding-bottom: 2px;
   border-bottom: 2px solid #ccc;
   margin-bottom: 8px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -2618,7 +2618,7 @@ table#casaroyal_inventory_table .full-width {
 .post-content h5 { font-size: 1.1em; }
 
 .post-content h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -2639,7 +2639,7 @@ table#casaroyal_inventory_table .full-width {
   padding: 15px 18px;
   margin: 0;
   border: 2px solid #111;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.8rem;
   line-height: 1;
   font-weight: 900;
@@ -2684,7 +2684,7 @@ table#casaroyal_inventory_table .full-width {
 .post-content blockquote cite {
   display: block;
   margin-top: 1.1em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   font-weight: 900;
   text-transform: uppercase;
@@ -2898,7 +2898,7 @@ img.aligncenter {
 .post-content .wp-caption-text,
 .post-content .gallery-caption {
   margin: 4px auto 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.9rem;
   line-height: 160%;
   color: #444;
@@ -2976,7 +2976,7 @@ img.aligncenter {
 }
 
 .post-content fieldset legend {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.8rem;
   line-height: 1;
   font-weight: 900;
@@ -2989,7 +2989,7 @@ img.aligncenter {
 
 .post-content label {
   font-size: 1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 700;
 }
 
@@ -3014,7 +3014,7 @@ img.aligncenter {
 
 .post-content input,
 .post-content textarea {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .post-content input[type="text"],
@@ -3066,7 +3066,7 @@ img.aligncenter {
   color: #fff;
   -webkit-appearance: none;
   cursor: pointer;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   display: inline-block;
   width: auto;
   float: none;
@@ -3237,7 +3237,7 @@ img.aligncenter {
   font-size: 2.8125em;
   line-height: 1.15555556em;
   margin-bottom: 0.57777777777778em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -3388,7 +3388,7 @@ ul.commentlist {
 }
 
 .comments-title-link {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   font-weight: 900;
   text-transform: uppercase;
@@ -3489,7 +3489,7 @@ div.comment { margin-top: 25px; }
 
 .comment-meta {
   margin-bottom: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.7em;
   font-weight: 900;
   text-transform: uppercase;
@@ -3528,7 +3528,7 @@ div.comment { margin-top: 25px; }
   padding-bottom: 2px;
   margin-bottom: 30px;
   border-bottom: 2px solid #0015d3;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.75em;
   font-weight: 900;
   color: #111;
@@ -3554,7 +3554,7 @@ div.comment { margin-top: 25px; }
 .comments-nav { margin-top: 30px; }
 
 .comments-nav a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -3584,7 +3584,7 @@ div.comment { margin-top: 25px; }
 .comment-respond form label {
   display: block;
   margin-bottom: 8px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -3634,7 +3634,7 @@ div.comment { margin-top: 25px; }
   margin: 0;
   background-color: #ececec;
   border: 2px solid #ececec;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 1rem;
   color: #111;
 }
@@ -3656,7 +3656,7 @@ div.comment { margin-top: 25px; }
   background: #0015d3;
   border: none;
   border-radius: 3px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -3682,7 +3682,7 @@ div.comment { margin-top: 25px; }
 
 .commentlist #cancel-comment-reply-link {
   margin-left: 3px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.8rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -3750,7 +3750,7 @@ div.comment { margin-top: 25px; }
   background: #f4f4f4;
   border: 1px solid #ddd !important;
   border-radius: 4px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.9rem;
   color: #111;
   padding: 15px 20px;
@@ -3839,7 +3839,7 @@ div.comment { margin-top: 25px; }
 }
 
 .page-title h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
@@ -3868,7 +3868,7 @@ div.comment { margin-top: 25px; }
 
 .archive-navigation p {
   display: inline;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.9em;
   font-weight: 700;
   text-transform: uppercase;
@@ -3904,7 +3904,7 @@ div.comment { margin-top: 25px; }
   padding: 15px 20px;
   border-radius: 3px;
   background: #111;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -4071,7 +4071,7 @@ div.comment { margin-top: 25px; }
   -moz-transition: border-color .2s ease-in-out;
   transition: border-color .2s ease-in-out;
   margin-bottom: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 16px;
   background: #ececec;
@@ -4197,7 +4197,7 @@ div.comment { margin-top: 25px; }
   border-top: none;
   background: none;
   background-color: #fff !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   border-radius: 0;
   box-shadow: none;
@@ -4236,7 +4236,7 @@ div.comment { margin-top: 25px; }
   box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
   border: none;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px !important;
   font-weight: bold !important;
   border-radius: 4px;
@@ -4350,7 +4350,7 @@ div.comment { margin-top: 25px; }
 }
 
 .advance-search .af-estate-search-field label {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   color: #797979;
@@ -4378,7 +4378,7 @@ select {
   border: 1px solid #ececec;
   background-color: #ececec;
   border-radius: 4px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   outline: none;
 }
@@ -4492,7 +4492,7 @@ select {
   width: 100%;
   float: left;
   margin-bottom: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   position: relative;
   padding-bottom: 30px;
   font-weight: 500 !important;
@@ -4536,7 +4536,7 @@ select {
   width: auto;
   float: left;
   margin-bottom: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -4563,7 +4563,7 @@ select {
   letter-spacing: 0;
   font-size: 13px;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #333;
   float: left;
@@ -4763,7 +4763,7 @@ select {
 .tooltip > .tooltip-inner {
   padding: 7px 10px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-compare-row {
@@ -5326,7 +5326,7 @@ a.empty-slot div.h5 {
 
 
 .widget-content {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.95em;
   display: inline-block;
   float: left;
@@ -5470,7 +5470,7 @@ ul.casaroyal-widget-list li {
 .widget_meta li a,
 .widget_nav_menu li a,
 .widget_pages li a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .widget_archive li a:hover,
@@ -5553,7 +5553,7 @@ ul.casaroyal-widget-list li {
 
 .sidebar-footer p.title {
   font-size: 18px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .sidebar-footer p a {
@@ -5593,7 +5593,7 @@ ul.casaroyal-widget-list li {
   position: relative;
   padding: 15px 20px 13px 20px;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
   line-height: 18px;
@@ -5860,7 +5860,7 @@ ul.casaroyal-widget-list li {
 
 .credits p {
   padding-bottom: 5px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -5956,7 +5956,7 @@ ul.casaroyal-widget-list li {
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 
   -webkit-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
@@ -6506,7 +6506,7 @@ ul.casaroyal-widget-list li {
   -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
 
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #000;
   letter-spacing: 2px;
   font-size: 16px;
@@ -7235,7 +7235,7 @@ ul.casaroyal-widget-list li {
   font-weight: 500;
   text-transform: uppercase;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-align: center;
 }
 
@@ -7794,7 +7794,7 @@ hr:before {
   font-size: 15px;
   line-height: 1;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
@@ -7840,7 +7840,7 @@ hr:before {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   position: relative;
   background-size: cover;
   background-color: #737373;
@@ -7927,7 +7927,7 @@ hr:before {
   padding-top: 20px;
   font-size: 16px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   color: #0015d3;
   text-align: center;
@@ -8253,7 +8253,7 @@ hr:before {
   bottom: 30px;
   z-index: 9;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.05);
@@ -8313,7 +8313,7 @@ hr:before {
   margin: 0 20px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 .footer-header,
 .fullscreen-menu-logo {
@@ -8565,7 +8565,7 @@ hr:before {
   width: 100%;
   font-size: 14px !important;
   letter-spacing: 0.05em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .site-socket {
@@ -8896,7 +8896,7 @@ hr:before {
   position: relative;
   background-color: #fafafa;
 
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   font-size: 0.78em;
   text-transform: uppercase;
@@ -9334,7 +9334,7 @@ hr:before {
 
 #magazine-post-slider ul.slides li .magazine-post-slider-content .entry-title {
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 #magazine-post-slider ul.slides li .magazine-post-slider-content .entry-title a {
@@ -9433,7 +9433,7 @@ hr:before {
   float: left;
   color: #111;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 20px;
 }
 
@@ -9453,7 +9453,7 @@ hr:before {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 7px 10px;
   margin-bottom: 15px;
   font-size: 16px;
@@ -9482,7 +9482,7 @@ hr:before {
 }
 
 .property-location-label {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #848484;
   font-size: 14px;
   margin-bottom: 15px;
@@ -9496,7 +9496,7 @@ hr:before {
 }
 
 .property-status-label {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #0015d3;
   text-transform: uppercase;
   font-weight: 500;
@@ -9536,7 +9536,7 @@ hr:before {
 
 .price-prefix {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #fff;
 }
 
@@ -9552,7 +9552,7 @@ hr:before {
   font-weight: 500;
   color: #b7b7b7;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .property-id b {
@@ -9564,7 +9564,7 @@ hr:before {
   margin-bottom: 60px !important;
   font-weight: 500;
   color: #b7b7b7;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px;
   float: left;
 }
@@ -9598,7 +9598,7 @@ hr:before {
   float: left;
   margin-bottom: 30px;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #111;
   position: relative;
 }
@@ -9642,7 +9642,7 @@ hr:before {
   border-radius: 3px;
   float: left;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 0.900em;
 }
@@ -9840,7 +9840,7 @@ hr:before {
   padding: 15px 30px;
   font-weight: 500;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   color: #fff;
 }
@@ -9883,7 +9883,7 @@ ul.additional-details li {
   float: left;
   padding: 15px 30px;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 0.900em;
   list-style: none !important;
@@ -9987,7 +9987,7 @@ ul.additional-details li:nth-child(2n) {
   -webkit-box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
   -ms-box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
   box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   border-radius: 4px;
   font-weight: 500;
   padding: 10px;
@@ -10155,7 +10155,7 @@ form.advance-search-form.ajax_load .af-estate-search-btn-holder {
   padding-bottom: 5px;
   width: 100%;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #484848;
   overflow: hidden;
   text-align: center;
@@ -10171,7 +10171,7 @@ form.advance-search-form.ajax_load .af-estate-search-btn-holder {
   width: 100%;
   font-size: 14px;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #DA3610;
   line-height: 1.5em;
   font-weight: 500;
@@ -10239,7 +10239,7 @@ form.advance-search-form.ajax_load .af-estate-search-btn-holder {
   max-width: 25%;
   float: left;
   padding-right: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 .property-meta-item.last-item {
   padding-right: 0;
@@ -10353,7 +10353,7 @@ ul.property-agent-contacts-list {
   margin: 0 !important;
   padding: 0 !important;
   margin-bottom: 0px !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 0.900em;
 }
 
@@ -10478,7 +10478,7 @@ ul.property-agent-contacts-list li span {
 .listings-controls-header .sort-controls strong,
 .total_properties_search {
   color: #b7b7b7;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -10495,7 +10495,7 @@ div.cs-skin-slide::before {
 .cs-select span {
   padding: 10px 20px !important;
   height: auto !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px !important;
   font-weight: 500 !important;
   padding-right: 50px !important;
@@ -10503,7 +10503,7 @@ div.cs-skin-slide::before {
 
 .cs-select li span {
   padding: 20px 0 !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 14px !important;
   line-height: 1 !important;
   letter-spacing: 1px !important;
@@ -10675,7 +10675,7 @@ ul.product_list_widget li .quantity {
 ul.product_list_widget .quantity {
   margin-top: 10px;
   color: #999999;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -10717,7 +10717,7 @@ ul.product_list_widget li a img {
 
 #mini-cart-content p.total span.amount {
   color: #999999;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -10821,13 +10821,13 @@ ul.product_list_widget li a img {
   line-height: 32px;
   text-transform: uppercase;
   font-size: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .agent-properties-nm {
   text-transform: uppercase;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   letter-spacing: 3px;
 }
@@ -11140,7 +11140,7 @@ ul.product_list_widget li a img {
   padding: 0;
   font-weight: 500;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
 }
 
@@ -11311,7 +11311,7 @@ ul.product_list_widget li a img {
 .property-list-view .property-grid-item .property-grid-item-title h4 {
   margin: 0;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 1.05em;
@@ -12265,7 +12265,7 @@ body.admin-bar .casaroyal-side-menu {
   padding-right: 10px;
   float: left;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-decoration: none;
   color: rgba(255,255,255,0.5);
   -webkit-transition: color .3s ease, background .3s ease;
@@ -12561,7 +12561,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
   border: 1px solid rgba(0,0,0,0.1);
   background: none;
   background-color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   outline: none;
   border-radius: 0;
@@ -12586,7 +12586,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
   border: 1px solid #ececec;
   border-color: transparent !important;
   background-color: #ececec;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   outline: none;
   border-radius: 4px;
@@ -12741,7 +12741,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
   border-top: none;
   background: none;
   background-color: #ffffff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   border-radius: 0;
   box-shadow: none;
@@ -12758,7 +12758,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
   border: none;
   box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.1);
   background: none;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   -webkit-border-bottom-left-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
@@ -12961,7 +12961,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
 .as-form-wrap .amenities-trigger {
   float: left;
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -13038,7 +13038,7 @@ body.casaroyal-side-opened .casaroyal-side-close {
 
 .pagination a {
   color: #fff !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 15px 13px;
   border-radius: 3px;
   background-color: #b7b7b7;
@@ -13292,7 +13292,7 @@ img.chef-signature {
   font-size: 24px;
   font-weight: 500;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   color: #b7b7b7;
   margin-bottom: 60px;
@@ -13309,7 +13309,7 @@ img.chef-signature {
 .dish-menu-item-title {
   color: #111;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 16px;
   padding-bottom: 10px;
@@ -13328,7 +13328,7 @@ img.chef-signature {
 
 .dish-menu-item-description p {
   color: #b7b7b7;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -13445,7 +13445,7 @@ body.casaroyal-hide-footer .casaroyal-page-footer {
 
 .ui-autocomplete li {
   font-size: 14px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   padding: 11px 15px 12px 15px;
   color: #232628;
@@ -13455,7 +13455,7 @@ body.casaroyal-hide-footer .casaroyal-page-footer {
 
 .ui-autocomplete li:hover {
   font-size: 14px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   padding: 11px 15px 12px 15px;
   color: #fff;
@@ -13488,7 +13488,7 @@ input[type="submit"] {
   line-height: 26px;
   letter-spacing: 2px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   padding: 16px 20px;
@@ -13558,7 +13558,7 @@ div.wpcf7-response-output {
   width: 51px !important;
   height: 51px !important;
   line-height: 44px !important;
-  font-family: 'Rubik', sans-serif !important;
+  font-family: 'SourceSansPro', sans-serif !important;
 }
 
 .cluster div:after {
@@ -13624,7 +13624,7 @@ div.wpcf7-response-output {
   overflow: hidden;
   text-align: center;
   color: rgb(0, 0, 0);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   -webkit-user-select: none;
   font-size: 11px;
   padding: 8px;
@@ -14365,7 +14365,7 @@ input#small-search-box::-webkit-input-placeholder {
   font-size: 14px;
   text-align: left;
   color: #0015d3;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .woocommerce-variation-price {
@@ -14463,7 +14463,7 @@ input#small-search-box::-webkit-input-placeholder {
   letter-spacing: 2px;
   min-height: auto;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -14509,7 +14509,7 @@ input#small-search-box::-webkit-input-placeholder {
 .woocommerce .casaroyal-page-content-fullwidth nav.woocommerce-pagination ul li a,
 .woocommerce .casaroyal-page-content-fullwidth nav.woocommerce-pagination ul li span {
   padding: 10px 14px 8px 14px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
 }
 
@@ -14583,7 +14583,7 @@ input#small-search-box::-webkit-input-placeholder {
 .woocommerce #respond input#submit,
 .woocommerce button.button,
 .woocommerce input.button {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 7px 30px !important;
   font-weight: 900;
   font-size: 16px;
@@ -14695,7 +14695,7 @@ input#small-search-box::-webkit-input-placeholder {
 .woocommerce div.product .woocommerce-tabs ul.tabs li a,
 #mini-cart-content p.buttons a,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 8px 20px;
   font-weight: 900;
   font-size: 16px;
@@ -14878,7 +14878,7 @@ input#small-search-box::-webkit-input-placeholder {
   float: left;
   color: #b7b7b7;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
@@ -14891,7 +14891,7 @@ input#small-search-box::-webkit-input-placeholder {
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding-bottom: 10px;
   font-weight: 900;
   font-size: 14px;
@@ -15200,7 +15200,7 @@ input#small-search-box::-webkit-input-placeholder {
   float: left;
   text-align: left;
   margin-bottom: 40px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 16px;
@@ -15242,7 +15242,7 @@ input#small-search-box::-webkit-input-placeholder {
 
 .yith-wcwl-add-to-wishlist a,
 .woocommerce .wishlist_table td.product-add-to-cart a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   padding: 13px 3.25em;
   font-weight: 900;
   font-size: 16px;
@@ -15302,7 +15302,7 @@ input#small-search-box::-webkit-input-placeholder {
 }
 
 .shop_table td.product-name a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -15339,7 +15339,7 @@ input#small-search-box::-webkit-input-placeholder {
   padding: 5px 10px;
   border: 2px solid #297E29;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 12px;
   letter-spacing: .3px;
   font-weight: 700;
@@ -15620,7 +15620,7 @@ input#small-search-box::-webkit-input-placeholder {
   background-size: cover;
   background-position: center center;
   opacity: 1;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   background-color: #fff;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -15795,7 +15795,7 @@ input#small-search-box::-webkit-input-placeholder {
   padding: 15px 30px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 14px;
@@ -15809,7 +15809,7 @@ input#small-search-box::-webkit-input-placeholder {
 .casaroyal-woocommerce-categories-vertical ul li a {
   padding: 15px 30px;
   color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -15888,7 +15888,7 @@ input#small-search-box::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: rgb(17, 17, 17);
   cursor: pointer;
 }
@@ -15899,7 +15899,7 @@ input#small-search-box::-webkit-input-placeholder {
   line-height: 20px;
   letter-spacing: 1px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #b7b7b7;
   cursor: pointer;
 }
@@ -16482,7 +16482,7 @@ input#small-search-box::-webkit-input-placeholder {
   line-height: 13px;
   margin-right: 5px;
   margin-bottom: 5px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-categories-post a:hover {
@@ -16491,7 +16491,7 @@ input#small-search-box::-webkit-input-placeholder {
 }
 
 .casaroyal-post-read-more {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   position: relative;
   color: #1f1f1f;
@@ -16568,7 +16568,7 @@ input#small-search-box::-webkit-input-placeholder {
 
 .casaroyal-search-card-body .entry-title a {
   color: #999;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 16px;
   line-height: 26px;
   margin: 0 5px 5px 0;
@@ -16763,7 +16763,7 @@ input#small-search-box::-webkit-input-placeholder {
   float: left;
   padding: 30px;
   background-color: rgb(17, 17, 17);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   color: #fff;
 }
@@ -16784,7 +16784,7 @@ input#small-search-box::-webkit-input-placeholder {
 .casaroyal-search-card-image .casaroyal-search-card-quote p {
   padding-bottom: 0;
   color: #828282;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-le-chef {
@@ -16864,7 +16864,7 @@ input#small-search-box::-webkit-input-placeholder {
   line-height: 17px;
   letter-spacing: 2px;
   font-weight: 500;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #484848;
   cursor: pointer;
   padding: 15px;
@@ -17426,7 +17426,7 @@ input#small-search-box::-webkit-input-placeholder {
   letter-spacing: -0.5px;
   line-height: 1.9;
   background-color: transparent;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   letter-spacing: 6px;
   font-weight: 500;
   text-transform: uppercase;
@@ -17981,7 +17981,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 }
 
 .casaroyal-tabs nav ul li a {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   color: #666;
   display: inline-block;
@@ -18543,7 +18543,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   bottom: -2rem;
   font-weight: 400;
   color: #737373;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
 }
 
 .casaroyal-progress-circle > .casaroyal-progress-circle-precentage {
@@ -18556,7 +18556,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   font-size: 2rem;
   text-align: center;
   color: #737373;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 24px;
 }
 
@@ -18609,7 +18609,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   top: 0;
   left: 0;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
   line-height: 18px;
@@ -18640,7 +18640,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   content: attr(data-percent);
   position: absolute;
   text-transform: uppercase;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
   line-height: 18px;
@@ -18923,7 +18923,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 }
 
 .casaroyal-price-box .casaroyal-price-box-subtitle {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   color: #a2a2a2;
   letter-spacing: 0.5px;
   font-size: 14px;
@@ -19219,7 +19219,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 }
 
 .casaroyal-gallery-fullscreen-slider .casaroyal-gallery-fullscreen-slider-content .casaroyal-gallery-fullscreen-slider-content-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -19287,7 +19287,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 }
 
 .casaroyal-gallery-fullscreen-slider-cover-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -19296,7 +19296,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 }
 
 .casaroyal-gallery-fullscreen-slider-cover-subtitle {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 32px;
@@ -19348,7 +19348,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   width: auto;
   overflow: hidden;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 16px;
@@ -19397,7 +19397,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 .casaroyal-gallery-fullscreen-slider .flex-direction-nav li.count_holder {
   padding: 0 30px;
   color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   font-size: 42px;
   line-height: 40px;
 }
@@ -19623,7 +19623,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
   padding: 15px 30px;
   font-weight: 500;
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -19989,7 +19989,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -20491,7 +20491,7 @@ ul.casaroyal-accordion li.active h4 i.accordion-arrows:after {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'SourceSansPro', sans-serif;
     font-size: 0.9rem;
   }
 
