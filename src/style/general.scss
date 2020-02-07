@@ -55,7 +55,7 @@ a{
   input{
     display: none;
   }
-  &:hover .solid-heart,input:checked ~ .solid-heart{
+  input:checked ~ .solid-heart{
       transform: scale(1);
   }
   .solid-heart{
@@ -63,6 +63,7 @@ a{
     position: absolute;
     width:  100%;
     height: 100%;
+    pointer-events: none;
     top:  0;
     left: 0;
     transition: 0.3s;

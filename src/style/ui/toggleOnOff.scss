@@ -7,7 +7,7 @@ $on: $main-green;
 
   input {
     display: none;
-    & + div {
+    & + span {
       max-width: 32px;
       max-height: 32px;
       position: relative;
@@ -68,7 +68,7 @@ $on: $main-green;
         transform: scale(.96);
       }
     }
-    &:checked + div {
+    &:checked + span {
       filter: drop-shadow(0 4px 6px rgba($on, .3));
       svg {
         stroke-dasharray: 120;
@@ -84,4 +84,20 @@ $on: $main-green;
       }
     }
   }
+  &--lg{
+    input + span:before {
+        content: '';
+        width: 5px;
+        height: 16px;
+        left: 48%;
+      }
+     input + span {
+        max-width: 48px;
+        max-height: 48px;
+      }
+     input + span svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
 }

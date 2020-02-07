@@ -10,6 +10,12 @@
   &__content{
     flex-grow: 1;
   }
+  & &__advert-cards{
+    margin-top: 32px;
+    & .property-grid-item-holder{
+      width: 100%;
+    }
+  }
   &__user-packages{
     padding: 40px 0;
   }

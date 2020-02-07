@@ -4599,6 +4599,9 @@ select {
   position: absolute;
   bottom: 25px;
   right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 9;
   font-size: 20px;
   line-height: 33px;
@@ -11396,6 +11399,8 @@ ul.product_list_widget li a img {
   background-color: #fff;
   border-radius: 4px;
   float: left;
+    display: flex;
+    align-items: center;
   width: 100%;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -11403,7 +11408,9 @@ ul.product_list_widget li a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
+.property-list-view  .property-grid-card__toogle{
+    margin-left: 16px;
+}
 .property-list-content h4.property-grid-title {
   line-height: 1;
   margin: 0;
@@ -11433,6 +11440,7 @@ ul.product_list_widget li a img {
 .property-list-view .property-grid-item .property-grid-item-holder {
   float: left;
   width: 70%;
+    min-height: 160px;
   padding-left: 30px;
   margin: 0;
 }

@@ -11,6 +11,9 @@
   transition: 0.3s;
   width: 100%;
   text-align: center;
+  &--round{
+    border-radius: 50%!important;
+  }
   &--rounded{
     border-radius: 50px;
   }
