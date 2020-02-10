@@ -10,10 +10,13 @@
   &__content{
     flex-grow: 1;
   }
-  & &__advert-cards{
+  &__advert-cards{
     margin-top: 32px;
-    & .property-grid-item-holder{
+    & .advert-card{
       width: 100%;
+      &:not(:last-child){
+        margin-bottom: 24px;
+      }
     }
   }
   &__user-packages{
@@ -25,6 +28,13 @@
   &__user-pack{
     &:not(:last-child){
       margin-bottom: 40px;
+    }
+  }
+}
+@media all and(max-width: $tablet-width){
+  .user-content{
+    &__user-menu{
+      display: none;
     }
   }
 }

@@ -51,7 +51,7 @@
 
 @media all and(max-width: $mobile-Width){
   .mainAdvert-top{
-    background-color: rgba($main-green,0.7);
+    background-color: $second-green;
     &__timeInfo{
       order:2;
       border:none;

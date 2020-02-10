@@ -38,8 +38,20 @@
   }
 
   a.user-menu__item{
+    &.active{
+      background-color: $main-grey;
+      color: #fff;
+      &:hover{
+        color: #fff;
+      }
+    }
     &:hover{
       color: $main-blue;
     }
+  }
+}
+@media all and(max-width: $tablet-width){
+  .user-menu{
+
   }
 }
