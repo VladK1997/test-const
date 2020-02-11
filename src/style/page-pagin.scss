@@ -35,10 +35,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
     input{
-      width: 64px;
+      width: 48px;
       height: 32px;
       text-align: center;
+      cursor: pointer;
+      &::placeholder{
+        font-size: 18px;
+      }
     }
   }
 }

@@ -797,3 +797,13 @@ if(wrapExfiles){
         }
     })
 })();
+function goTo(item) {
+    if(event.keyCode === 13){
+        let preLink = item.dataset.link;
+        let pageNumber = +item.value;
+        let maxNumber = +item.dataset.max
+        if(pageNumber > maxNumber) pageNumber = maxNumber;
+        if(pageNumber < 1) pageNumber = 1;
+        window.location.href = preLink + pageNumber;
+    }
+}
