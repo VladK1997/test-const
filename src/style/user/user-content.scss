@@ -1,7 +1,7 @@
 .user-content{
   padding: 40px 0;
   display: flex;
-
+  width: 100%;
   &__user-menu{
     max-width: 320px;
     margin-right: 56px;
@@ -9,6 +9,7 @@
   }
   &__content{
     flex-grow: 1;
+    width: 100%;
   }
   &__advert-cards{
     margin-top: 32px;

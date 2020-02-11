@@ -198,6 +198,31 @@ let vWidth = window.innerWidth;
             });
 
         }
+
+    }
+    let packeges = document.querySelector(".packages");
+    if(vWidth < 992 && packeges){
+        let packegesSlider = new Swiper(packeges, {
+            slidesPerView: 3,
+            spaceBetween: 4,
+            initialSlide: 1,
+            centeredSlides: true,
+            navigation:{
+                nextEl: '.packages__slider-next',
+                prevEl: '.packages__slider-prev',
+            },
+            pagination: {
+                el: '.packages__pag',
+                type: 'bullets',
+                clickable: true,
+            },
+            breakpoints: {
+                768:{
+                    slidesPerView: "auto",
+                    spaceBetween: 0,
+                },
+            }
+        });
     }
 })();
 (function(){
