@@ -2,12 +2,15 @@
   height: 220px;
   display: flex;
   width: 100%;
+  box-shadow: 0 0 8px 0 $main-border-color;
+  border-radius: 5px;
+  overflow: hidden;
   &__img{
     position: relative;
     height: 100%;
     width: 100%;
     border-radius: 5px 0 0 5px;
-    max-width: 316px;
+    max-width: 34.19%;
 
     &:hover a:after{
       opacity: 0.6;
@@ -41,17 +44,17 @@
     height: 100%;
   }
   &__body{
+    height: 100%;
     width: 100%;
     padding: 8px 16px;
     display: flex;
-    align-items: center;
     margin-right: 24px;
     position: relative;
   }
   &__power{
    position: absolute;
-    right: 0;
-    top: 50%;
+    right: 8px;
+    top: 40%;
     transform: translateY(-50%);
   }
   &__title{
@@ -80,8 +83,18 @@
   }
   &__bottom{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 32px;
+    margin-top: 16px;
+    a{
+      max-width: 49%;
+      &:first-child{
+        margin-right: 2%;
+      }
+    }
+    p{
+      margin-top: 4px;
+    }
   }
   &__price{
     position: absolute;
@@ -156,11 +169,12 @@
     &__desc{
       margin-top: 0;
     }
-
+    &__power{
+      top: 30%;
+    }
     &__bottom{
-      margin-top: 24px;
+      margin-top: 8px;
       a{
-        max-width: 100%;
         font-size: 14px;
         min-height: 32px;
       }
@@ -169,7 +183,10 @@
 }
 @media all and(max-width: $mobileXsWidth){
   .advert-card{
-    height: 180px;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 450px;
     &__top{
       p{
         font-size: 14px;
@@ -177,25 +194,29 @@
     }
     &__img{
       flex-shrink: 0;
+      max-width: none;
+      height: 180px;
+      border-radius: 5px 5px 0 0;
+      a{
+        padding: 0;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    &__content{
+      max-width: none;
     }
     &__title{
       padding-right: 40px;
       white-space: nowrap;
     }
     &__bottom{
-      margin-top: 0px;
-      flex-wrap: wrap;
       a{
-        width: 100%;
         font-size: 12px;
-        &:first-child{
-          margin-bottom: 8px;
-        }
       }
     }
     &__desc{
 
-      padding-right: 0;
+      padding-right: 40px;
     }
     &__power{
       top:8px;

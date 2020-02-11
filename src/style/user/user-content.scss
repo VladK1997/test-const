@@ -30,6 +30,9 @@
       margin-bottom: 40px;
     }
   }
+  &__pagin{
+    margin: 0 0 40px 0;
+  }
 }
 @media all and(max-width: $tablet-width){
   .user-content{

@@ -266,6 +266,26 @@ function fileLeave(item) {
     })
 })();
 (function(){
+    let profileTop = document.getElementById("loggedIn");
+    if(profileTop){
+        let btn = document.querySelector('.profile-top__btn');
+        let close = profileTop.querySelector(".profile-top__close");
+        if(btn.hasAttribute('data-authopen')){
+            btn.removeAttribute('data-authopen');
+        }
+        if(vWidth < 1201) {
+            btn.addEventListener("click", function () {
+                profileTop.classList.toggle('active');
+            })
+            close.addEventListener('click', function (e) {
+                if (e.target != profileTop) {
+                    profileTop.classList.remove('active');
+                }
+            })
+        }
+    }
+})();
+(function(){
     const animationTime = 1000;
     const animationFrameCount = 1;
     let btn = document.getElementById("toOffer");

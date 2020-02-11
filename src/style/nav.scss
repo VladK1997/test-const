@@ -24,6 +24,7 @@
       padding: 16px 0;
       display: flex;
       align-items: center;
+      text-align: left;
     }
   }
   &__item a:hover{
@@ -33,11 +34,16 @@
     position: absolute;
     top: 100%;
     left: 0;
+    min-width: 200px;
+    white-space: nowrap;
     visibility: hidden;
     list-style: none;
     opacity: 0;
+    border-radius: 0 0 3px 3px;
     transition: 0.3s;
+    overflow: hidden;
     padding-top: 10px;
+    box-shadow: 0 16px 16px 0 $main-grey;
     &:after{
       position: absolute;
       top:0;
@@ -53,13 +59,9 @@
     a{
       padding: 16px 24px;
       background-color: $main-blue;
-    }
-
-    a{
       color: #fff;
       height: 100%;
       display: flex;
-      justify-content: center;
       align-self: center;
     }
   }

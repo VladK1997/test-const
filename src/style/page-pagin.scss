@@ -1,0 +1,64 @@
+.page-pagin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  a{
+    display: flex;
+  }
+  &__btn{
+    width: 32px;
+    height: 32px;
+    color: $main-blue;
+    &:hover{
+      color: $main-blueHover;
+    }
+  }
+  &__number-wrap{
+    display: flex;
+    margin: 0 16px;
+  }
+  &__number,&__more{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 4px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    input{
+      width: 64px;
+      height: 32px;
+      text-align: center;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .page-pagin{
+    &__number{
+
+      &:nth-of-type(n+10){
+        display: none;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .page-pagin{
+    &__number{
+
+      &:nth-of-type(n+5){
+        display: none;
+      }
+    }
+  }
+}
