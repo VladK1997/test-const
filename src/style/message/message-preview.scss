@@ -2,7 +2,8 @@
   display: flex;
   padding: 16px;
   position: relative;
-  border-bottom: 1px solid $main-border-color;
+  border: 1px solid $main-border-color;
+  border-top: 0;
   &:first-child{
     border-top: 1px solid $main-border-color;
   }
