@@ -1,0 +1,107 @@
+.chat{
+  border: 1px solid $main-border-color;
+  box-shadow: 0 0 16px 0 rgba($main-grey,0.6);
+  border-radius: 5px;
+
+  position: relative;
+  &__user{
+    text-align: center;
+  }
+  &__date{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin: 16px 0;
+  }
+  &__wrap{
+    overflow: auto;
+    padding: 16px;
+  }
+  &__msg{
+    max-width: 80%;
+    padding: 16px;
+    position: relative;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    background-color: $main-border-color;
+    &:not(:last-child){
+      margin-bottom: 32px;
+    }
+    &:after{
+      width: 40px;
+      height: 20px;
+      content: "";
+      display: inline-block;
+    }
+    &--from{
+      margin-left: auto;
+      background-color: $second-green;
+    }
+  }
+  &__msg-time{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    right: 16px;
+    bottom: 16px;
+  }
+  &__answer{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: $main-blue;
+    padding: 16px;
+    textarea{
+      width: 80%;
+      padding: 4px 8px;
+      resize: none;
+      height: 40px;
+      border-radius: 3px;
+      max-height: 116px;
+      overflow-y: auto;
+      @extend %scrollBarSecond;
+    }
+  }
+  &__send{
+    position: relative;
+    margin-left: 16px;
+    align-self: flex-end;
+    margin-bottom: 6px;
+    &:before{
+      display: block;
+      border-left: 30px solid #fff;
+      border-top:    14px solid transparent;
+      border-bottom: 14px solid transparent;
+      content: "";
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 6px solid $main-blue;
+      border-top:    14px solid transparent;
+      border-bottom: 14px solid transparent;
+      content:"";
+    }
+  }
+  &__file{
+    cursor: pointer;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    color: #fff;
+    align-self: flex-end;
+    input{
+      display: none;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .chat{
+    &__msg{
+      max-width: 90%;
+    }
+  }
+}

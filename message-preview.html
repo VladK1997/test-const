@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Избранное</title>
+    <title>Сообшения</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/first-style.css">
@@ -34,32 +34,31 @@
     <svg id="doc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
     <svg id="round-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg>
 </div>
-<div class="page ">
-    <div class="header">
-        <nav class="nav header__nav">
-            <div class="container d-flex">
-                <div class="burger" id="headerBurger">
-                    <div class="burger__line"></div>
-                    <div class="burger__line"></div>
-                    <div class="burger__line"></div>
-                </div>
-                <a href="#" class="header__logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 212.8 88.2" style="enable-background:new 0 0 212.8 88.2;" xml:space="preserve">
+<div class="header">
+    <nav class="nav header__nav">
+        <div class="container d-flex">
+            <div class="burger" id="headerBurger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+            <a href="#" class="header__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 212.8 88.2" style="enable-background:new 0 0 212.8 88.2;" xml:space="preserve">
                         <path fill="#fff" d="M86.2,45.1c0,24.9-19.3,45.1-43.1,45.1S0,70.1,0,45.1S19.3,0,43.1,0S86.2,20.2,86.2,45.1z M42.1,16.8
                             c-14.9,0-26.9,12.6-26.9,28.2s12.1,28.2,26.9,28.2s26.9-12.6,26.9-28.2S57,16.8,42.1,16.8z"/>
-                        <polygon fill="#43B64D" class="st1" points="97,3.2 113.9,2.3 114.7,70 143.5,70.9 143.7,88 97.2,87.4 "/>
-                        <polygon fill="#fff" points="154.2,2 215,2.6 181.5,69.4 180.7,71.8 212.8,72.1 212.8,88.2 151.9,88 185.7,20 152.5,20.3 152.8,2.3
+                    <polygon fill="#43B64D" class="st1" points="97,3.2 113.9,2.3 114.7,70 143.5,70.9 143.7,88 97.2,87.4 "/>
+                    <polygon fill="#fff" points="154.2,2 215,2.6 181.5,69.4 180.7,71.8 212.8,72.1 212.8,88.2 151.9,88 185.7,20 152.5,20.3 152.8,2.3
                             "/>
                     </svg>
 
-                </a>
-                <ul class="nav__list header__nav-list" id="headerList">
-                    <li class="nav__item">
-                        <button type="button" class="light-mode-btn light-mode-btn--mob" data-lightmode>
-                            <span class="light-mode-btn__text light-mode-btn__text--day">DAYMODE</span>
-                            <span class="light-mode-btn__text light-mode-btn__text--night">NIGHTMODE</span>
-                            <span class="light-mode-btn__thumb-wrap">
+            </a>
+            <ul class="nav__list header__nav-list" id="headerList">
+                <li class="nav__item">
+                    <button type="button" class="light-mode-btn light-mode-btn--mob" data-lightmode>
+                        <span class="light-mode-btn__text light-mode-btn__text--day">DAYMODE</span>
+                        <span class="light-mode-btn__text light-mode-btn__text--night">NIGHTMODE</span>
+                        <span class="light-mode-btn__thumb-wrap">
                                 <span class="light-mode-btn__thumb">
                         <span class="light-mode-btn__icon light-mode-btn__icon--day">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 228">
@@ -82,98 +81,99 @@
                         </span>
                     </span>
                             </span>
-                        </button>
-                        <button type="button" class="header__lang header__lang--mob lang" data-langopen>
-                            <img src="dist/img/lang.png">
-                        </button>
-                    </li>
-                    <li class="nav__item">
-                        <a class="text--white" href="#">О нас</a>
-                    </li>
-                    <li class="nav__item" data-navAccord>
-                        <a class="text--white" href="#">Руководство<br>пользователя</a>
-                        <ul class="nav__sub-list">
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item" data-navAccord>
-                        <a class="text--white" href="#">Блог</a>
-                        <ul class="nav__sub-list">
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item" data-navAccord>
-                        <a class="text--white" href="#">Цены и предложения</a>
-                        <ul class="nav__sub-list">
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item" data-navAccord>
-                        <a class="text--white" href="#">Помощь</a>
-                        <ul class="nav__sub-list">
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item" data-navAccord>
-                        <a class="text--white" href="#">Контакты</a>
-                        <ul class="nav__sub-list">
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                            <li class="nav__sub-item"><a href="#">Руководство</a></li>
-                        </ul>
-                    </li>
+                    </button>
+                    <button type="button" class="header__lang header__lang--mob lang" data-langopen>
+                        <img src="dist/img/lang.png">
+                    </button>
+                </li>
+                <li class="nav__item">
+                    <a class="text--white" href="#">О нас</a>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Руководство<br>пользователя</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Блог</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Цены и предложения</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Помощь</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Контакты</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
 
-                </ul>
-                <!--<a href="#" class="header__mobile-logo">
-                    <img src="dist/img/logo2.png">
-                </a>-->
-                <div class="header__profile profile-top loggedin" id="loggedIn">
-                    <div class="profile-top__close"></div>
-                    <p class="text--white profile-top__btn" href="#" data-authopen>Личный кабинет
-                        <span class="profile-top__icon">
+            </ul>
+            <!--<a href="#" class="header__mobile-logo">
+                <img src="dist/img/logo2.png">
+            </a>-->
+            <div class="header__profile profile-top loggedin" id="loggedIn">
+                <div class="profile-top__close"></div>
+                <p class="text--white profile-top__btn" href="#" data-authopen>Личный кабинет
+                    <span class="profile-top__icon">
                             <svg>
                                 <use xlink:href="#user-icon"></use>
                             </svg>
                         </span>
-                    </p>
-                    <div class="profile-top__wrap">
-                        <a class="profile-top__item" href="#">Мои обьявления</a>
-                        <a class="profile-top__item" href="#">Мои пакеты</a>
-                        <a class="profile-top__item" href="#">Мои сообщения</a>
-                        <a class="profile-top__item" href="#">Избранное</a>
-                        <a class="profile-top__item" href="#">Подать обьявления</a>
-                        <button class="profile-top__exit">Выход</button>
-                    </div>
+                </p>
+                <div class="profile-top__wrap">
+                    <a class="profile-top__item" href="#">Мои обьявления</a>
+                    <a class="profile-top__item" href="#">Мои пакеты</a>
+                    <a class="profile-top__item" href="#">Мои сообщения</a>
+                    <a class="profile-top__item" href="#">Избранное</a>
+                    <a class="profile-top__item" href="#">Подать обьявления</a>
+                    <button class="profile-top__exit">Выход</button>
                 </div>
-                <button type="button" class="header__lang lang header__lang--desktop" data-langopen>
-                    <img src="dist/img/lang.png">
-                </button>
             </div>
-        </nav>
-    </div>
+            <button type="button" class="header__lang lang header__lang--desktop" data-langopen>
+                <img src="dist/img/lang.png">
+            </button>
+        </div>
+    </nav>
+</div>
+<div class="page">
     <div class="container container--lg">
         <main class="user-content">
             <div class="user-content__user-menu">
@@ -226,352 +226,53 @@
                         Избранное
                     </a>
                 </div>
-                <div class="row property-grid-view">
-                    <div class="col-lg-4 col-md-6 col-xs-12 property-grid-item property-item-data property-grid-item--top">
-                        <div class="property-grid-card">
-                            <div class="property-grid-card-a">
-                                <div class="property-grid-image">
-                                    <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link-over-image" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                    <span class="property-status-label">
-                                                        <span class="property-type">
-                                                        House
-                                                        </span>
-                                                    </span>
-                                    <label class="property-action-unit add-to-favorites" data-id="69" data-action="login">
-                                                        <span class="icon icon--sm icon-heart">
-                                                            <input type="checkbox">
-                                                            <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                                            <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="property-grid-content">
-
-                                    <div class="property-grid-item-holder">
-
-                                        <span class="property-grid-price"><span class="price-prefix"></span> <span class="property-price-holder">$<span class="property-price-number">160,000.00</span></span> <span class="price-prefix"></span></span>
-                                        <div class="casaroyal-property-title-holder">
-                                                            <span class="property-location-label">
-
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                                Mission Viejo, CA
-                                                            </span>
-                                            <h4 class="property-grid-title-v2">
-                                                <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link">
-                                                    26502 Vía Cuervo, Mission Viejo, CA 92691, USA
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="casaroyal-property-agent-name">
-                                            <img class="property-agent-avatar avatar-agent" src="https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/agent-5-1-60x60.jpg">
-                                            <a href="https://casaroyal.fantasythemes.net/agent/lionel-richie/">Lionel Richie</a>
-                                        </div>
-                                        <div class="casaroyal-property-listing-time">
-
-                                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 12.02.2020
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="message-preview message-preview--new">
+                    <div class="message-preview__body">
+                        <a href="#" class="message-preview__user">Anna London</a>
+                        <p class="message-preview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad anim</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 property-grid-item property-item-data property-grid-item--top">
-                        <div class="property-grid-card">
-                            <div class="property-grid-card-a">
-                                <div class="property-grid-image">
-                                    <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link-over-image" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                    <span class="property-status-label">
-                                                        <span class="property-type">
-                                                        House
-                                                        </span>
-                                                    </span>
-                                    <label class="property-action-unit add-to-favorites" data-id="69" data-action="login">
-                                                        <span class="icon icon--sm icon-heart">
-                                                            <input type="checkbox">
-                                                            <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                                            <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="property-grid-content">
-
-                                    <div class="property-grid-item-holder">
-
-                                        <span class="property-grid-price"><span class="price-prefix"></span> <span class="property-price-holder">$<span class="property-price-number">160,000.00</span></span> <span class="price-prefix"></span></span>
-                                        <div class="casaroyal-property-title-holder">
-                                                            <span class="property-location-label">
-
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                                Mission Viejo, CA
-                                                            </span>
-                                            <h4 class="property-grid-title-v2">
-                                                <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link">
-                                                    26502 Vía Cuervo, Mission Viejo, CA 92691, USA
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="casaroyal-property-agent-name">
-                                            <img class="property-agent-avatar avatar-agent" src="https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/agent-5-1-60x60.jpg">
-                                            <a href="https://casaroyal.fantasythemes.net/agent/lionel-richie/">Lionel Richie</a>
-                                        </div>
-                                        <div class="casaroyal-property-listing-time">
-
-                                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 12.02.2020
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
+                    <p class="message-preview__status">Новое сообшение</p>
+                    <div class="message-preview__del"><i class="cross"></i></div>
+                    <p class="message-preview__date">12.02.2020</p>
+                </div>
+                <div class="message-preview">
+                    <div class="message-preview__body">
+                        <p class="message-preview__user">Anna London</p>
+                        <p class="message-preview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad anim</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 property-grid-item property-item-data property-grid-item--top">
-                        <div class="property-grid-card">
-                            <div class="property-grid-card-a">
-                                <div class="property-grid-image">
-                                    <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link-over-image" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                    <span class="property-status-label">
-                                                        <span class="property-type">
-                                                        House
-                                                        </span>
-                                                    </span>
-                                    <label class="property-action-unit add-to-favorites" data-id="69" data-action="login">
-                                                        <span class="icon icon--sm icon-heart">
-                                                            <input type="checkbox">
-                                                            <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                                            <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="property-grid-content">
-
-                                    <div class="property-grid-item-holder">
-
-                                        <span class="property-grid-price"><span class="price-prefix"></span> <span class="property-price-holder">$<span class="property-price-number">160,000.00</span></span> <span class="price-prefix"></span></span>
-                                        <div class="casaroyal-property-title-holder">
-                                                            <span class="property-location-label">
-
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                                Mission Viejo, CA
-                                                            </span>
-                                            <h4 class="property-grid-title-v2">
-                                                <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link">
-                                                    26502 Vía Cuervo, Mission Viejo, CA 92691, USA
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="casaroyal-property-agent-name">
-                                            <img class="property-agent-avatar avatar-agent" src="https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/agent-5-1-60x60.jpg">
-                                            <a href="https://casaroyal.fantasythemes.net/agent/lionel-richie/">Lionel Richie</a>
-                                        </div>
-                                        <div class="casaroyal-property-listing-time">
-
-                                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 12.02.2020
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
+                    <p class="message-preview__status">Новое сообшение</p>
+                    <div class="message-preview__del"><i class="cross"></i> </div>
+                    <p class="message-preview__date">12.02.2020</p>
+                </div>
+                <div class="message-preview">
+                    <div class="message-preview__body">
+                        <p class="message-preview__user">Anna London</p>
+                        <p class="message-preview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad anim</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 property-grid-item property-item-data property-grid-item--top">
-                        <div class="property-grid-card">
-                            <div class="property-grid-card-a">
-                                <div class="property-grid-image">
-                                    <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link-over-image" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                    <span class="property-status-label">
-                                                        <span class="property-type">
-                                                        House
-                                                        </span>
-                                                    </span>
-                                    <label class="property-action-unit add-to-favorites" data-id="69" data-action="login">
-                                                        <span class="icon icon--sm icon-heart">
-                                                            <input type="checkbox">
-                                                            <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                                            <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="property-grid-content">
-
-                                    <div class="property-grid-item-holder">
-
-                                        <span class="property-grid-price"><span class="price-prefix"></span> <span class="property-price-holder">$<span class="property-price-number">160,000.00</span></span> <span class="price-prefix"></span></span>
-                                        <div class="casaroyal-property-title-holder">
-                                                            <span class="property-location-label">
-
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                                Mission Viejo, CA
-                                                            </span>
-                                            <h4 class="property-grid-title-v2">
-                                                <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link">
-                                                    26502 Vía Cuervo, Mission Viejo, CA 92691, USA
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="casaroyal-property-agent-name">
-                                            <img class="property-agent-avatar avatar-agent" src="https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/agent-5-1-60x60.jpg">
-                                            <a href="https://casaroyal.fantasythemes.net/agent/lionel-richie/">Lionel Richie</a>
-                                        </div>
-                                        <div class="casaroyal-property-listing-time">
-
-                                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 12.02.2020
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
+                    <p class="message-preview__status">Новое сообшение</p>
+                    <div class="message-preview__del"><i class="cross"></i> </div>
+                    <p class="message-preview__date">12.02.2020</p>
+                </div>
+                <div class="message-preview">
+                    <div class="message-preview__body">
+                        <p class="message-preview__user">Anna London</p>
+                        <p class="message-preview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad anim</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 property-grid-item property-item-data property-grid-item--top">
-                        <div class="property-grid-card">
-                            <div class="property-grid-card-a">
-                                <div class="property-grid-image">
-                                    <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link-over-image" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                    <span class="property-status-label">
-                                                        <span class="property-type">
-                                                        House
-                                                        </span>
-                                                    </span>
-                                    <label class="property-action-unit add-to-favorites" data-id="69" data-action="login">
-                                                        <span class="icon icon--sm icon-heart">
-                                                            <input type="checkbox">
-                                                            <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                                            <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="property-grid-content">
-
-                                    <div class="property-grid-item-holder">
-
-                                        <span class="property-grid-price"><span class="price-prefix"></span> <span class="property-price-holder">$<span class="property-price-number">160,000.00</span></span> <span class="price-prefix"></span></span>
-                                        <div class="casaroyal-property-title-holder">
-                                                            <span class="property-location-label">
-
-                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                                Mission Viejo, CA
-                                                            </span>
-                                            <h4 class="property-grid-title-v2">
-                                                <a href="https://casaroyal.fantasythemes.net/property/26502-via-cuervo-mission-viejo-ca-92691-usa/" class="property-link">
-                                                    26502 Vía Cuervo, Mission Viejo, CA 92691, USA
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="casaroyal-property-agent-name">
-                                            <img class="property-agent-avatar avatar-agent" src="https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/agent-5-1-60x60.jpg">
-                                            <a href="https://casaroyal.fantasythemes.net/agent/lionel-richie/">Lionel Richie</a>
-                                        </div>
-                                        <div class="casaroyal-property-listing-time">
-
-                                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> 12.02.2020
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="message-preview__status">Новое сообшение</p>
+                    <div class="message-preview__del"><i class="cross"></i> </div>
+                    <p class="message-preview__date">12.02.2020</p>
+                </div>
+                <div class="message-preview">
+                    <div class="message-preview__body">
+                        <p class="message-preview__user">Anna London</p>
+                        <p class="message-preview__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad anim</p>
                     </div>
+                    <p class="message-preview__status">Новое сообшение</p>
+                    <div class="message-preview__del"><i class="cross"></i> </div>
+                    <p class="message-preview__date">12.02.2020</p>
                 </div>
             </div>
         </main>
-    </div>
-    <div class="user-content__pagin page-pagin">
-        <a href="#" class="page-pagin__btn">
-            <svg style="transform: rotate(180deg)"><use xlink:href="#round-arrow"></use></svg>
-        </a>
-        <div class="page-pagin__number-wrap">
-            <a href="#" class="page-pagin__number">1</a>
-            <a href="#" class="page-pagin__number">2</a>
-            <a href="#" class="page-pagin__number">3</a>
-            <a href="#" class="page-pagin__number">4</a>
-            <a href="#" class="page-pagin__number">5</a>
-            <a href="#" class="page-pagin__number">6</a>
-            <a href="#" class="page-pagin__number">7</a>
-            <a href="#" class="page-pagin__number">8</a>
-            <a href="#" class="page-pagin__number">9</a>
-            <a href="#" class="page-pagin__number">10</a>
-            <a href="#" class="page-pagin__number">11</a>
-            <a href="#" class="page-pagin__number">12</a>
-            <a href="#" class="page-pagin__number">13</a>
-            <label class="page-pagin__input">
-                <input type="text" class="cust-input__field" maxlength="3" placeholder="..." data-link="" data-max="12" onkeyup="goTo(this)">
-            </label>
-        </div>
-        <a href="#" class="page-pagin__btn">
-            <svg><use xlink:href="#round-arrow"></use></svg>
-        </a>
-
-    </div>
-    <div class="container container--lg">
-        <p class="articles__readMore">Читайте также...</p>
-        <div class="articles__slider-wrap">
-            <div class="articles__slider-prev slider-nav-prev"></div>
-            <div class="advert__articles articles swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="articles__pag cust-bul cust-bul--secondary"></div>
-            </div>
-            <div class="articles__slider-next slider-nav-next"></div>
-        </div>
-        <div class="advert__banner banner banner--2">
-            <div class="row">
-                <div class="col col-md-6 col-12">
-                    <div class="banner__item banner__item--large"></div>
-                </div>
-                <div class="col col-md-6 col-sm-12 d-flex flex-wrap">
-                    <div class="banner__item banner__item--medium">
-                        <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
-                    </div>
-                    <div class="d-flex flex-wrap w-100 u-margin-top-auto">
-                        <div class="banner__item banner__item--small">
-                            <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
-                        </div>
-                        <div class="banner__item banner__item--small"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <div class="container container--lg">

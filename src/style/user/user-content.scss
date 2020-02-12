@@ -7,6 +7,9 @@
     margin-right: 56px;
     width: 100%;
   }
+  &__user-nav{
+    margin-bottom: 32px;
+  }
   &__content{
     flex-grow: 1;
     width: 100%;
@@ -19,12 +22,6 @@
         margin-bottom: 24px;
       }
     }
-  }
-  &__user-packages{
-    padding: 40px 0;
-  }
-  &__packages{
-    padding-top: 40px;
   }
   &__user-pack{
     &:not(:last-child){

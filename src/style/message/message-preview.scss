@@ -1,0 +1,87 @@
+.message-preview{
+  display: flex;
+  padding: 16px;
+  position: relative;
+  border-bottom: 1px solid $main-border-color;
+  &:first-child{
+    border-top: 1px solid $main-border-color;
+  }
+  &__status{
+    display: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    white-space: nowrap;
+  }
+  &__del{
+    width:  40px;
+    height: 40px;
+    margin-left: auto;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+  }
+  &__date{
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    font-size: 12px;
+  }
+  &__body{
+    max-width: 65%;
+  }
+  &__user{
+    color: inherit;
+    &:after{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 1;
+    }
+  }
+  &__text{
+    position: relative;
+    color: inherit;
+    overflow: hidden;
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 1;
+    &:after{
+      background-color: #fff;
+      width: 16px;
+      position: absolute;
+      right: 0;
+      font-size: 18px;
+      bottom: -2px;
+      display: block;
+      content: "...";
+    }
+  }
+  &--new{
+    background-color: $second-green;
+    color: #fff;
+  }
+  &--new &__status{
+    display: block;
+    align-self: center;
+    margin: 0 auto;
+  }
+  &--new &__text{
+    &:after{
+      background-color: $second-green;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .message-preview{
+    &--new &__status{
+      display: none;
+    }
+    &__body{
+      max-width: 80%;
+    }
+  }
+}
