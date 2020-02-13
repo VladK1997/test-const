@@ -1,0 +1,79 @@
+.chat-answer{
+  display: flex;
+  align-items: center;
+  background-color: $main-blue;
+  padding: 16px;
+  textarea{
+    width: 100%;
+    padding: 4px 8px;
+    resize: none;
+    height: 40px;
+    border-radius: 3px;
+    max-height: 116px;
+    overflow-y: auto;
+    @extend %scrollBarSecond;
+  }
+  &__send{
+    position: relative;
+    margin-left: 16px;
+    align-self: flex-end;
+    margin-bottom: 6px;
+    &:before{
+      display: block;
+      border-left: 30px solid #fff;
+      border-top:    14px solid transparent;
+      border-bottom: 14px solid transparent;
+      content: "";
+      border-radius: 3px;
+    }
+    &:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 6px solid $main-blue;
+      border-top:    14px solid transparent;
+      border-bottom: 14px solid transparent;
+      content:"";
+    }
+  }
+  &__file{
+    cursor: pointer;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    color: #fff;
+    align-self: flex-end;
+    input{
+      display: none;
+    }
+  }
+  &__files-wrap{
+    position: absolute;
+    bottom: 100%;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid $main-border-color;
+    max-height: 0;
+    overflow: hidden;
+    padding: 16px;
+    transition: 0.3s;
+    opacity: 0;
+    &.active{
+      max-height: 80px;
+      opacity: 1;
+      overflow: auto;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .chat-answer{
+    &__files-wrap{
+      &.active{
+        max-height: 160px;
+      }
+    }
+  }
+}

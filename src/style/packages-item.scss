@@ -102,12 +102,14 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "times new roaman",serif;
     z-index: 2;
     top: 16px;
     font-style: italic;
     right: 16px;
+    cursor: pointer;
   }
   &.info &__desc{
     transform: translateY(0);

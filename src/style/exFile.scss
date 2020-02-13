@@ -1,5 +1,4 @@
 .exFile{
-
   &__item{
     position: relative;
     align-items: center;
@@ -31,6 +30,19 @@
     font-size: 14px;
     .icon{
       margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+  &--row &__item{
+    margin-right: 16px;
+    &:not(:last-child){
+      margin-bottom: 0;
+    }
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    &:nth-of-type(n+4){
+      margin-top: 16px;
     }
   }
   & &__del{
@@ -52,6 +64,28 @@
     }
     &:before{
       transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+}
+@media all and(max-width: 880px){
+  .exFile {
+    &--row &__item {
+      &:nth-of-type(n) {
+        margin-right: 0;
+      }
+      &:nth-of-type(n+3) {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .exFile {
+    &--row &__item {
+      &:nth-of-type(n) {
+        margin: 0 auto;
+        margin-top: 16px;
+      }
     }
   }
 }

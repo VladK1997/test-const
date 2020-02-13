@@ -802,9 +802,9 @@ if(wrapExfiles){
         item.value = null;
         console.log(item.files[0])
     }
-    function delFile(file) {
-        file.parentNode.remove();
-    }
+}
+function delFile(file) {
+    file.parentNode.remove();
 }
 (function(){
     let tel = document.getElementById("showTel");
