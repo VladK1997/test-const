@@ -1,0 +1,26 @@
+.blog{
+  display: flex;
+  &__main{
+    width: 73%;
+    margin-right: 2%;
+  }
+  &__header{
+    margin-bottom: 16px;
+  }
+  &__side{
+    width: 25%;
+    padding: 16px;
+    background-color: $second-blue;
+  }
+  &__side-item{
+    width: 100%;
+    padding-top: 60%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+}

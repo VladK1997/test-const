@@ -33,4 +33,17 @@
       }
     }
   }
+  &__note{
+    position: absolute;
+    top: 16px;
+    display: none;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $main-green;
+  }
+  &__item--new &__note{
+    display: block;
+  }
 }

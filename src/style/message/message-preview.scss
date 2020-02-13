@@ -19,6 +19,7 @@
   &__del{
     width:  40px;
     height: 40px;
+    padding:0 4px 8px;
     margin-left: auto;
     flex-shrink: 0;
     z-index: 2;
@@ -80,6 +81,9 @@
   .message-preview{
     &--new &__status{
       display: none;
+    }
+    &__del{
+      padding:0 8px 16px;
     }
     &__body{
       max-width: 80%;

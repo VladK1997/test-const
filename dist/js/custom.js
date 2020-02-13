@@ -203,8 +203,7 @@ let vWidth = window.innerWidth;
     let packeges = document.querySelector(".packages");
     if(vWidth < 992 && packeges){
         let packegesSlider = new Swiper(packeges, {
-            slidesPerView: 3,
-            spaceBetween: 4,
+            slidesPerView: "auto",
             initialSlide: 1,
             centeredSlides: true,
             navigation:{
@@ -216,17 +215,16 @@ let vWidth = window.innerWidth;
                 type: 'bullets',
                 clickable: true,
             },
-            breakpoints: {
-                768:{
-                    slidesPerView: "auto",
-                    spaceBetween: 0,
-                },
-            }
         });
     }
 })();
 (function(){
-
+    window.addEventListener('click',function(e){
+        let target = e.target;
+        if(target.hasAttribute('data-info')){
+            target.parentNode.classList.toggle('info')
+        }
+    })
 })();
 
 
