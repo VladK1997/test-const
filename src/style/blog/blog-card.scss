@@ -3,6 +3,9 @@
   padding: 16px;
   position: relative;
   height: 100%;
+  &--self{
+    min-height: 100%;
+  }
   &:not(:first-child){
     margin-top: 16px;
   }
