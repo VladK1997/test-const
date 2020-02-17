@@ -1,6 +1,5 @@
 .socials{
   display: flex;
-
   &__item{
     cursor: pointer;
     width: 40px;
@@ -11,5 +10,8 @@
     &:hover{
       color: $main-green;
     }
+  }
+  &--primary &__item:hover{
+    color: $main-blue;
   }
 }

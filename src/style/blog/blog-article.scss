@@ -1,0 +1,96 @@
+.blog-article{
+  width: 100%;
+  h1{
+    background-color: $second-blue;
+    padding: 16px;
+  }
+  &__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p{
+      line-height: 1;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    blockquote{
+      text-align: right;
+      width: 100%;
+      padding: 0;
+      background: none;
+      font-weight: 600;
+      border: none;
+      margin-top: 8px;
+      &:before,&:after{
+        display: none;
+      }
+    }
+  }
+  h2{
+    font-size: 24px;
+    margin: 40px 0 16px;
+    font-weight: 600;
+  }
+  img{
+    width: 100%;
+    display: block;
+    margin: 24px 0;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  h2 + p{
+    margin-top: 16px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 24px 0;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    a{
+      font-size: inherit;
+      color: $main-blue;
+      transition: 0.3s;
+      &:hover{
+        color: lighten($main-blue,20);
+      }
+    }
+  }
+  ol,ul{
+    h2{
+      margin-top: 0;
+      margin-left: -20px;
+    }
+    margin: 16px 0;
+    padding: 24px;
+    padding-left: 40px;
+    background-color: $second-blue;
+    li{
+      font-size: 21px;
+      color: $main-blue;
+      &:not(:last-child){
+        margin-bottom: 8px;
+      }
+    }
+    ol,ul{
+      padding: 0;
+      padding-left: 32px;
+      margin: 16px 0 0 0;
+    }
+  }
+  &__sharing{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    p{
+      margin-right: 8px;
+      font-size: 20px;
+      font-weight: 600;
+
+    }
+  }
+}
