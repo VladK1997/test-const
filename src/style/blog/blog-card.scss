@@ -10,6 +10,7 @@
     margin-top: 16px;
   }
   &__info{
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     p{
@@ -29,6 +30,7 @@
     a{
       color: inherit;
       line-height: 1.5;
+      font-size: inherit;
       &:after{
         position: absolute;
         width: 100%;
@@ -64,6 +66,13 @@
     }
     &__text{
       padding: 0 0 0 8px;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .blog-card{
+    &__text{
+      font-size: 14px;
     }
   }
 }

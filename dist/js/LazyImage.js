@@ -23,7 +23,6 @@
                                     n.setAttribute("src", n.dataset.src)
                                 }
                                 setTimeout(function () {
-                                    n.classList.remove("lazy");
                                     n.classList.remove("lazy-out");
                                     n.removeAttribute('data-src');
                                     n.removeAttribute('data-webpsrc');
@@ -53,7 +52,6 @@
                                     n.style.backgroundImage = 'url("' + n.dataset.src + '")'
                                 }
                                 setTimeout(function () {
-                                    n.classList.remove("lazy-bg");
                                     n.classList.remove("lazy-out");
                                     n.removeAttribute('data-src');
                                     n.removeAttribute('data-webpsrc');

@@ -2,11 +2,14 @@
     let chatForm = document.getElementById("chatForm");
     let chatBlock = document.getElementById('charWrap');
     if(chatForm && chatBlock){
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual'
+        }
         var currentdate = new Date();
-
+        let start = chatBlock.offsetHeight - window.innerHeight + 300;
+        window.scrollTo(0,start);
         let monthName = [ "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December" ];
-        console.log(monthName[currentdate.getMonth()]);
         let files = [];
         let fileInput = chatForm.querySelector(".chat-answer__file input");
         let fileWrap = chatForm.querySelector('.chat-answer__files-wrap');
@@ -16,7 +19,6 @@
             e.preventDefault();
             let filesHtml = "";
             let form = e.target;
-            console.log(files.length);
             if(files.length > 0){
                 for(let i = 0, l = files.length;i < l; i++){
                     let myClass ="";
@@ -29,11 +31,13 @@
                     '<input type="hidden" value="'+files[i]+'">'+
                     '</a>';
                 }
+
             }
+
             if(filesHtml.length > 0 || textWrap.value.length > 0){
+                let scrollToEl = chatBlock.offsetHeight - window.innerHeight/2;
                 if(!dateExist) {
                     let existableDates = chatBlock.querySelectorAll('.chat__date');
-                    console.log("gog");
                     for (let i = 0, l = existableDates.length; i < l; i++) {
                         if (existableDates[i].innerText == currentdate.getDate() + " " + monthName[currentdate.getMonth()]) {
                             dateExist = true;
@@ -55,7 +59,22 @@
                 files = [];
                 fileWrap.classList.remove('active');
                 fileWrap.innerHTML="";
+                console.log(window.innerHeight,chatBlock.getBoundingClientRect().bottom);
+                if(window.innerHeight < chatBlock.getBoundingClientRect().bottom+70) {
+                    window.scrollTo(0, scrollToEl-680);
+                    for(let i = 0,l = 36;i< l ;i++){
+                        window.requestAnimationFrame(function () {
+                            setTimeout(function () {
+                                window.scrollTo(0, scrollToEl-680+20*i);
+                            },7*i);
+                        })
+                    }
+
+
+
+                }
             }
+
         });
         fileInput.addEventListener("change",function(e){
             let outputFileHtml = "";
@@ -87,6 +106,12 @@
 
         });
 
+
     }
 })();
+document.addEventListener('DOMContentLoaded',function () {
+
+
+})
+
 

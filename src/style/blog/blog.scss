@@ -45,5 +45,24 @@
     position: absolute;
     bottom:0;
   }
-
+}
+@media all and(max-width:$small-tablet-width) {
+  .blog{
+    &__main{
+      margin-right: 0;
+      width: 100%;
+    }
+    &__side{
+      display: none;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .blog{
+    .col{
+      &:not(:last-child){
+        margin-bottom: 24px;
+      }
+    }
+  }
 }

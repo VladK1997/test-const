@@ -1,5 +1,6 @@
 .blog-header{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: $second-blue;
   padding: 16px;
@@ -10,6 +11,7 @@
   }
   &__col{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
@@ -24,6 +26,45 @@
     font-size: 18px;
     &:hover{
       opacity: 0.6;
+    }
+  }
+  &__text{
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}
+@media all and(max-width: $small-tablet-width) {
+  .blog-header{
+    &__col{
+      width: 100%;
+      justify-content: center;
+      flex-direction: row;
+    }
+    &__link{
+      &:not(:last-child){
+        margin-right: 12px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .blog-header{
+    &__link{
+      font-size: 16px;
+    }
+    &__text{
+      font-size: 15px;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .blog-header{
+    padding: 12px;
+    &__link{
+      font-size: 14px;
+    }
+    &__text{
+      font-size: 13px;
     }
   }
 }

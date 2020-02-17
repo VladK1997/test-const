@@ -1,3 +1,10 @@
+.banner{
+  &__item{
+    border: 1px solid $main-border-color;
+    padding: 8px;
+    border-radius: 5px;
+  }
+}
 .banner.banner--2{
   .banner{
     &__temp-text{
@@ -43,6 +50,7 @@
     }
   }
 }
+
 @media all and(max-width: $mobile-Width){
   .banner.banner--2 {
     .banner {
