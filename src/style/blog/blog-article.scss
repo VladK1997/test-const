@@ -3,14 +3,17 @@
   h1{
     background-color: $second-blue;
     padding: 16px;
+    margin: 0;
   }
-  &__info{
+  & &__info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 16px;
     p{
       line-height: 1;
       font-size: 16px;
+      margin: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -45,7 +48,7 @@
     margin-top: 16px;
   }
   p{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     margin: 24px 0;
     &:last-child{
@@ -91,6 +94,20 @@
       font-size: 20px;
       font-weight: 600;
 
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .blog-article{
+    p{
+      font-size: 16px;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .blog-article{
+    p{
+      font-size: 14px;
     }
   }
 }

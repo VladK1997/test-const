@@ -12,6 +12,10 @@
     width: 25%;
     padding: 16px;
     background-color: $second-blue;
+
+  }
+  &__articles{
+    margin-top: 24px;
   }
   &__side-item{
     width: 100%;
@@ -22,6 +26,13 @@
     background-repeat: no-repeat;
     &:not(:last-child){
       margin-bottom: 16px;
+    }
+    position: relative;
+    span{
+      position: absolute;
+      bottom: 0;
+      padding: 16px;
+      color: #fff;
     }
   }
   &__section{
