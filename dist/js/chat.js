@@ -59,7 +59,6 @@
                 files = [];
                 fileWrap.classList.remove('active');
                 fileWrap.innerHTML="";
-                console.log(window.innerHeight,chatBlock.getBoundingClientRect().bottom);
                 if(window.innerHeight < chatBlock.getBoundingClientRect().bottom+70) {
                     window.scrollTo(0, scrollToEl-680);
                     for(let i = 0,l = 36;i< l ;i++){

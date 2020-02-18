@@ -2,6 +2,7 @@
   background-color: $second-blue;
   padding: 16px;
   position: relative;
+  transition: 0.3s;
   height: 100%;
   &--self{
     min-height: 100%;
@@ -66,6 +67,13 @@
     }
     &__text{
       padding: 0 0 0 8px;
+    }
+  }
+}
+@media all and(min-width: $tablet-width) {
+  .blog-card{
+    &:hover{
+      box-shadow: 0 0 10px 0 rgba($main-grey,0.7);
     }
   }
 }

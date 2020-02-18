@@ -171,6 +171,9 @@
         </div>
     </nav>
 </div>
+<a href="#list" class="toTopBtn" id="backToTop" data-scroll>
+    <svg style="transform: rotate(-90deg)"><use xlink:href="#round-arrow"></use></svg>
+</a>
 <div class="page">
     <div class="container container--lg">
         <div class="blog">
@@ -191,18 +194,18 @@
                         озвучить сценарий дальнейшего развития? Конечно, да.
                     </p>
                     <img src="dist/img/blogArticle1.jpg">
-                    <h2>В этой статье вы узнаете:</h2>
-                    <ol>
-                        <li>Геометричесская прогрессия .</li>
-                        <li>Изменение нашего тела - последствие.</li>
-                        <li>Наиболее вероятные сценарии будущего:
+                    <h2 id="list">В этой статье вы узнаете:</h2>
+                    <ol >
+                        <li><a href="#first" data-scroll>Геометричесская прогрессия.</a></li>
+                        <li><a href="#second" data-scroll>Изменение нашего тела - последствие.</a></li>
+                        <li><a href="#third" data-scroll>Наиболее вероятные сценарии будущего:</a>
                             <ol type="a">
                                 <li>экологический разлом;</li>
                                 <li>очередная схватка за власть - последняя.</li>
                             </ol>
                         </li>
                     </ol>
-                    <h2>Геометрическая прогрессия</h2>
+                    <h2 id="first">Геометрическая прогрессия</h2>
                     <p>
                         Столетие неоднозначности, стремительности, величайшего технологического
                         взрыва, уплотнение периодов динамики развития, человечество, бродящие по
@@ -232,7 +235,7 @@
                         будущего – оперативная адаптация. Теперь Homo должен обучаться в разы
                         быстрее, чтобы идти в ногу со временем.
                     </p>
-                    <h2>Изменения нашего тела - последствие.</h2>
+                    <h2 id="second">Изменения нашего тела - последствие.</h2>
                     <p>
                         Как утверждает доцент кафедры антропологии биологического факультета МГУ,
                         научный редактор портала антропогенез.ру Станислав Дробышевский, эволюция
@@ -291,18 +294,20 @@
                 </div>
             </div>
             <div class="blog__side">
-                <p class="text text-h6">Самое свежее</p>
-                <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
-                </a>
-                <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
-                </a>
-                <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
-                </a>
-                <div class="banner__item banner__item--medium w-100">
-                    <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
+                <div class="blog__side-wrap">
+                    <p class="text text-h6">Самое свежее</p>
+                    <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
+                    </a>
+                    <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
+                    </a>
+                    <a href="#" class="blog__side-item lazy-bg lazy-out" data-src="dist/img/odessa.jpg">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor.</span>
+                    </a>
+                    <div class="banner__item banner__item--medium w-100">
+                        <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -654,5 +659,7 @@
 <script src="dist/doc/userAreement.js"></script>
 <script src="dist/js/custom.js"></script>
 <script src="dist/js/LazyImage.js"></script>
+<script src="dist/js/SmoothScroll.js"></script>
+<script src="dist/js/backToTopBtn.js"></script>
 </body>
 </html>
