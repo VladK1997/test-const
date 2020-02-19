@@ -1,14 +1,16 @@
 (function(){
     let checkImgId = document.getElementById("checkImgId");
-    if(checkImgId) {
+
         let img = "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACyAgCdASoCAAEALmk0mk0iIiIiIgBoSygABc6zbAAA/v56QAAAAA==";
         let webpEnable = false;
+    if(checkImgId) {
         checkImg = document.createElement("IMG");
         checkImgId.src = img;
         checkImgId.addEventListener("load", function () {
             console.log(checkImgId.width);
             if (checkImgId.width > 0) webpEnable = true;
         })
+    }
         document.addEventListener("DOMContentLoaded", function () {
             var e = [].slice.call(document.querySelectorAll("img.lazy"));
             console.log(e.length);
@@ -66,5 +68,5 @@
                 })
             }
         });
-    }
+
 })();

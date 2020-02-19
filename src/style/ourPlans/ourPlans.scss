@@ -1,0 +1,98 @@
+.ourPlans{
+  &__team-slider{
+    padding: 8px 12px 32px;
+    margin: 24px -12px 0;
+  }
+  &__img{
+    position: relative;
+  }
+  &__img-topText{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 100%;
+    max-width: 540px;
+    blockquote{
+      font-size: 32px;
+      font-weight: 600;
+      font-family: 'aFuturaOrto',arial,sans-serif;
+      text-align: center;
+      margin-bottom: 0;
+      color: $main-blue;
+    }
+    p{
+      font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'aFuturaOrto',arial,sans-serif;
+    }
+  }
+  &__img-bottomText{
+    font-size: 18px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 100%;
+    text-align: right;
+  }
+  &__team-pag{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+  &__content{
+    padding: 40px 0;
+    margin: 0 auto;
+    position: relative;
+
+    &:after{
+      position: absolute;
+
+    }
+    .route-card{
+      &:not(:last-child){
+        margin-bottom: 26px;
+      }
+      &--reverse{
+        margin-left: auto;
+      }
+    }
+  }
+  &__team{
+    margin-top: 24px;
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .ourPlans{
+    .route-card{
+      &:not(:last-child){
+        margin-bottom: 32px;
+      }
+    }
+    &__img-bottomText{
+      display: none;
+    }
+    &__img-topText{
+      max-width: 340px;
+      blockquote{
+        font-size: 24px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .ourPlans{
+    &__img-topText{
+      max-width: 300px;
+      blockquote{
+        font-size: 18px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}

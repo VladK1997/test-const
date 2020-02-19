@@ -219,31 +219,6 @@ p {
   /*color: #484848;*/
 }
 
-blockquote {
-  background-color: rgba(0,0,0,0.1);
-  border-left: solid 5px #0015d3;
-  font-size: 20px;
-  font-style: italic;
-  padding: 30px;
-  margin-bottom: 30px;
-}
-
-blockquote p {
-  color: #000;
-  font-size: 20px;
-  line-height: 32px;
-  font-style: italic;
-}
-
-blockquote p:last-child {
-  padding-bottom: 0;
-}
-
-.uploader-inline p,
-.supports-drag-drop .uploader-inline .drop-instructions,
-.media-frame .uploader-inline {
-  text-align: center !important;
-}
 
 .says,
 .screen-reader-text {

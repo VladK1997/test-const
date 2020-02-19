@@ -16,11 +16,14 @@
     margin-bottom: 24px;
     font-size: 16px;
     font-weight: 400;
-    color: inherit;
     display: block;
-    &:hover{
-      color: $main-green;
+    a{
+      color: inherit;
+      &:hover{
+        color: $main-green;
+      }
     }
+
   }
   &__bottom{
     display: flex;
@@ -44,16 +47,20 @@
     }
   }
   &__link{
-    display: block;
+    display: flex;
     font-size: 14px;
-    transition: 0.3s;
-    opacity: 0.8;
+    opacity: 0.9;
+    a{
+      color: inherit;
+      font-size: inherit;
+      &:hover{
+        color: $main-green;
+      }
+    }
     &:not(:last-child){
       margin-bottom: 16px;
     }
-    &:hover{
-      color: $main-green;
-    }
+
   }
   &__column{
     &:not(:last-child){

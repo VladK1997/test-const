@@ -1,0 +1,55 @@
+.team-card-extd{
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-radius: 15px;
+  background-color: $second-blue;
+  box-shadow: 0 0 10px 0 rgba($main-grey,0.6);
+ &__card{
+   width: 40%;
+   padding: 16px;
+ }
+  &__text{
+    width: 60%;
+    padding: 16px;
+    border-left: 1px solid $main-border-color;
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .team-card-extd{
+    flex-direction: column-reverse;
+    &__text{
+      width: 100%;
+      padding: 0;
+      border-left: none;
+    }
+    &__card{
+      width: 100%;
+      padding: 0;
+      margin-top: 16px;
+    }
+    .team-card{
+      display: flex;
+      align-items: center;
+      &__avatar{
+        flex-shrink: 0;
+        width: 30%;
+        padding-top: 30%;
+        margin-right: 8px;
+      }
+      &__title{
+        font-size: 18px;
+      }
+      &__text{
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .team-card-extd{
+    &__text{
+      font-size: 14px;
+    }
+  }
+}

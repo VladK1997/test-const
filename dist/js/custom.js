@@ -43,7 +43,18 @@ let vWidth = window.innerWidth;
            },
        });
    }
-   if(vWidth < 1301){
+   let teamBlockSlider = document.querySelector('.team-block__slider');
+   if(vWidth < 577 && teamBlockSlider){
+       new Swiper(teamBlockSlider, {
+           slidesPerView: 1,
+           pagination: {
+               el: '.team-block__pag',
+               clickable: true,
+           },
+           autoplay:{
+               delay: 4000,
+           },
+       });
    }
    if(vWidth < 994) {
        let banner1Swiper = new Swiper(".banner1-swiper", {
@@ -234,6 +245,26 @@ let vWidth = window.innerWidth;
             },
         });
     }
+
+
+    let ourPlansTeamSlider = document.querySelector('.ourPlans__team-slider');
+    if(ourPlansTeamSlider){
+
+         new Swiper(ourPlansTeamSlider, {
+            slidesPerView: 1,
+            initialSlide: 0,
+             autoHeight: true,
+             spaceBetween: 24,
+            autoplay:{
+                delay: 30000,
+            },
+            pagination: {
+                el: '.ourPlans__team-pag',
+                clickable: true,
+            },
+        });
+    }
+
 })();
 (function(){
     window.addEventListener('click',function(e){

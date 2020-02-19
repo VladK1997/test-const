@@ -1,0 +1,22 @@
+.corp-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px 0;
+  color: $main-grey;
+  &__item{
+    padding: 8px 16px;
+    font-weight: 600;
+    font-family: 'aFuturaOrto', arial,sans-serif;
+    font-size: 18px;
+    color: inherit;
+    border-bottom: 1px solid $main-border-color;
+    &:not(:last-child){
+      border-right: 1px solid $main-border-color;
+    }
+    &:hover{
+      background-color: $second-blue;
+    }
+  }
+
+}
