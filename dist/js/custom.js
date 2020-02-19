@@ -255,7 +255,9 @@ let vWidth = window.innerWidth;
             initialSlide: 0,
              autoHeight: true,
              spaceBetween: 24,
+
             autoplay:{
+                disableOnInteraction: false,
                 delay: 30000,
             },
             pagination: {
