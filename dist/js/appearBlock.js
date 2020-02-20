@@ -7,7 +7,7 @@
                         if (e.isIntersecting) {
                             let n = e.target;
                                 n.classList.add('appeared');
-                            console.log(n);
+
                             setTimeout(function () {
                                 t.unobserve(n);
                             },0)
