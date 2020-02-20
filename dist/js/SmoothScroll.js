@@ -24,16 +24,16 @@ function smoothScroll(toEl){
     if(toEl.offsetTop  > window.pageYOffset){
         window.scrollTo(0, coordinate);
     }else{
-        coordinate = toEl.offsetTop+680
+        coordinate = toEl.offsetTop + window.innerHeight * 0.64;
         window.scrollTo(0, coordinate);
     }
     for(let i = 0,l = 36;i< l ;i++){
         window.requestAnimationFrame(function () {
             setTimeout(function () {
                 if(toEl.offsetTop  > window.pageYOffset){
-                    window.scrollTo(0, coordinate + 22*i);
+                    window.scrollTo(0, coordinate + ((window.innerHeight)/36)* i);
                 }else{
-                    window.scrollTo(0, coordinate - 20*i);
+                    window.scrollTo(0, coordinate - ((window.innerHeight * 0.68)/36)* i);
                 }
 
             },7*i);

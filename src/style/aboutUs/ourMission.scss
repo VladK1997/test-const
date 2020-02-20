@@ -1,0 +1,51 @@
+.ourMission{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__title{
+    width: 100%;
+    @extend %futuraTitle;
+    font-size: 40px;
+    color: $main-blue;
+    text-align: center;
+  }
+  &__blockquote{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    @extend %futuraTitle;
+  }
+  &__col{
+    text-align: center;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item{
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+  &__sub-title{
+    font-size: 25px;
+    @extend %futuraTitle;
+    color: $main-blue;
+  }
+  &__text{
+    font-size: 18px;
+    margin-top: 8px;
+    @extend %futuraTitle;
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .ourMission{
+    &__title{
+      font-size: 36px;
+    }
+    &__col{
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

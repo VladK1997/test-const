@@ -4,6 +4,7 @@
     background-color: $second-blue;
     padding: 16px;
     margin: 0;
+    font-size: 40px;
   }
   & &__info{
     display: flex;
@@ -97,8 +98,18 @@
     }
   }
 }
+@media all and(max-width: $small-tablet-width) {
+  .blog-article {
+    h1 {
+      font-size: 36px;
+    }
+  }
+}
 @media all and(max-width: $mobile-Width) {
   .blog-article{
+    h1{
+      font-size: 32px;
+    }
     p{
       font-size: 16px;
     }
@@ -106,6 +117,12 @@
 }
 @media all and(max-width: $mobileXsWidth) {
   .blog-article{
+    h1{
+      font-size: 28px;
+    }
+    h2{
+      font-size: 20px;
+    }
     p{
       font-size: 14px;
     }

@@ -28,16 +28,6 @@
     width: 100%;
     max-width: 290px;
   }
-  &__greet-boy{
-    position: absolute;
-    left: 0;
-    top: 0;
-    img{
-      object-fit: contain;
-      max-height: 204px;
-      display: block;
-    }
-  }
   &__greet-center{
     margin: 0 auto;
   }
@@ -55,11 +45,25 @@
   &__slide-text{
     margin-bottom: 32px;
   }
+  &__mission{
+    margin: 24px 0 40px;
+  }
 }
 @media all and(max-width: $mobile-Width){
   .aboutUs {
+    &__greet-logo{
+      max-width: 220px;
+    }
     &__card {
       width: 100%;
     }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .aboutUs {
+    &__greet-title{
+      font-size: 22px;
+    }
+
   }
 }

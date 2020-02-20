@@ -16,6 +16,7 @@
   &__content{
     font-size: 18px;
     width: 100%;
+    font-weight: 400;
     color: #fff;
     display: flex;
     position: relative;
@@ -30,17 +31,19 @@
       width:100vw;
       position: absolute;
       left: 100%;
-      margin-left: -1px;
-      background: linear-gradient(to right,#4bb065 1%,#7acc82 60%);
+      margin-left: -6px;
+      background-size: 100px;
+      background:url('img/noise.png'), linear-gradient(to right,#3abf5d 1%,#7acc82 60%);
       content:'';
     }
 
   }
   &--upper &__content{
-    background-image: url('img/aboutUsFigure.png');
+    background-image: url('img/aboutUsFigure.png') ;
     &:after{
       top: 1px;
       bottom: 0;
+
     }
   }
   &--bottom &__content{
@@ -71,6 +74,12 @@
   .aboutUs-card{
     &__content{
       font-size: 14px;
+      min-height: 160px;
+      padding: 16px 8px 16px 15% ;
+    }
+    &__number{
+      font-size: 32px;
+      padding: 20px 11% 20px 12px;
     }
   }
 }
