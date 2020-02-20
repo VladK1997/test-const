@@ -108,7 +108,7 @@
     &--reverse{
       transform: translateX(-90%);
     }
-    &.active{
+    &.appeared{
       transform: translateX(0);
     }
     &__route {

@@ -1,0 +1,16 @@
+.slide-text{
+  text-align: center;
+  font-weight: 600;
+  p{
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(50%);
+    &:nth-of-type(2n){
+      transform: translateX(-50%);
+    }
+    &.appeared{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

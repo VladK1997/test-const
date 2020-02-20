@@ -1,0 +1,65 @@
+.aboutUs{
+  &__card{
+    margin-left: auto;
+    transition: 1s;
+    transform: translateX(90%) translateZ(0);
+    &.appeared{
+      transform: translateX(0) translateZ(0);
+    }
+    &:not(last-child){
+      margin-bottom: 32px;
+    }
+    &--large{
+      width: 100%;
+    }
+    &--small{
+      width: 80%;
+    }
+    &--medium{
+      width: 90%;
+    }
+  }
+  &__greet{
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  &__greet-logo{
+    width: 100%;
+    max-width: 290px;
+  }
+  &__greet-boy{
+    position: absolute;
+    left: 0;
+    top: 0;
+    img{
+      object-fit: contain;
+      max-height: 204px;
+      display: block;
+    }
+  }
+  &__greet-center{
+    margin: 0 auto;
+  }
+  &__greet-logo{
+    margin: 0 auto;
+  }
+  &__greet-title{
+    margin-top: 48px;
+    font-size: 32px;
+    margin-bottom: 0;
+    color: $main-blue;
+    text-align: center;
+    font-family: 'aFuturaOrto',arial,sans-serif;
+  }
+  &__slide-text{
+    margin-bottom: 32px;
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .aboutUs {
+    &__card {
+      width: 100%;
+    }
+  }
+}

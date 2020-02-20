@@ -6,7 +6,7 @@
                     e.forEach(function (e) {
                         if (e.isIntersecting) {
                             let n = e.target;
-                                n.classList.add('active');
+                                n.classList.add('appeared');
                             console.log(n);
                             setTimeout(function () {
                                 t.unobserve(n);
