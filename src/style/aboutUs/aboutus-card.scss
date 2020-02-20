@@ -18,14 +18,37 @@
     width: 100%;
     color: #fff;
     display: flex;
+    position: relative;
     align-items: center;
     line-height: 1.5;
     padding: 40px;
-    min-height: 160px;
+    min-height: 200px;
     padding-left: 15%;
-    border-radius: 0 30px 30px 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    &:after{
+      width:100vw;
+      position: absolute;
+      left: 100%;
+      margin-left: -1px;
+      background: linear-gradient(to right,#4bb065 1%,#7acc82 60%);
+      content:'';
+    }
+
+  }
+  &--upper &__content{
+    background-image: url('img/aboutUsFigure.png');
+    &:after{
+      top: 1px;
+      bottom: 0;
+    }
+  }
+  &--bottom &__content{
+    background-image: url('img/aboutUsFigure2.png');
+    &:after{
+      top: 0;
+      bottom: 1px;
+    }
   }
 }
 @media all and(max-width: $small-tablet-width){
