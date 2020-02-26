@@ -71,10 +71,11 @@
     width: 100%;
     text-align: right;
   }
-  &__team-pag{
+  & &__team-pag{
     position: absolute;
     display: flex;
     justify-content: center;
+    bottom:0;
   }
   &__content{
     padding: 40px 0;
@@ -96,6 +97,9 @@
   }
   &__team{
     margin-top: 24px;
+  }
+  &__articles{
+    margin-top: 40px;
   }
 }
 @media all and(max-width: $mobile-Width){
