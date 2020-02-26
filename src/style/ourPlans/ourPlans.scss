@@ -6,6 +6,42 @@
   &__img{
     position: relative;
   }
+  &__arrow{
+    position: absolute;
+    top: 44%;
+    left: 29%;
+    width: 62.45%;
+    padding-top: 6.6%;
+    background-size: contain;
+    background-position: center;
+    transform: translate3d(200%,-50%,0);
+    background-repeat: no-repeat;
+
+    transform-origin: left;
+    &:before{
+      width: 40%;
+      height: 50%;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: -5%;
+      border-radius: 50% 0 0 50%;
+      transform-origin: left ;
+      background: linear-gradient(to top ,transparent,rgba($main-grey,0.1),transparent),
+      linear-gradient(to right ,rgba($main-grey,0.5),transparent,transparent);
+      transform: rotate(45deg);
+    }
+  }
+  &__img.appeared &__arrow{
+    animation: arrowShot 1.3s linear 1 forwards;
+    animation-delay: 1s;
+    &:before{
+      animation: arrowShadowAnim 1.3s linear 1 forwards;
+      animation-delay: 1s;
+    }
+
+  }
   &__img-topText{
     position: absolute;
     top: 8px;

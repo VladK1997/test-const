@@ -1,0 +1,154 @@
+$angle: 3deg;
+$angle2: 2deg;
+@keyframes arrowShot {
+  @for $i from 0 through 10 {
+      #{$i* 3%}{
+        transform: translate3d(#{200% - $i*20},-50%,0);
+      }
+  }
+  34%{
+    transform: translate3d(0%,-50%,0) rotate(0deg);
+  }
+  35%{
+    transform: translate3d(0%,-50%,0) rotate($angle);
+  }
+  40%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle);
+  }
+  45%{
+    transform: translate3d(0%,-50%,0) rotate($angle);
+  }
+  50%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle);
+  }
+  55%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle);
+  }
+  60%{
+    transform: translate3d(0%,-50%,0) rotate($angle);
+  }
+  62%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  64%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  66%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  68%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  70%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  72%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  73%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  75%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  76%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  77%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  78%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  79%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  80%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  81%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  82%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  83%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  84%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  85%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  86%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  87%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  88%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  89%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  90%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  91%{
+    transform: translate3d(0%,-50%,0) rotate($angle2);
+  }
+  92%{
+    transform: translate3d(0%,-50%,0) rotate(-$angle2);
+  }
+  93%{
+    transform: translate3d(0%,-50%,0) rotate(1deg);
+  }
+  94%{
+    transform: translate3d(0%,-50%,0) rotate(-1deg);
+  }
+  95%{
+    transform: translate3d(0%,-50%,0) rotate(1deg);
+  }
+  96%{
+    transform: translate3d(0%,-50%,0) rotate(-1deg);
+  }
+  95%{
+    transform: translate3d(0%,-50%,0) rotate(1deg);
+  }
+  96%{
+    transform: translate3d(0%,-50%,0) rotate(-1deg);
+  }
+  97%{
+    transform: translate3d(0%,-50%,0) rotate(1deg);
+  }
+  98%{
+    transform: translate3d(0%,-50%,0) rotate(-1deg);
+  }
+  99%{
+    transform: translate3d(0%,-50%,0) rotate(1deg);
+  }
+  100%{
+    transform: translate3d(0%,-50%,0) rotate(0);
+  }
+}
+@keyframes arrowShadowAnim {
+  0%{
+    transform: rotate(0);
+    margin-top: 40%;
+  }
+  25%{
+    transform: rotate(0);
+  }
+  34%{
+    transform: rotate(85deg);
+    margin-top: -3.5%;
+    left: 1%;
+  }
+  100%{
+    transform: rotate(85deg);
+    margin-top: -3.5%;
+    left: 1%;
+  }
+}
