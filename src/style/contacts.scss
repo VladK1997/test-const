@@ -58,12 +58,13 @@
     overflow: hidden;
     max-height: 0;
     transition: 0.5s;
-    margin: 40px auto;
+    margin: 0 auto;
     border-radius: 10px;
     padding: 16px;
     border: 1px solid $main-grey;
     &.active{
       visibility: visible;
+      margin: 40px auto;
     }
     label{
       position: relative;
