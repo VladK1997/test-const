@@ -65,6 +65,9 @@
   &--primary{
     color: $main-blue;
   }
+  &--secondary{
+    color: $main-green;
+  }
   &-hover{
     &Primary:hover{
       color: $main-blue;

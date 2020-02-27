@@ -71,12 +71,6 @@ strong {
   font-weight: 500;
 }
 
-small {
-  font-size: 80%;
-}
-
-
-
 li > ol,
 li > ul {
   margin-bottom: 0;
@@ -23113,10 +23107,6 @@ hr {
   color: #1e2022 !important;
 }
 
-small, .small {
-  font-size: 80% !important;
-  font-weight: 400 !important;
-}
 
 .h-40 {
   height: 40px;

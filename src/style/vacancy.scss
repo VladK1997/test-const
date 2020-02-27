@@ -1,0 +1,160 @@
+.vacancy{
+  &__greet{
+    padding: 16px 40px;
+    background-color: $second-blue;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    p{
+      font-size: inherit;
+      text-align: center;
+      &:not(:last-child){
+        margin-bottom: 8px;
+      }
+    }
+    p.small{
+      margin: 0 auto;
+      font-size: inherit;
+      max-width: 660px;
+    }
+  }
+  &__question{
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    max-width: 880px;
+    margin: 40px auto;
+    li{
+      font-weight: 600;
+      span{
+        @extend %futuraTitle;
+      }
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__question-desc{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    max-width: 600px;
+  }
+  &__btn{
+    margin: 0 auto;
+    margin-top: 24px;
+    outline: none!important;
+    &.active{
+      background-color: $main-blue;
+      pointer-events: none;
+    }
+  }
+  &__themselfs{
+    max-width: 880px;
+    margin: 0 auto;
+    padding-top: 40px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    justify-content: space-between;
+    &.active{
+      visibility: visible;
+    }
+    li{
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      width: 40%;
+      opacity: 0;
+      transition: 0.3s;
+      transform: translateY(150%);
+      //transition-timing-function: cubic-bezier(.17,.67,.89,2);
+      &:not(:last-child){
+        margin-bottom: 24px;
+      }
+      &:before{
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        background-color: $second-green;
+        border-radius: 50%;
+        content: '';
+      }
+      &.visible{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  &__contact{
+    border-radius: 5px;
+    padding: 16px;
+    text-align: center;
+    font-size: 20px;
+    background-color: $second-blue;
+  }
+  &__desc{
+    margin: 40px auto;
+    text-align: center;
+    font-size: 20px;
+    max-width: 880px;
+  }
+  &__contact-place{
+    font-size: 18px;
+    color: $main-green;
+    display: block;
+    text-align: right;
+    margin: 16px 0;
+    &:hover{
+      color: green;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .vacancy{
+    &__greet{
+      font-size: 18px;
+    }
+    &__question{
+      font-size: 18px;
+    }
+    &__themselfs{
+      li{
+        width: 49.5%;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .vacancy{
+    &__greet{
+      font-size: 16px;
+    }
+    &__question{
+      font-size: 16px;
+    }
+    &__question-desc{
+      font-size: 16px;
+    }
+    &__desc{
+      font-size: 16px;
+    }
+    &__themselfs{
+      li{
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    &__contact{
+      font-size: 16px;
+    }
+    &__contact-place{
+      font-size: 16px;
+    }
+  }
+}

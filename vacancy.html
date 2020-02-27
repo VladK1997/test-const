@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Наши планы</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/first-style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/font.css">
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+<body>
+<div class="d-none">
+    <svg id="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path>
+    </svg>
+    <svg id="reload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path>
+    </svg>
+    <svg id="power-off-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M400 54.1c63 45 104 118.6 104 201.9 0 136.8-110.8 247.7-247.5 248C120 504.3 8.2 393 8 256.4 7.9 173.1 48.9 99.3 111.8 54.2c11.7-8.3 28-4.8 35 7.7L162.6 90c5.9 10.5 3.1 23.8-6.6 31-41.5 30.8-68 79.6-68 134.9-.1 92.3 74.5 168.1 168 168.1 91.6 0 168.6-74.2 168-169.1-.3-51.8-24.7-101.8-68.1-134-9.7-7.2-12.4-20.5-6.5-30.9l15.8-28.1c7-12.4 23.2-16.1 34.8-7.8zM296 264V24c0-13.3-10.7-24-24-24h-32c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24z"></path>
+    </svg>
+    <svg id="del-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M268 416h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12zM432 80h-82.41l-34-56.7A48 48 0 0 0 274.41 0H173.59a48 48 0 0 0-41.16 23.3L98.41 80H16A16 16 0 0 0 0 96v16a16 16 0 0 0 16 16h16v336a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128h16a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16zM171.84 50.91A6 6 0 0 1 177 48h94a6 6 0 0 1 5.15 2.91L293.61 80H154.39zM368 464H80V128h288zm-212-48h24a12 12 0 0 0 12-12V188a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v216a12 12 0 0 0 12 12z"></path>
+    </svg>
+    <svg id="cross-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg>
+    <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path stroke-width="8px" stroke="currentColor" fill="none" d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>
+    <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>0
+    <svg id="favorite-stroke-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+    <svg id="favorite-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" stroke-width="16" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+    <svg id="doc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
+    <svg id="round-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg>
+</div>
+<div class="header">
+    <nav class="nav header__nav">
+        <div class="container d-flex">
+            <div class="burger" id="headerBurger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+            <a href="#" class="header__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 212.8 88.2" style="enable-background:new 0 0 212.8 88.2;" xml:space="preserve">
+                        <path fill="#fff" d="M86.2,45.1c0,24.9-19.3,45.1-43.1,45.1S0,70.1,0,45.1S19.3,0,43.1,0S86.2,20.2,86.2,45.1z M42.1,16.8
+                            c-14.9,0-26.9,12.6-26.9,28.2s12.1,28.2,26.9,28.2s26.9-12.6,26.9-28.2S57,16.8,42.1,16.8z"/>
+                    <polygon fill="#43B64D" class="st1" points="97,3.2 113.9,2.3 114.7,70 143.5,70.9 143.7,88 97.2,87.4 "/>
+                    <polygon fill="#fff" points="154.2,2 215,2.6 181.5,69.4 180.7,71.8 212.8,72.1 212.8,88.2 151.9,88 185.7,20 152.5,20.3 152.8,2.3
+                            "/>
+                    </svg>
+
+            </a>
+            <ul class="nav__list header__nav-list" id="headerList">
+                <li class="nav__item">
+                    <button type="button" class="light-mode-btn light-mode-btn--mob" data-lightmode>
+                        <span class="light-mode-btn__text light-mode-btn__text--day">DAYMODE</span>
+                        <span class="light-mode-btn__text light-mode-btn__text--night">NIGHTMODE</span>
+                        <span class="light-mode-btn__thumb-wrap">
+                                <span class="light-mode-btn__thumb">
+                        <span class="light-mode-btn__icon light-mode-btn__icon--day">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 228">
+                                <rect x="204" y="94.5" width="9" height="39" rx="4.5" transform="translate(94.5 322.5) rotate(-90)"/>
+                                <path d="M114,228h0a4.5,4.5,0,0,1-4.5-4.5v-30A4.51,4.51,0,0,1,114,189h0a4.5,4.5,0,0,1,4.5,4.5v30A4.49,4.49,0,0,1,114,228Z"/>
+                                <path d="M114,171.44A57.44,57.44,0,1,1,171.44,114,57.51,57.51,0,0,1,114,171.44Zm0-106.06A48.63,48.63,0,1,0,162.63,114,48.68,48.68,0,0,0,114,65.38Z"/>
+                                <rect x="15" y="94.5" width="9" height="39" rx="4.5" transform="translate(-94.5 133.5) rotate(-90)"/><path class="cls-1" d="M114,39h0a4.5,4.5,0,0,1-4.5-4.5V4.5A4.5,4.5,0,0,1,114,0h0a4.49,4.49,0,0,1,4.5,4.5v30A4.49,4.49,0,0,1,114,39Z"/>
+                                <path d="M61,61h0a4.5,4.5,0,0,1-6.37,0L33.39,39.75a4.49,4.49,0,0,1,0-6.36h0a4.49,4.49,0,0,1,6.36,0L61,54.6A4.5,4.5,0,0,1,61,61Z"/>
+                                <path d="M194.61,194.61h0a4.49,4.49,0,0,1-6.36,0L167,173.4a4.49,4.49,0,0,1,0-6.36h0a4.49,4.49,0,0,1,6.36,0l21.21,21.21A4.49,4.49,0,0,1,194.61,194.61Z"/>
+                                <path d="M61,167h0a4.49,4.49,0,0,1,0,6.36L39.75,194.61a4.49,4.49,0,0,1-6.36,0h0a4.49,4.49,0,0,1,0-6.36L54.6,167A4.5,4.5,0,0,1,61,167Z"/>
+                                <path d="M194.61,33.39h0a4.49,4.49,0,0,1,0,6.36L173.4,61A4.49,4.49,0,0,1,167,61h0a4.5,4.5,0,0,1,0-6.37l21.21-21.21A4.49,4.49,0,0,1,194.61,33.39Z"/>
+                            </svg>
+                        </span>
+                        <span class="light-mode-btn__icon light-mode-btn__icon--night">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189.12 188.46">
+                                <path d="M90,188.46A89.94,89.94,0,0,1,83.75,8.8,4.49,4.49,0,0,1,87.6,16,76.07,76.07,0,0,0,71.38,63.24a77,77,0,0,0,76.9,76.91,78.37,78.37,0,0,0,13.65-1.23,4.49,4.49,0,0,1,4.61,6.77A89.47,89.47,0,0,1,90,188.46ZM74.67,19A81,81,0,1,0,153.3,149c-1.68.1-3.35.15-5,.15A86,86,0,0,1,62.4,63.24,84.94,84.94,0,0,1,74.67,19Z"/>
+                                <path d="M165.57,63.33A4.49,4.49,0,0,1,161.22,60a21.58,21.58,0,0,0-15.47-15.53,4.43,4.43,0,0,1-2.53-1.26l-.07-.07a4.49,4.49,0,0,1,2.13-7.54,21.6,21.6,0,0,0,15.89-15.83,4.49,4.49,0,0,1,8.72,0A21.6,21.6,0,0,0,185.7,35.54a4.49,4.49,0,0,1,0,8.72,21.56,21.56,0,0,0-15.78,15.68,4.48,4.48,0,0,1-4.34,3.39ZM157.3,39.91a30.85,30.85,0,0,1,8.25,8.17,30.45,30.45,0,0,1,8.19-8.18,30.45,30.45,0,0,1-8.21-8.21,31.8,31.8,0,0,1-3.71,4.5A30.82,30.82,0,0,1,157.3,39.91Z"/>
+                                <path d="M133,25.48a4.49,4.49,0,0,1-4.35-3.38A6.79,6.79,0,0,0,126.83,19a6.89,6.89,0,0,0-3-1.76A4.37,4.37,0,0,1,121.47,16a4.51,4.51,0,0,1,2.09-7.57,6.79,6.79,0,0,0,5-5A4.48,4.48,0,0,1,132.94,0h0a4.48,4.48,0,0,1,4.36,3.42,6.86,6.86,0,0,0,5,5,4.48,4.48,0,0,1,0,8.71,6.82,6.82,0,0,0-5,4.95,4.48,4.48,0,0,1-4.34,3.4Z"/>
+                            </svg>
+                        </span>
+                    </span>
+                            </span>
+                    </button>
+                    <button type="button" class="header__lang header__lang--mob lang" data-langopen>
+                        <img src="dist/img/lang.png">
+                    </button>
+                </li>
+                <li class="nav__item">
+                    <a class="text--white" href="#">О нас</a>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Руководство<br>пользователя</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Блог</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Цены и предложения</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Помощь</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item" data-navAccord>
+                    <a class="text--white" href="#">Контакты</a>
+                    <ul class="nav__sub-list">
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                        <li class="nav__sub-item"><a href="#">Руководство</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="header__profile profile-top loggedin" id="loggedIn">
+                <div class="profile-top__close"></div>
+                <p class="text--white profile-top__btn" href="#" data-authopen>Личный кабинет
+                    <span class="profile-top__icon">
+                            <svg>
+                                <use xlink:href="#user-icon"></use>
+                            </svg>
+                        </span>
+                </p>
+                <div class="profile-top__wrap">
+                    <a class="profile-top__item" href="#">Мои обьявления</a>
+                    <a class="profile-top__item" href="#">Мои пакеты</a>
+                    <a class="profile-top__item" href="#">Мои сообщения</a>
+                    <a class="profile-top__item" href="#">Избранное</a>
+                    <a class="profile-top__item" href="#">Подать обьявления</a>
+                    <button class="profile-top__exit">Выход</button>
+                </div>
+            </div>
+            <button type="button" class="header__lang lang header__lang--desktop" data-langopen>
+                <img class="lazy lazy-out" data-src="dist/img/lang.png">
+            </button>
+        </div>
+    </nav>
+</div>
+<div class="page">
+    <div class="container container--lg">
+        <div class="corp-nav">
+            <a href="#" class="corp-nav__item">О нас</a>
+            <a href="#" class="corp-nav__item">Наши планы</a>
+            <a href="#" class="corp-nav__item">Наша команда</a>
+            <a href="#" class="corp-nav__item">Вакансии</a>
+            <a href="#" class="corp-nav__item">Контакты</a>
+        </div>
+
+    </div>
+    <div class="container container--sm">
+        <div class="vacancy">
+            <div class="vacancy__greet">
+                <p class="large">
+                    Здравствуй, приятель(-ница). Если ты забрёл(-а) на эту страничку, значит, тебя интересуют
+                    свободные вакансии в нашей фирме «Коляда Софт».
+                </p>
+                <p class="small">
+                    Для того, чтобы мы сразу расставили все точки над И,
+                    предлагаю  ответить для себя на 7 вопросов.
+                </p>
+            </div>
+            <ol class="vacancy__question">
+                <li><span>Готов(-а) ли ты на постоянную и полную занятость?</span></li>
+                <li><span>Ты креативный(-а) и полон(-а) идей?</span></li>
+                <li><span>Тебя интересует не только материальная выгода, но и личностный рост?</span></li>
+                <li><span>Ты легко работаешь в команде?</span></li>
+                <li><span>Быстро ли ты учишься и превращаешь новые знания в действия?</span></li>
+                <li><span>Боишься ли ты трудностей или трудности дрожат перед тобой?</span></li>
+                <li><span>Обладаешь ли ты продвинутыми знаниями в специальности, которую желаешь получить?</span></li>
+                <li><span>Обладаешь ли ты базовыми знаниями и сильным желанием совершенствовать себя и компанию?</span></li>
+            </ol>
+            <p class="vacancy__question-desc">
+                Если ты ответил(-а) «да» на 5-7вопросов, предлагаю ознакомиться
+                со списком специалистов, в которых мы нуждаемся. Жми :
+            </p>
+            <button id="vacancyBtn" type="button" class="vacancy__btn text-md cust-btn cust-btn--third cust-btn--rounded cust-btn--lg">
+                Огласить весь
+                список!
+            </button>
+            <ul class="vacancy__themselfs" id="vacancyItems">
+                <li>Менеджер по продажам;</li>
+                <li>Фронтенд-мастера;</li>
+                <li>Оператор службы поддержки;</li>
+                <li>Бэкенд-мастера;</li>
+                <li>Визуальный дизайнер;</li>
+                <li>Маркетолог;</li>
+                <li>PR-менеджер.</li>
+            </ul>
+            <p class="vacancy__desc">
+                Присоединяйся к нашей команде, мы будем любить, угощать печеньками
+                и помогать во всех рабочих вопросах.
+            </p>
+            <p class="vacancy__contact">
+                +380506568756  (менеджер Юлия Максимовна), почта : olz.reklamaarenda@gmail.com
+            </p>
+            <a href="#" class="vacancy__contact-place">Как найти офис?</a>
+        </div>
+    </div>
+
+</div>
+<div class="container container--lg">
+    <div class="d-flex u-margin-fly-40 flex-wrap">
+        <div class="u-margin-right-auto">
+            <a href="#" class="before-footer__logo logo logo--sm"><img src="dist/img/logo3.png"></a>
+        </div>
+        <div class="payment">
+            <div class="payment__item"><img class="lazy lazy-out" data-src="dist/img/pay1.png"></div>
+            <div class="payment__item"><img class="lazy lazy-out" data-src="dist/img/pay2.png"></div>
+            <div class="payment__item"><img class="lazy lazy-out" data-src="dist/img/pay3.svg"></div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container container--lg">
+        <div class="footer__wrap">
+            <div class="footer__top-line">
+                <p class="text-h6 text">Сервис аренды и услуг</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/olzagency" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </a>
+                    <div class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
+                    </div>
+                    <a href=" https://www.instagram.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a>
+                    <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                        </svg>
+                    </a>
+                    <a href=" https://www.twitter.com/olz.com.ua/?hl=ru" target="_blank" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                            </svg>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__body">
+                <div class="d-flex flex-wrap">
+                    <div>
+
+                        <div class="d-flex flex-wrap">
+                            <div class="footer__column">
+                                <p class="footer__sub-title"><a href="#" >Карта сайта</a></p>
+                                <p class="footer__link"><a href="#" >Договора об аренде</a></p>
+                                <p class="footer__link"><a href="#" >Руководство пользователя</a></p>
+                                <p class="footer__link"><a href="#" >Пользовательское соглашение</a></p>
+                                <p class="footer__link"><a href="#" >Помощь</a></p>
+                                <p class="footer__link"><a href="#" >По вопросам о рекламе</a></p>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title"><a href="#">О нас</a></p>
+                                <p class="footer__link"><a href="#">Ценности компании</a></p>
+                                <p class="footer__link"><a href="#">ПOLZbot</a></p>
+                                <p class="footer__link"><a href="#">Рассылка писем</a></p>
+                                <p class="footer__link"><a href="#">Вакансии</a></p>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title">Партнерам</p>
+                                <p class="footer__link"><a href="#">Наши партнёры</a></p>
+                                <p class="footer__link"><a href="#">Партнёрские программы</a></p>
+                            </div>
+                            <div class="footer__column">
+                                <p class="footer__sub-title"><a href="#" >Стоимость пакетов</a></p>
+                                <p class="footer__link"><a href="#" >Главная</a></p>
+                                <p class="footer__link"><a href="#" >Блог</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__tel">
+                        <p class="footer__sub-title">
+                            Отдел рекламы:
+                        </p>
+                        <a class="footer__link text text-lg tel" href="tel:+380506568756">+380 506568756</a>
+                        <a class="footer__link text text-lg tel" href="tel:+380681702284">+380 681702284</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>
+                    <p class="text text-xs">OLZ.com.ua 2019</p>
+                    <p class="text text-xs">ТОВ "Коляда Софт". Все права защишены</p>
+                </div>
+                <div class="footer__logo-boy">
+                    <img class="lazy lazy-out" data-src="dist/img/olzboy.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="popup" id="lang-popup">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap lang-popup">
+        <div class="popup__top">
+            <p class="popup__title">Выбор языка</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <div class="popup__body">
+            <a href="#" class="lang-popup__item"><i class="lang-popup__flag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100">
+                    <rect width="150" height="100" fill="#005BBB"/>
+                    <rect width="150" height="50" y="50" fill="#FFD500"/>
+                </svg>
+            </i>украинский</a>
+            <a href="#" class="lang-popup__item">
+                <i class="lang-popup__flag">
+                    <svg viewBox="0 0 310.09174 203.5294" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="matrix(2.8449 0 0 2.9076 -1524.9 -966.36)">
+                            <path d="m585 332.36h11v70h-11z" fill="#f10002"/>
+                            <path d="m536 361.36h109v12h-109z" fill="#f10002"/>
+                            <g transform="translate(61,-105)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1,0,0,1,1120,-105)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1 0 0 -1 1120 839.72)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                            <g transform="matrix(-1,0,0,1,1058,-62)">
+                                <path d="m487 437.36 35 25v-25h-35" fill="#092c70"/>
+                                <path d="m475 443.36v21h31l-31-21" fill="#092c70"/>
+                                <path d="m475 437.36v3l36 24h5l-41-27" fill="#f10002"/>
+                            </g>
+                        </g>
+                    </svg>
+                </i>английский</a>
+            <a href="#" class="lang-popup__item">
+                <i class="lang-popup__flag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+                        <rect width="1200" height="800" fill="#E30A17"/>
+                        <circle cx="425" cy="400" r="200" style="fill:#ffffff"/>
+                        <circle cx="475" cy="400" r="160" style="fill:#E30A17"/>
+                        <polygon style="fill:#ffffff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/>
+                    </svg>
+                </i>
+                турецкий
+            </a>
+            <a href="#" class="lang-popup__item lang-popup__item--active">
+                <i class="lang-popup__flag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                        <rect stroke-width="0.5px" stroke="#7d7c7c" fill="#fff" width="9" height="3"/>
+                        <rect fill="#d52b1e" y="3" width="9" height="3"/>
+                        <rect fill="#0039a6" y="2" width="9" height="2"/>
+                    </svg>
+                </i>русский
+            </a>
+            <button type="button" class="u-margin-top-32 text-sm u-margin-left-auto cust-btn--sm cust-btn--primary cust-btn" data-closepopup>Закрыть</button>
+        </div>
+    </div>
+</div>
+<div class="popup" id="auth-popup">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap auth-popup">
+        <div class="popup__top">
+            <p class="popup__title">Авторизация</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <form id="auth-form" class="popup__body auth-popup__body active">
+            <label class="auth-popup__input cust-input">
+                <span class="cust-input__title">E-mail</span>
+                <input type="email" class="cust-input__field" placeholder="E-mail">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input">
+                <span class="cust-input__title">Password</span>
+                <input type="password" class="cust-input__field" placeholder="Password">
+                <span class="cust-input__show" data-showpass>
+                     <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                 </span>
+                <span class="cust-input__mesg"></span>
+            </label>
+            <button class="cust-btn cust-btn--primary">Войти</button>
+            <div class="d-flex flex-center">
+                <button type="button" class="text text--sm text--primary text-lh-xl cust-btn--clear" data-switch>Зарегистрироваться</button>
+            </div>
+            <div class="">
+                <p class="text text-sm d-flex flex-center">Или войти через</p>
+                <div class="d-flex flex-center">
+                    <a href="#" class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </a>
+                    <div class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
+                    </div>
+                    <a href="#" class="auth-popup__social">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </form>
+        <form action="/" class="popup__body auth-popup__body auth-popup__body--reg" id="registrForm">
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">E-mail</span>
+                <input type="email" class="cust-input__field" name="E-mail" data-required placeholder="E-mail">
+                <span class="cust-input__mesg"></span>
+            </label>
+
+            <label class="auth-popup__input cust-input cust-input--required active">
+                <span class="cust-input__title">ФИО</span>
+                <input type="text" class="cust-input__field" name="name" data-required  placeholder="ФИО">
+                <span class="cust-input__mesg"></span>
+            </label>
+
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Телефон</span>
+                <input type="tel" class="cust-input__field" name="tel" maxlength="13" data-required placeholder="Введите номер">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Пароль</span>
+                <input id="regPassword" type="password" class="cust-input__field" name="password" data-required placeholder="Пароль">
+                <span class="cust-input__show" data-showpass><svg><use xlink:href="#eye-icon"></use> </svg></span>
+                <span id="passGen" class="cust-input__passgen">Введите пароль или использовать:</span>
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__input cust-input cust-input--required">
+                <span class="cust-input__title">Повторите пароль</span>
+                <input type="password" class="cust-input__field" name="password" data-required placeholder="Повторите пароль">
+                <span class="cust-input__mesg"></span>
+            </label>
+            <label class="auth-popup__check cust-check">
+                <input class="cust-check__nat" type="checkbox">
+                <span class="cust-check__cust"></span>
+                <span class="text text-xs text-lh-xs">Уведомлять о скидках:</span>
+            </label>
+            <label class="auth-popup__check cust-check cust-check--required" >
+                <input class="cust-check__nat" type="checkbox" data-required data-check-required>
+                <span class="cust-check__cust"></span>
+                <span class="text text-xs">
+                     Я ознакомился(-ась) с
+                     <a href="#" data-userAgree>Cоглашением пользователя OLZ</a>
+                     и согласен(-на) со всеми условиями
+                 : </span>
+            </label>
+            <!-- добавление элемента div -->
+            <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+            <!-- элемент для вывода ошибок -->
+            <div class="text-danger" id="recaptchaError"></div>
+
+
+            <button type="submit" class="auth-popup__btn u-margin-side-auto cust-btn cust-btn--secondary cust-btn--xl">Зарегистрироваться</button>
+            <p class="text text-sm d-flex flex-center text--primary" data-switch>Войти</p>
+        </form>
+    </div>
+</div>
+<div class="popup" id="user-agree">
+    <div class="popup__back" data-closepopup></div>
+    <div class="popup__wrap user-agree">
+        <div class="popup__top">
+            <p class="popup__title">Пользовательское соглашение сервисов OLZ.ua</p>
+            <button type="button" class="text text-sm text--white cust-btn--clear" data-closepopup>Закрыть</button>
+        </div>
+        <div class="popup__body user-agree__body">
+            <p id="userAgreeText"></p>
+        </div>
+    </div>
+</div>
+<img id="checkImgId">
+<!-- js-скрипт гугл капчи -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="dist/swiper.min.js"></script>
+<script src="dist/js/darkmode.js"></script>
+<script src="dist/doc/userAreement.js"></script>
+<script src="dist/js/custom.js"></script>
+<script src="dist/js/LazyImage.js"></script>
+<script src="dist/js/appearBlock.js"></script>
+</body>
+</html>

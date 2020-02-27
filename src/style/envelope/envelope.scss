@@ -1,0 +1,53 @@
+.envelope{
+  border-radius:10px ;
+  border: 4px solid $main-blue;
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  position: relative;
+  &:after{
+    width: 58%;
+    border-bottom: 4px solid $main-blue;
+    position: absolute;
+    left: 0;
+    transform-origin: left;
+    transform: rotate(30deg);
+    content:'';
+  }
+  &:before{
+    width: 58%;
+    border-bottom: 4px solid $main-blue;
+    position: absolute;
+    border-radius:0 0 0 10px;
+    right: 0;
+    transform-origin: right;
+    transform: rotate(-30deg);
+    content:'';
+  }
+  &__bottom{
+    z-index: 0;
+    top: 100%;
+    width: 74%;
+    left: 50%;
+    background-color: #fff;
+    padding-top: 74%;
+    position: absolute;
+    border-top:  6px solid $main-blue;
+    border-left: 6px solid $main-blue;
+    border-radius: 20px 0 0 0;
+    transform: translate(-51%,-48%) rotate(45deg) ;
+  }
+  &__hatch{
+    z-index: 1;
+    top: 0;
+    width: 74%;
+    left: 50%;
+    background-color: #fff;
+    padding-top: 74%;
+    position: absolute;
+    border-top:  6px solid $main-blue;
+    border-left: 6px solid $main-blue;
+    border-radius: 20px 0 0 0;
+    transform:translate(-49%,-52%) rotate(-135deg);
+  }
+}

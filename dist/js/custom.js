@@ -284,16 +284,7 @@ function fileOver(item){
 function fileLeave(item) {
     item.classList.remove("active");
 }
-/*function imagedrop(item){
-    input = item.querySelector("input");
-    setTimeout(function () {
-        let files = input.files;
-        for(let i = 0, l = files.length; i < l; i++){
-            files[i].
-        }
-    },0)
 
-}*/
 (function () {
     let itemsWrapper = document.getElementById("itemsWrap");
     if(itemsWrapper) {
@@ -869,6 +860,57 @@ function delFile(file) {
             telShowed = false
         }
     })
+})();
+(function () {
+   let vacancyBtn = document.getElementById('vacancyBtn');
+   let vacancyItems = document.getElementById('vacancyItems');
+   let opened = false;
+   if(vacancyBtn && vacancyItems){
+       let items = vacancyItems.querySelectorAll('li');
+       vacancyBtn.addEventListener('click',function(){
+           if(!opened){
+               opened = true;
+               vacancyItems.style.maxHeight = 'none';
+               let height = vacancyItems.offsetHeight;
+               vacancyItems.style.maxHeight = 0;
+               vacancyBtn.classList.add('active');
+               setTimeout(function () {
+                   vacancyItems.style.maxHeight = height+'px';
+                   vacancyItems.classList.add('active');
+                   setTimeout(function () {
+                       vacancyItems.style.maxHeight = 'none';
+                   },500);
+                   for(let i = 0, l = items.length; i < l; i++){
+                       setTimeout(function () {
+                           items[i].classList.add('visible');
+                       },i*150);
+                   }
+               },0);
+           }
+       })
+   }
+})();
+(function () {
+    let feedBackForm = document.getElementById('feedBackForm');
+    let feedBackBtn = document.getElementById('feedBackBtn');
+    let opened = false;
+    if(feedBackForm && feedBackBtn){
+        feedBackBtn.addEventListener('click',function () {
+            if(!opened){
+                opened = true;
+                feedBackForm.style.maxHeight = 'none';
+                let height = feedBackForm.offsetHeight;
+                feedBackForm.style.maxHeight = 0;
+                setTimeout(function () {
+                    feedBackForm.style.maxHeight = height+'px';
+                    feedBackForm.classList.add('active');
+                    setTimeout(function () {
+                        feedBackForm.style.maxHeight = 'none';
+                    },1000);
+                },0);
+            }
+        })
+    }
 })();
 function goTo(item) {
     if(event.keyCode === 13){
