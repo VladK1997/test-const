@@ -17,13 +17,13 @@
     font-size: 16px;
     font-weight: 400;
     display: block;
-    a{
-      color: inherit;
-      &:hover{
-        color: $main-green;
-      }
-    }
 
+  }
+  a.footer__sub-title ,.footer__sub-title a{
+    color: inherit;
+    &:hover{
+      color: $main-green;
+    }
   }
   &__bottom{
     display: flex;
@@ -46,17 +46,19 @@
       display: block;
     }
   }
+  a.footer__link, .footer__link a{
+    color: inherit;
+    font-size: inherit;
+    &:hover{
+      color: $main-green;
+    }
+  }
   &__link{
+    transition: 0.3s;
     display: flex;
     font-size: 14px;
     opacity: 0.9;
-    a{
-      color: inherit;
-      font-size: inherit;
-      &:hover{
-        color: $main-green;
-      }
-    }
+
     &:not(:last-child){
       margin-bottom: 16px;
     }

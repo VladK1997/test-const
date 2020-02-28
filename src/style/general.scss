@@ -23,8 +23,21 @@ svg{
 }
 a{
   color: $main-blue;
+  text-decoration: none;
 }
-
+button{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1.7;
+  font-family: inherit;
+}
+.vc_row{
+  z-index: 0;
+}
 .page{
   padding-top: 72px;
   overflow: hidden;

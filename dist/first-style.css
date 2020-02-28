@@ -4587,7 +4587,6 @@ select {
   cursor: pointer;
   z-index: 999999;
 }
-
 .add-to-compare.remove,
 .add-to-favorites.remove {
   background-color: #ff5e14
@@ -11261,7 +11260,7 @@ ul.product_list_widget li a img {
 .property-list-view .property-grid-card-a {
   display: flex;
 }
-.property-list-view  .property-grid-item{
+.property-list-view .property-grid-item{
   width: 100%!important;
   flex:0 0 100%!important;
   max-width: none!important;
@@ -11273,12 +11272,10 @@ ul.product_list_widget li a img {
   margin-bottom: 30px;
   text-align: left;
 }
-
 .property-list-view .property-grid-item .property-grid-item-title {
   background-color: #3b3a38;
   padding: 15px 30px;
 }
-
 .property-list-view .property-grid-item .property-grid-item-title h4 {
   margin: 0;
   font-weight: 500;
@@ -11288,15 +11285,12 @@ ul.product_list_widget li a img {
   font-size: 1.05em;
   display: inline-block;
 }
-
 .property-list-view .property-grid-item .property-grid-item-title a:hover {
   text-decoration: none;
 }
-
 .property-list-view .property-grid-item .property-grid-item-title a:hover h4 {
   color: #0015d3;
 }
-
 .property-list-view .property-grid-item .property-grid-image {
   float: left;
   width: 30%;
@@ -11329,16 +11323,13 @@ ul.product_list_widget li a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 .property-list-view .property-grid-item .property-grid-image:hover:after {
   opacity: 0;
 }
-
 .property-list-view .property-grid-item .property-grid-image img {
   opacity: 0;
   width: 100%;
 }
-
 .property-list-view .property-grid-item .property-grid-image-second {
   position: absolute;
   top: 0;
@@ -11353,7 +11344,6 @@ ul.product_list_widget li a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 .property-list-view .property-grid-image:hover > img.property-grid-image-second {
   opacity: 1;
 }
@@ -11389,11 +11379,9 @@ ul.product_list_widget li a img {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 .property-list-content a:hover h4.property-grid-title {
   color: #0015d3;
 }
-
 .property-list-view .property-grid-item .property-grid-content:hover {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -11404,7 +11392,6 @@ ul.product_list_widget li a img {
   -ms-box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
   box-shadow: 0px 0px 90px -15px rgba(41, 44, 28, 0.085);
 }
-
 .property-list-view .property-grid-item .property-grid-item-holder {
   float: left;
   width: 70%;
@@ -11412,13 +11399,11 @@ ul.product_list_widget li a img {
   padding-left: 30px;
   margin: 0;
 }
-
 .property-list-view .property-grid-item .property-meta {
   float: left;
   width: 100%;
   margin-bottom: 0;
 }
-
 .property-list-view .property-meta-list {
   width: 100%;
   float: left;
@@ -11426,7 +11411,6 @@ ul.product_list_widget li a img {
   padding-top: 15px;
   border-top: solid 1px #f4f4f4;
 }
-
 .property-list-view .property-meta-item {
   width: auto !important;
   padding-right: 0;
@@ -11434,32 +11418,26 @@ ul.product_list_widget li a img {
   float: right;
   max-width: 25%;
 }
-
 .property-meta-item-garage svg {
   margin-top: -2px;
 }
-
 .property-list-view .property-meta-item .property-meta-number,
 .property-list-view .property-meta-item .property-meta-name {
   font-size: 20px;
   width: auto;
   margin-top: 0;
 }
-
 .property-list-view .property-meta-item svg path {
   fill: #111 !important;
 }
-
 .property-list-view .property-meta-item.first-item {
   float: left;
   padding-left: 0;
   max-width: 35%;
 }
-
 .property-list-view .property-meta-item.first-item .property-meta-name {
   padding-left: 5px;
 }
-
 .property-list-view .property-meta svg {
   width: 40px;
   margin-right: 5px;
@@ -11467,17 +11445,14 @@ ul.product_list_widget li a img {
   max-height: 24px;
   padding: 0;
 }
-
 .property-list-view .property-price {
   margin-bottom: 10px !important;
 }
-
 .property-list-view .property-price .status-label {
   width: 100%;
   float: left;
   margin-top: 10px;
 }
-
 .property-list-view .property-grid-item-holder p {
   padding-bottom: 15px;
 }

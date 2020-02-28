@@ -308,10 +308,12 @@ function fileLeave(item) {
     let burger = document.getElementById("headerBurger");
     let list = document.getElementById("headerList");
     let currentItem = null;
-    burger.addEventListener("click", function () {
-        list.classList.toggle("active");
-        burger.classList.toggle("active");
-    })
+    if(burger && list){
+        burger.addEventListener("click", function () {
+            list.classList.toggle("active");
+            burger.classList.toggle("active");
+        })
+    }
     window.addEventListener("click",function(e){
         let target = e.target;
         if(target.hasAttribute("data-navAccord")){
@@ -402,18 +404,22 @@ function fileLeave(item) {
             })
         }
     }
-    let smoth = new SmothScroll({
-        from:btn,
-        to: scroll,
-        direction:"down"
-    })
-    let smoth2 = new SmothScroll({
-        from:toCateg,
-        to: category,
-        direction:"up",
-        time: 500,
-        speed: 150
-    });
+    if(btn && scroll) {
+        let smoth = new SmothScroll({
+            from: btn,
+            to: scroll,
+            direction: "down"
+        })
+    }
+    if(toCateg && category){
+        let smoth2 = new SmothScroll({
+            from:toCateg,
+            to: category,
+            direction:"up",
+            time: 500,
+            speed: 150
+        });
+    }
 })();
 
 (function() {
@@ -447,16 +453,12 @@ function fileLeave(item) {
 (function () {
     const userAgreeText = document.getElementById("userAgreeText");
     let added;
-
     const lang = document.getElementById("lang-popup");
     const langOpenBtnAttr = "data-langopen";
-
     const auth = document.getElementById("auth-popup");
     const authOpenBtnAttr = "data-authopen";
-
     const userAgree = document.getElementById("user-agree");
     const userAgreeOpenBtnAttr = "data-userAgree";
-
     let ClosePopup = function (popup) {
         let self = this;
         if(popup){
@@ -469,13 +471,13 @@ function fileLeave(item) {
         }
     }
     window.addEventListener("click",function(e){
-        if (e.target.hasAttribute(langOpenBtnAttr)){
+        if (e.target.hasAttribute(langOpenBtnAttr) && lang){
             openPopup(lang);
         }
-        if (e.target.hasAttribute(authOpenBtnAttr)){
+        if (e.target.hasAttribute(authOpenBtnAttr) && auth){
             openPopup(auth);
         }
-        if(e.target.hasAttribute(userAgreeOpenBtnAttr)){
+        if(e.target.hasAttribute(userAgreeOpenBtnAttr) && userAgree){
             e.preventDefault();
             openPopup(userAgree);
             if(!added){
@@ -488,22 +490,30 @@ function fileLeave(item) {
     function openPopup(popup){
         popup.classList.add("active");
     }
-    let lanhPopup = new ClosePopup(lang);
-    let authPopup = new ClosePopup(auth);
-    let userAgreePopup = new ClosePopup(userAgree)
-    let authPopupSections = auth.querySelectorAll(".auth-popup__body");
-    let swiched = false;
-    auth.addEventListener("click",function (e) {
-            if(e.target.hasAttribute("data-switch") && !swiched){
+    if(lang){
+        let langPopup = new ClosePopup(lang);
+    }
+    if(userAgree){
+        let userAgreePopup = new ClosePopup(userAgree)
+    }
+    if(auth) {
+        let authPopup = new ClosePopup(auth);
+        let authPopupSections = auth.querySelectorAll(".auth-popup__body");
+        let swiched = false;
+        auth.addEventListener("click", function (e) {
+            if (e.target.hasAttribute("data-switch") && !swiched) {
                 auth.classList.add("changing");
                 setTimeout(function () {
-                    for(let i = 0, l = authPopupSections.length; i < l; i++){
+                    for (let i = 0, l = authPopupSections.length; i < l; i++) {
                         authPopupSections[i].classList.toggle("active");
                     }
-                },300)
-                setTimeout(function(){auth.classList.remove("changing");},500);
+                }, 300)
+                setTimeout(function () {
+                    auth.classList.remove("changing");
+                }, 500);
             }
-    })
+        })
+    }
 })();
 (function(){
     let currentItem = null;
@@ -550,7 +560,6 @@ function generatePassword() {
      let FormValid = function(form) {
         let self = this;
         self.thisForm = form;
-
         self.passwordArray = self.thisForm.querySelectorAll("input[type='password'");
         self.inputArray = self.thisForm.querySelectorAll("input[data-required]");
         self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
@@ -738,9 +747,6 @@ function generatePassword() {
             },0)
 
         })
-        /*regpassword.addEventListener("blur",function () {
-            regpassword.classList.remove("showGen");
-        })*/
         regpassword.addEventListener("input",function (e) {
             if(e.target.value.length > 0){
                 regpassword.classList.remove("showGen");

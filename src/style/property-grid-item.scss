@@ -26,3 +26,49 @@
     }
   }
 }
+.property-grid-view .property-grid-item .property-grid-title {
+  font-size: 1.1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 0;
+  z-index: 999;
+  color: #fff;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+.property-grid-view .property-grid-item .property-grid-title-v2 {
+  text-align: left;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: #1d1d1d;
+}
+
+.property-grid-view .property-grid-item .property-grid-title-v2 a {
+  color: #1d1d1d;
+}
+
+.property-grid-view .property-grid-item .property-grid-title-v2 a:hover {
+  color: #0015d3;
+}
+
+.property-grid-view .property-grid-image,
+.compare-property-image .property-grid-image {
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70%;
+  background-color: #0015d3;
+}
