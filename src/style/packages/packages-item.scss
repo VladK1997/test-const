@@ -8,6 +8,7 @@
   box-shadow: 0 0 16px 0 $main-medium-grey;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
   p{
     display: flex;
     align-items: center;
@@ -28,7 +29,8 @@
     &:after{
       position: absolute;
       bottom: -1px;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       border-bottom: 32px solid #fff;
       border-left:  145px solid transparent;
       border-right: 145px solid transparent;

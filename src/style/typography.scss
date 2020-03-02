@@ -62,6 +62,12 @@
   &--white{
     color: #fff;
   }
+  &-center{
+   text-align: center;
+  }
+  &-right{
+    text-align: right;
+  }
   &--primary{
     color: $main-blue;
   }
@@ -75,6 +81,23 @@
   }
   &--nowrap{
     white-space: nowrap;
+  }
+  &--attention{
+    background-color: $main-border-color;
+    padding: 16px 16px 16px 40px;
+    margin: 24px 0;
+    position: relative;
+    border-radius: 3px;
+    &:before{
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      font-weight: 600;
+      color: $main-red;
+      content: '!';
+    }
   }
   &-lh{
     &-xs{

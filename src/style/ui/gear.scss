@@ -1,0 +1,36 @@
+.gear{
+  position: relative;
+  display: flex;
+  &__circle{
+    width: 255px;
+    height: 255px;
+  }
+  &__wrap{
+    position: relative;
+  }
+  &__circle{
+    animation: rotateClockWise 10s linear infinite;
+  }
+  &__item{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    &--top{
+      left: 39.5%;
+      top: 17.5%;
+      animation: rotateUnClockWise 4s linear infinite;
+    }
+    &--middle{
+      left: 18%;
+      top: 37%;
+      color: $main-green;
+      animation: rotateClockWise 4s linear infinite;
+    }
+    &--bottom{
+      left: 45%;
+      bottom: 21%;
+      color: $main-blue;
+      animation: rotateUnClockWise 4s linear infinite;
+    }
+  }
+}

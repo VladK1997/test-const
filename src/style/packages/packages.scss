@@ -94,7 +94,7 @@
         transition: 0.3s;
       }
       width: 100%;
-      &.swiper-slide-active .packages-item{
+      &.swiper-slide-active .packages-item,.swiper-slide-active .packages-item{
         transform: scale(1) translateZ(0);
       }
     }

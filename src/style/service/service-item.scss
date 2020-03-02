@@ -1,0 +1,125 @@
+.service-item{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  min-height: 248px;
+  &--reverse{
+    flex-direction: row-reverse;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: $main-blue;
+    padding:48px;
+
+    background-image: url('img/noise.png');
+    p{
+      display: block;
+      color: #eaeaea;
+      letter-spacing: 0.02em;
+      &:first-letter{
+        margin-left: 16px;
+      }
+      &:not(:last-child){
+        margin-bottom: 8px;
+      }
+    }
+    p.title{
+      &:first-letter{
+        margin-left: 0;
+      }
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+  }
+  &__img{
+    width: 50%;
+    padding-top: 31%;
+    margin-left: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      color: #fff;
+      max-width: 400px;
+      font-size: 40px;
+      text-align: center;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &__btn-wrap{
+    display: flex;
+    margin-top: 16px;
+  }
+  &__btn{
+    color: darken(#fff,10);
+    &:not(:last-child){
+      margin-right: 24px;
+    }
+    &:hover{
+      background-color: $main-greenHover;
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .service-item{
+    &__text{
+      width: 100%;
+    }
+    &__img{
+      width: 100%;
+      padding-top: 62%;
+      p{
+        font-size: 38px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .service-item{
+
+    &__img{
+      p{
+        font-size: 32px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .service-item{
+    &__text{
+      padding: 16px;
+      p.title{
+        margin-bottom: 8px;
+        font-size: 26px;
+      }
+    }
+    &__btn-wrap{
+      flex-wrap: wrap;
+    }
+    &__btn{
+      width: 100%;
+      &:nth-of-type(n){
+        margin: 0;
+        margin-bottom: 16px;
+      }
+
+    }
+    &__img{
+      p{
+        padding: 8px;
+        background-color: rgba(#000,0.4);
+        max-width: 300px;
+        font-size: 24px;
+      }
+    }
+  }
+}

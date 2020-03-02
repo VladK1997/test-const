@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Наши планы</title>
+    <title>Price</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <!--    <link rel="stylesheet" href="dist/first-style.css">-->
@@ -34,6 +34,9 @@
     <svg id="favorite-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" stroke-width="16" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
     <svg id="doc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"></path></svg>
     <svg id="round-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg>
+    <svg id="gear-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve">
+	    <path d="M485.212,272.93v-60.648h-48.034c-2.193-14.125-5.801-27.75-10.842-40.72l41.528-23.991l-30.332-52.535l-41.462,23.956   c-8.882-10.958-18.832-20.967-29.846-29.823l23.979-41.488l-52.533-30.327l-23.988,41.551   c-12.971-5.036-26.594-8.678-40.749-10.841V0h-60.65v48.068c-14.097,2.159-27.72,5.834-40.695,10.837l-23.984-41.551l-52.54,30.327   l23.928,41.493c-10.956,8.853-20.964,18.864-29.79,29.818L47.682,95.036l-30.327,52.507l41.579,24.019   c-5.031,12.97-8.679,26.595-10.837,40.72H0.001v60.648h48.097c2.158,14.128,5.806,27.751,10.837,40.726l-41.579,23.988   l30.327,52.533l41.521-23.956c8.826,10.958,18.834,20.964,29.79,29.822l-23.928,41.49l52.54,30.322l23.988-41.547   c12.97,5.036,26.593,8.648,40.69,10.838v48.065h60.65v-48.065c14.155-2.189,27.783-5.802,40.749-10.838l23.988,41.547   l52.542-30.322l-23.988-41.49c11.014-8.858,20.964-18.864,29.854-29.855l41.458,23.961l30.327-52.505l-41.528-23.988   c5.041-12.975,8.648-26.598,10.847-40.726H485.212L485.212,272.93z M242.607,379.074c-75.341,0-136.468-61.124-136.468-136.468   c0-75.368,61.127-136.465,136.468-136.465s136.47,61.097,136.47,136.465C379.077,317.95,317.948,379.074,242.607,379.074z"/>
+    </svg>
 </div>
 <div class="header">
     <nav class="nav header__nav">
@@ -182,9 +185,378 @@
         </div>
 
     </div>
-    <div class="container container--sm">
+    <div class="container container--lg">
         <div class="pricelist">
-            <p class="price-list__title">Горячие предложения </p>
+            <p class="pricelist__title">Горячие предложения</p>
+            <div class="promotion swiper-container ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="dist/img/odessa.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dist/img/odessa.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="dist/img/odessa.jpg">
+                    </div>
+                </div>
+                <div class="promotion__pag cust-bul"></div>
+            </div>
+            <section class="pricelist__section">
+                <p class="pricelist__section-title">
+                    Пакеты на размещение и продвижение
+                </p>
+                <div class="pricelist__packages packages-inline">
+                    <div class="packages-inline__wrap swiper-container packages">
+                        <div class="packages__slider-prev slider-nav-prev slider-nav-prev--round"></div>
+                        <div class="swiper-wrapper">
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="packages-inline__item swiper-slide">
+                                <div class="packages-item">
+                                    <div class="packages-item__info-btn" data-info>i</div>
+                                    <div class="packages-item__top" style="background-image:url('dist/img/noise.png')">
+                                        <p class="packages-item__title">Топ-стандарт</p>
+                                        <p class="packages-item__price">150 Грн</p>
+                                    </div>
+                                    <div class="packages-item__body">
+                                        <p class="packages-item__cont"><span class="packages-item__figure">31</span> Дней</p>
+                                        <p><span class="packages-item__figure">4</span> показать на 1-м месте</p>
+                                        <button type="button" class="packages-item__btn cust-btn--soft-round cust-btn cust-btn--third">Выбрать</button>
+                                        <div class="packages-item__desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo optio pariatur tempora tenetur. Alias blanditiis cupiditate dolorem est id ipsum labore laudantium minima praesentium quidem ratione sunt, ullam voluptatem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque autem deserunt ea error, et exercitationem harum illo inventore optio quaerat quisquam, quo ullam vel veritatis! Culpa debitis neque nesciunt.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packages__pag cust-bul cust-bul--secondary"></div>
+                        <div class="packages__slider-next slider-nav-next slider-nav-next--round"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="pricelist__section">
+                <p class="pricelist__section-title">
+                    Дополнительные услуги для продвижения
+                </p>
+                <div class="extra-service__item service-item">
+                    <div class="service-item__text">
+                        <p class="title">Баннерное размещение рекламы</p>
+                        <p>
+                            Баннерное размещение рекламы - эффективный метод
+                            рекламы вашего товара или услуг. Публикуя свой баннер
+                            на сайте, вы экономите свой бюджет, так как данная услуга
+                            позволяет охватить большое  количество заинтересованных
+                            пользователей, в отличие от физических вывесок на улицах.</p>
+                        <p>
+                            Наша система размещения позволяет максимально
+                            эффективно разместить баннер,учитывая интересы вашей
+                            целевой аудитории.
+                        </p>
+                        <div class="service-item__btn-wrap">
+                            <a href="#" class="service-item__btn cust-btn cust-btn--rounded cust-btn--third cust-btn--md">Оценить инвестицию</a>
+                            <a href="#" class="service-item__btn cust-btn cust-btn--rounded cust-btn--third cust-btn--md">Просмотреть каталог</a>
+                        </div>
+
+                    </div>
+
+                    <div class="service-item__img" title='Рекламный баннер' style="background-image: url('dist/img/serviceBanner.jpg')">
+                        <p>
+                            Вашей рекламе тут было бы уютно
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+            <p class="text text-lg text--attention">
+                Обращаем ваше внимание, что реклама должна быть тематической и привлекательной. Это позволит
+                привлечь целевую аудиторию, а не случайные заходы.
+            </p>
+            <section class="pricelist__section">
+                <p class="pricelist__section-title">
+                    У вас нет баннера?  Не беда, мы вас выручим!
+                </p>
+                <div class="pricelist__help">
+                    <div class="pricelist__help-text">
+                    <p class="text text-md text-h">Разработаем баннер:</p>
+                        <ul class="pricelist__help-list">
+                            <li><i class="icon icon--xl u-margin-side-8"><img src="dist/img/gear/gear1.png"> </i> Добавим щепотку интерактивности;</li>
+                            <li><i class="icon icon--xxl u-margin-right-16"><img src="dist/img/gear/gear2.png"> </i> Немного вашего фирменного стиля для вкуса;</li>
+                            <li><i class="icon icon--xl u-margin-side-8"><img src="dist/img/gear/gear3.png"> </i> Подрезаем края под нужный формат;</li>
+                            <li><i class="icon icon--xxl u-margin-right-16"><img src="dist/img/gear/gear4.png"> </i> Отгоняем ботов;</li>
+                            <li><i class="icon icon--xl u-margin-side-8"><img src="dist/img/gear/gear5.png"> </i> Смотрим, как смотрится с соседними баннерами;</li>
+                            <li><i class="icon icon--xxl u-margin-right-16"><img src="dist/img/gear/gear6.png"> </i> Последний штрих и Вуаля! Ваш баннер готов к продвижению.</li>
+                        </ul>
+                    </div>
+                    <div class="pricelist__help-gear gear">
+                        <div class="gear__wrap">
+                            <img class="gear__circle" src="dist/img/gear/circle.png">
+                            <div class="gear__item gear__item--top"><svg style="transform: rotate(-10deg)"><use xlink:href="#gear-icon"></use></svg></div>
+                            <div class="gear__item gear__item--middle"><svg><use xlink:href="#gear-icon"></use></svg></div>
+                            <div class="gear__item gear__item--bottom"><svg><use xlink:href="#gear-icon"></use></svg></div>
+                        </div>
+                    </div>
+                    <p class="pricelist__help-desc">
+                        Возможна реклама по бартеру. Деловая дружба приносит хорошие плоды, не так ли?
+                    </p>
+                </div>
+            </section>
+            <div class="callback">
+                <p class="text text-md text-center">ОСТАВЬТЕ ЗАПРОС НА ЗВОНОК и мы вас наберём в течении 30-ти секунд.</p>
+                <p class="contacts__text-small text text-sm text-center">В левом нижнем углу вашего экрана</p>
+                <button class="u-margin-side-auto u-margin-top-16 cust-btn cust-btn--rounded cust-btn--third cust-btn--md">Позвоните мне</button>
+            </div>
+            <section class="pricelist__section">
+                <p class="pricelist__section-title">Наполним вашу базу потенциальными клиентами</p>
+                <div class="info-block">
+                    <div class="info-block__content">
+                        <img class="lazy lazy-out" width="" data-src="dist/img/callCenter.jpg" alt="Колл Центр">
+                        <p class="info-block__title">Автоматический обзвон всей базы клиентов</p>
+                        <p class="info-block__text">
+                            Торжественно презентуем вам <a href="#"><strong>Zvonilo</strong></a> -  инновационный
+                            инструмент, который позволяет совершить десятки тысяч звонков
+                            за 10 минут, а умная программа позволяет набрать номер через
+                            некоторое время, если трубку не взяли.
+                            Если вы когда-то использовали холодные звонки, вам знакомы
+                            те неловкие ситуации, когда разным людям нужно по сто с
+                            лишним раз в день объяснять, кто вы, почему звоните и вообще
+                            откуда номер. <strong>Zvonilo</strong> превращает ещё холодных клиентов
+                            в уже горячих. А вам остаётся только перезвонить человеку,
+                            ответить на актуальные вопросы и оформить заказ.
+                            Эту услугу можно использовать также для уведомлений своих
+                            клиентов об акциях и специальных предложениях.
+                        </p>
+                    </div>
+                    <div class="info-block__tab-wrap">
+                        <div class="info-block__tab">
+                            <p class="info-block__tab-title">
+                                У вас нет e-mail адресов?
+                                <strong>Не беда, мы найдём их для вас!</strong>
+                                Стоимость 1 адреса – 0,20 грн
+                            </p>
+                            <ol class="cust-list cust-list--ol">
+                                <li>Проанализируем потенциальную
+                                    целевую аудиторию именно вашего
+                                    бизнеса.
+                                </li>
+                                <li>
+                                    Найдём E-mail адреса клиентов,
+                                    с высокой вероятностью
+                                    заинтересованности.
+                                </li>
+                                <li>
+                                    Поместим в таблицу Excel.
+                                </li>
+                                <li>Распределим по ключевым словам.</li>
+                            </ol>
+                        </div>
+                        <div class="info-block__tab info-block__tab--2">
+                            <p class="info-block__tab-title">
+                                Нет базы номеров для обзвона?
+                                <strong>Не беда, мы сможем помочь!</strong>
+                                Стоимость 1 номера - 0,10 грн
+                            </p>
+                            <ol class="cust-list cust-list--dot">
+                                <li>
+                                    Проанализируем вашу целевую
+                                    аудиторию
+                                </li>
+                                <li>
+                                    Соберём необходимое количество
+                                    холодных номеров;
+                                </li>
+                                <li>
+                                    Оформим список в Excel так, чтобы
+                                    робот распознал номера корректно.
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="info-block__tab info-block__tab--2">
+                            <p class="info-block__tab-title">
+                                Псс, если ты зарегистрируешься
+                                сейчас  на zvonilo.com, получишь
+                                <strong>200 номеров – бесплатно.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pricelist__section">
+                <p class="pricelist__section-title">
+                    Как это работает?
+                </p>
+                <div class="howItWork">
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">1</p>
+                        <p class="howItWork__text">Заходите на страницу Zvonilo</p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">5</p>
+                        <p class="howItWork__text">
+                            Записываете голосовое сообщение
+                            или поэтапную структуру разговора.
+                        </p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">2</p>
+                        <p class="howItWork__text">
+                            Регистрируетесь на персональном  аккаунте.
+                        </p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">6</p>
+                        <p class="howItWork__text">Активируете рассылку.</p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">3</p>
+                        <p class="howItWork__text">
+                            Пополняете необходимую сумму
+                            на ваш личный счёт.
+                        </p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">7</p>
+                        <p class="howItWork__text">
+                            Свяжитесь с теми, кто
+                            откликнулся.
+                        </p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">4</p>
+                        <p class="howItWork__text">
+                            Добавляете вашу базу номеров
+                        </p>
+                    </div>
+                    <div class="howItWork__item">
+                        <p class="howItWork__number">8</p>
+                        <p class="howItWork__text">
+                            Проанализируйте эффективность
+                            рекламной компании.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <a href="#" class="text-md u-margin-side-auto cust-btn cust-btn--md cust-btn--bordered cust-btn--rounded cust-btn--primaryHover">Регистрация</a>
+            <section class="pricelist__section">
+                <div class="pricelist__someService-price">
+                    <p>
+                        Напишем информативные статьи с переходом на вашу
+                        ссылку и разместим в Блоге.
+                        <span>
+                            Стоимость 1 статьи – 200 грн.
+                        </span>
+                    </p>
+                    <img data-src="dist/img/pricelistArticlePrice.png" class="lazy lazy-out">
+                </div>
+            </section>
         </div>
     </div>
 </div>
