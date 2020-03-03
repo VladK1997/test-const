@@ -421,34 +421,55 @@ function fileLeave(item) {
         });
     }
 })();
-
+function cookieSearch(item){
+    let array = document.cookie.split(';');
+    let retItem;
+    array.forEach(function(el){
+        if(el.match(item)) retItem = el;
+        console.log(array,el,item);
+    });
+    return retItem.match(/=[a-zA-Z0-9]*/)[0].match(/[a-zA-Z0-9]*$/)[0];
+}
 (function() {
     let body = document.getElementsByTagName("html")[0];
-
-    darkMode = false;
+    let btns = document.querySelectorAll('[data-lightmode]');
+    let darkMode;
+    if(cookieSearch('darkMode') == 'true'){
+        turnOn();
+    }
     window.addEventListener("click",function(e){
         if(e.target.hasAttribute("data-lightmode")){
-            e.target.classList.toggle("active");
             setTimeout(function () {
                 body.classList.add("body-dark");
-                body.classList.toggle("body-night");
                 setTimeout(function () {
                     body.classList.remove("body-dark");
                 }, 500);
                 if(!darkMode) {
-                    DarkReader.enable({
-                        brightness: 100,
-                        contrast: 90,
-                        sepia: 10
-                    });
-                    darkMode=true;
+                    turnOn();
                 }else{
-                    darkMode=false;
-                    DarkReader.disable();
+                    turnOff();
                 }
             },300)
         }
     })
+    function turnOn(){
+        DarkReader.enable({
+            brightness: 100,
+            contrast: 90,
+            sepia: 10
+        });
+        btns.forEach(el => el.classList.add('active'));
+        body.classList.toggle("body-night");
+        document.cookie = "darkMode=true;"
+        darkMode=true;
+    }
+    function turnOff() {
+        darkMode=false;
+        body.classList.toggle("body-night");
+        btns.forEach(el => el.classList.remove('active'));
+        document.cookie = "darkMode=false;"
+        DarkReader.disable();
+    }
 })();
 (function () {
     const userAgreeText = document.getElementById("userAgreeText");
