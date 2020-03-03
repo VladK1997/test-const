@@ -1,3 +1,10 @@
+/**
+ * project: OLZ
+ *
+ * Frontend developer: Vladyslav Kukhlii
+ *
+ */
+
 let vWidth = window.innerWidth;
 (function() {
     let articles = document.querySelector('.articles');
@@ -449,7 +456,7 @@ function cookieSearch(item){
                 }else{
                     turnOff();
                 }
-            },300)
+            },300);
         }
     })
     function turnOn(){
