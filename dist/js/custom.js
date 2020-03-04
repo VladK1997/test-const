@@ -283,15 +283,12 @@ let vWidth = window.innerWidth;
         }
     })
 })();
-
-
 function fileOver(item){
     item.classList.add("active");
 }
 function fileLeave(item) {
     item.classList.remove("active");
 }
-
 (function () {
     let itemsWrapper = document.getElementById("itemsWrap");
     if(itemsWrapper) {
@@ -786,7 +783,6 @@ function generatePassword() {
 
     }
 })();
-
 function auto_grow(element) {
     element.style.height = '5px';
     element.style.height = element.scrollHeight+8+"px";

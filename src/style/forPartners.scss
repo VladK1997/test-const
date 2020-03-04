@@ -1,0 +1,21 @@
+.forPartners{
+  img{
+    width: 100%;
+  }
+  &__title-desc{
+    padding: 16px 40px;
+    border-radius: 500px;
+    background-color: $second-blue;
+    max-width: 1000px;
+    text-align: center;
+    margin: 24px auto;
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .forPartners {
+    &__title-desc{
+      border-radius: 20px;
+      padding: 16px 16px;
+    }
+  }
+}
