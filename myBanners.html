@@ -6,7 +6,6 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/first-style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/font.css">
     <link rel="stylesheet" href="dist/app.css">
@@ -183,7 +182,7 @@
                             </svg>
                         </i>
                     </div>
-                    <a href="#" class="user-menu__item active">
+                    <a href="#" class="user-menu__item">
                         <i class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                 <path fill="currentColor" d="M552 64H112c-20.858 0-38.643 13.377-45.248 32H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h496c13.255 0 24-10.745 24-24V88c0-13.255-10.745-24-24-24zM48 392V144h16v248c0 4.411-3.589 8-8 8s-8-3.589-8-8zm480 8H111.422c.374-2.614.578-5.283.578-8V112h416v288zM172 280h136c6.627 0 12-5.373 12-12v-96c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v96c0 6.627 5.373 12 12 12zm28-80h80v40h-80v-40zm-40 140v-24c0-6.627 5.373-12 12-12h136c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H172c-6.627 0-12-5.373-12-12zm192 0v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0-144v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0 72v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12z"></path>
@@ -211,6 +210,12 @@
                         </i>
                         <p>Избранное</p>
                     </a>
+                    <a href="#" class="user-menu__item active">
+                        <i class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z"></path></svg>
+                        </i>
+                        <p>Мои баннеры</p>
+                    </a>
                     <div class="user-menu__item">
                         <a href="#" class="neon cust-btn cust-btn--third cust-btn--rounded">Подать объявление</a>
                         <button type="button" class="cust-btn--clear user-menu__exit">Выход</button>
@@ -218,108 +223,17 @@
                 </div>
             </div>
             <div class="user-content__content">
-                <div class="user-content__user-nav user-nav">
-                    <a href="#" class="user-nav__item active">
-                        Активные
-                    </a>
-                    <a href="#" class="user-nav__item">
-                        Не активные
-                    </a>
-                </div>
                 <div class="user-content__advert-cards">
-                    <div class="advert-card">
-                            <div class="advert-card__img">
-                                <a href="#" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                                <span class="advert-card__label">
-                                    House
-                                </span>
-                                <span class="advert-card__price">$160,000.00</span>
-                                <label class="advert-card__favorites" data-id="69" data-action="login">
-                                    <span class="icon icon--sm icon-heart">
-                                        <input type="checkbox">
-                                        <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                        <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                    </span>
-                                </label>
-                            </div>
-
-                            <div class="advert-card__content">
-                                <div class="advert-card__top">
-                                    <p class="u-margin-side-auto">
-                                        Объявление №765
-                                    </p>
-                                    <p class="d-flex flex-center ">
-                                        455
-                                        <i class="icon icon--sm u-margin-left-8">
-                                            <svg>
-                                                <use xlink:href="#eye-icon"></use>
-                                            </svg>
-                                        </i>
-                                    </p>
-                                </div>
-                                <div class="advert-card__body">
-                                    <div class="d-flex flex-column">
-                                        <p class="advert-card__title">Сдам в аренду дом</p>
-                                        <p class="advert-card__desc">
-                                            Сдам в влатваптьв жвалмжвб мжвабмж вамспим
-                                            вдлмоваьм вждамьвмь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вмьвжаило
-                                        </p>
-                                        <div class="advert-card__bottom">
-                                            <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Рекламировать</a>
-                                            <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Изменить</a>
-                                            <p class="text text-sm text-right w-100">31.01.2020</p>
-                                        </div>
-                                    </div>
-                                    <div class="advert-card__action" data-toggleActive>
-                                        <div class="icon advert-card__action-btn">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"></path></svg>
-                                        </div>
-                                        <div class="advert-card__action-wrap">
-                                            <button type="button" class="reload reload--round reload--sm active cust-btn--clear">
-                                                <i class="icon icon--md">
-                                                    <svg><use xlink:href="#reload-icon"></use></svg>
-                                                </i>
-                                            </button>
-                                            <label class=" power power--sm power--adapt">
-                                                <input type="checkbox">
-                                                <span class="cust-btn--round">
-                                                <svg viewBox="0 0 44 44">
-                                                    <path d="M22,6 C31,6 38,13 38,22 C38,31 31,38 22,38 C13,38 6,31 6,22 C6,13 13,6 22,6 L22,28" id="path"></path>
-                                                </svg>
-                                            </span>
-                                            </label>
-                                            <button type="button" class="del del--round del--sm cust-btn--clear">
-                                                <i class="icon icon--md">
-                                                    <svg><use xlink:href="#del-icon"></use></svg>
-                                                </i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="advert-card">
+                    <div class="advert-card advert-card--banner">
                         <div class="advert-card__img">
                             <a href="#" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                            <span class="advert-card__label">
-                                    House
-                                </span>
-                            <span class="advert-card__price">$160,000.00</span>
-                            <label class="advert-card__favorites" data-id="69" data-action="login">
-                                    <span class="icon icon--sm icon-heart">
-                                        <input type="checkbox">
-                                        <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                        <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                    </span>
-                            </label>
                         </div>
-
                         <div class="advert-card__content">
                             <div class="advert-card__top">
                                 <p class="u-margin-side-auto">
                                     Объявление №765
                                 </p>
-                                <p class="d-flex flex-center ">
+                                <p class="d-flex flex-center">
                                     455
                                     <i class="icon icon--sm u-margin-left-8">
                                         <svg>
@@ -329,14 +243,11 @@
                                 </p>
                             </div>
                             <div class="advert-card__body">
-                                <div class="d-flex flex-column">
-                                    <p class="advert-card__title">Сдам в аренду дом</p>
-                                    <p class="advert-card__desc">
-                                        Сдам в влатваптьв жвалмжвб мжвабмж вамспим
-                                        вдлмоваьм вждамьвмь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вмьвжаило
-                                    </p>
-                                    <div class="advert-card__bottom">
-                                        <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Рекламировать</a>
+                                <div class="d-flex flex-column w-100">
+                                    <p class="text text-md"><strong>Дата активации : </strong>29.02.2019</p>
+                                    <p class="text text-md u-margin-fly-16"><strong>Дата выключения : </strong>29.02.2019</p>
+                                    <p class="text text-md"><strong>Стоимость : </strong>500грн</p>
+                                    <div class="advert-card__bottom ">
                                         <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Изменить</a>
                                         <p class="text text-sm text-right w-100">31.01.2020</p>
                                     </div>
@@ -369,28 +280,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="advert-card">
+                    <div class="advert-card advert-card--banner">
                         <div class="advert-card__img">
                             <a href="#" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                            <span class="advert-card__label">
-                                    House
-                                </span>
-                            <span class="advert-card__price">$160,000.00</span>
-                            <label class="advert-card__favorites" data-id="69" data-action="login">
-                                    <span class="icon icon--sm icon-heart">
-                                        <input type="checkbox">
-                                        <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                        <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                    </span>
-                            </label>
                         </div>
-
                         <div class="advert-card__content">
                             <div class="advert-card__top">
                                 <p class="u-margin-side-auto">
                                     Объявление №765
                                 </p>
-                                <p class="d-flex flex-center ">
+                                <p class="d-flex flex-center">
                                     455
                                     <i class="icon icon--sm u-margin-left-8">
                                         <svg>
@@ -400,14 +299,11 @@
                                 </p>
                             </div>
                             <div class="advert-card__body">
-                                <div class="d-flex flex-column">
-                                    <p class="advert-card__title">Сдам в аренду дом</p>
-                                    <p class="advert-card__desc">
-                                        Сдам в влатваптьв жвалмжвб мжвабмж вамспим
-                                        вдлмоваьм вждамьвмь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вмьвжаило
-                                    </p>
-                                    <div class="advert-card__bottom">
-                                        <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Рекламировать</a>
+                                <div class="d-flex flex-column w-100">
+                                    <p class="text text-md"><strong>Дата активации : </strong>29.02.2019</p>
+                                    <p class="text text-md u-margin-fly-16"><strong>Дата выключения : </strong>29.02.2019</p>
+                                    <p class="text text-md"><strong>Стоимость : </strong>500грн</p>
+                                    <div class="advert-card__bottom ">
                                         <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Изменить</a>
                                         <p class="text text-sm text-right w-100">31.01.2020</p>
                                     </div>
@@ -437,31 +333,20 @@
                                         </button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="advert-card">
+                    <div class="advert-card advert-card--banner">
                         <div class="advert-card__img">
                             <a href="#" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
-                            <span class="advert-card__label">
-                                    House
-                                </span>
-                            <span class="advert-card__price">$160,000.00</span>
-                            <label class="advert-card__favorites" data-id="69" data-action="login">
-                                    <span class="icon icon--sm icon-heart">
-                                        <input type="checkbox">
-                                        <svg><use xlink:href="#favorite-stroke-icon"></use></svg>
-                                        <svg class="solid-heart"><use xlink:href="#favorite-icon"></use></svg>
-                                    </span>
-                            </label>
                         </div>
-
                         <div class="advert-card__content">
                             <div class="advert-card__top">
                                 <p class="u-margin-side-auto">
                                     Объявление №765
                                 </p>
-                                <p class="d-flex flex-center ">
+                                <p class="d-flex flex-center">
                                     455
                                     <i class="icon icon--sm u-margin-left-8">
                                         <svg>
@@ -471,14 +356,11 @@
                                 </p>
                             </div>
                             <div class="advert-card__body">
-                                <div class="d-flex flex-column">
-                                    <p class="advert-card__title">Сдам в аренду дом</p>
-                                    <p class="advert-card__desc">
-                                        Сдам в влатваптьв жвалмжвб мжвабмж вамспим
-                                        вдлмоваьм вждамьвмь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вжмьвжамь вмьвжаило
-                                    </p>
-                                    <div class="advert-card__bottom">
-                                        <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Рекламировать</a>
+                                <div class="d-flex flex-column w-100">
+                                    <p class="text text-md"><strong>Дата активации : </strong>29.02.2019</p>
+                                    <p class="text text-md u-margin-fly-16"><strong>Дата выключения : </strong>29.02.2019</p>
+                                    <p class="text text-md"><strong>Стоимость : </strong>500грн</p>
+                                    <div class="advert-card__bottom ">
                                         <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Изменить</a>
                                         <p class="text text-sm text-right w-100">31.01.2020</p>
                                     </div>
@@ -508,6 +390,64 @@
                                         </button>
                                     </div>
                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advert-card advert-card--banner">
+                        <div class="advert-card__img">
+                            <a href="#" style="background-image: url(https://casaroyal.fantasythemes.net/wp-content/uploads/2019/09/daniil-silantev-574966-unsplash-1.jpg);"></a>
+                        </div>
+                        <div class="advert-card__content">
+                            <div class="advert-card__top">
+                                <p class="u-margin-side-auto">
+                                    Объявление №765
+                                </p>
+                                <p class="d-flex flex-center">
+                                    455
+                                    <i class="icon icon--sm u-margin-left-8">
+                                        <svg>
+                                            <use xlink:href="#eye-icon"></use>
+                                        </svg>
+                                    </i>
+                                </p>
+                            </div>
+                            <div class="advert-card__body">
+                                <div class="d-flex flex-column w-100">
+                                    <p class="text text-md"><strong>Дата активации : </strong>29.02.2019</p>
+                                    <p class="text text-md u-margin-fly-16"><strong>Дата выключения : </strong>29.02.2019</p>
+                                    <p class="text text-md"><strong>Стоимость : </strong>500грн</p>
+                                    <div class="advert-card__bottom ">
+                                        <a href="#" class="cust-btn cust-btn--md cust-btn--rounded cust-btn--third">Изменить</a>
+                                        <p class="text text-sm text-right w-100">31.01.2020</p>
+                                    </div>
+                                </div>
+                                <div class="advert-card__action" data-toggleActive>
+                                    <div class="icon advert-card__action-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"></path></svg>
+                                    </div>
+                                    <div class="advert-card__action-wrap">
+                                        <button type="button" class="reload reload--round reload--sm active cust-btn--clear">
+                                            <i class="icon icon--md">
+                                                <svg><use xlink:href="#reload-icon"></use></svg>
+                                            </i>
+                                        </button>
+                                        <label class=" power power--sm power--adapt">
+                                            <input type="checkbox">
+                                            <span class="cust-btn--round">
+                                                <svg viewBox="0 0 44 44">
+                                                    <path d="M22,6 C31,6 38,13 38,22 C38,31 31,38 22,38 C13,38 6,31 6,22 C6,13 13,6 22,6 L22,28" id="path"></path>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <button type="button" class="del del--round del--sm cust-btn--clear">
+                                            <i class="icon icon--md">
+                                                <svg><use xlink:href="#del-icon"></use></svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

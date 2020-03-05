@@ -18,6 +18,16 @@
     display: flex;
     margin: 0 16px;
   }
+  &__number{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    &.active{
+      background-color: $third-green;
+    }
+
+  }
   &__number,&__more{
     font-size: 18px;
     font-weight: 600;

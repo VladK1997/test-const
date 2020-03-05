@@ -84,6 +84,25 @@ $on: $main-green;
       }
     }
   }
+  &--sm{
+    input + span:before {
+      content: '';
+      width: 3px;
+      height: 11px;
+      left: 48.9%;
+      top: 6px;
+      transform: scaleY(1) translate(1px, 2px);
+    }
+    input + span {
+      max-width:  40px;
+      max-height: 40px;
+      padding: 8px;
+    }
+    input + span svg {
+      width:  32px;
+      height: 32px;
+    }
+  }
   &--md{
     input + span:before {
       content: '';

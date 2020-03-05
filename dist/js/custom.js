@@ -952,3 +952,17 @@ function goTo(item) {
         window.location.href = preLink + pageNumber;
     }
 }
+(function () {
+    let opened = false;
+    let btn;
+    window.addEventListener('click', function (e) {
+        if(e.target.hasAttribute('data-toggleActive') && !opened){
+            e.target.classList.toggle('active');
+            btn = e.target;
+            opened = true;
+        }else if(opened){
+            btn.classList.remove('active');
+            opened = false;
+        }
+    })
+})();
