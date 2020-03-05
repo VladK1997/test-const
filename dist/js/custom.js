@@ -432,7 +432,10 @@ function cookieSearch(item){
         if(el.match(item)) retItem = el;
         console.log(array,el,item);
     });
-    return retItem.match(/=[a-zA-Z0-9]*/)[0].match(/[a-zA-Z0-9]*$/)[0];
+    if(retItem){
+        return retItem.match(/=[a-zA-Z0-9]*/)[0].match(/[a-zA-Z0-9]*$/)[0];
+    }
+
 }
 (function() {
     let body = document.getElementsByTagName("html")[0];
