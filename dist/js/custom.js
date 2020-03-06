@@ -481,22 +481,46 @@ function cookieSearch(item){
 (function () {
     const userAgreeText = document.getElementById("userAgreeText");
     let added;
+
     const lang = document.getElementById("lang-popup");
     const langOpenBtnAttr = "data-langopen";
+
     const auth = document.getElementById("auth-popup");
     const authOpenBtnAttr = "data-authopen";
+
     const userAgree = document.getElementById("user-agree");
     const userAgreeOpenBtnAttr = "data-userAgree";
-    let ClosePopup = function (popup) {
+
+    const docPopup = document.getElementById('doc-popup');
+    const docPopupOpenBtnAttr = "data-docPopup";
+
+    if(docPopup){
+        var docContainer = docPopup.querySelector('.docPopup__doc');
+        var docTitle = docPopup.querySelector('.popup__title');
+        var docPopupBody = docPopup.querySelector('.docPopup__body');
+        var openedID;
+        if(vWidth < 1101){
+            var docArrow = docPopup.querySelector('.popup__botOptions-btn');
+            docArrow.addEventListener('click',function(e){
+                docArrow.classList.toggle('active');
+            })
+        }
+
+    }
+    let ClosePopup = function (popup,callBack) {
         let self = this;
         if(popup){
             self.popup = popup;
             self.popup.addEventListener("click", function(e){
                 if(e.target.hasAttribute("data-closepopup")){
                     self.popup.classList.remove("active");
+                    if(callBack){
+                        setTimeout(callBack,300);
+                    }
                 }
             })
         }
+
     }
     window.addEventListener("click",function(e){
         if (e.target.hasAttribute(langOpenBtnAttr) && lang){
@@ -504,7 +528,9 @@ function cookieSearch(item){
         }
         if (e.target.hasAttribute(authOpenBtnAttr) && auth){
             openPopup(auth);
+
         }
+
         if(e.target.hasAttribute(userAgreeOpenBtnAttr) && userAgree){
             e.preventDefault();
             openPopup(userAgree);
@@ -513,8 +539,34 @@ function cookieSearch(item){
                 userAgreeText.innerHTML = userAgrrementText;
             }
         }
+        if(e.target.hasAttribute(docPopupOpenBtnAttr) && docPopup){
+            e.preventDefault();
+            openPopup(docPopup);
+            console.log(docPagedocuments);
+            for(let i = 0,l = docPagedocuments.length; i < l; i++){
+                if(docPagedocuments[i].id == e.target.dataset.docpopup && openedID != docPagedocuments[i].id){
+                    if(docPagedocuments[i].content){
+                        docContainer.innerHTML = docPagedocuments[i].content;
+                    }else{
+                        docContainer.innerHTML = 'Отсутствует содержимое документа';
+                    }
+                    if(docPagedocuments[i].title){
+                        docTitle.innerText = docPagedocuments[i].title;
+                    }else{
+                        docTitle.innerText = 'Документ ' + docPagedocuments[i].id;
+                    }
 
-    })
+                    break;
+                }
+            }
+
+        }
+
+    });
+    function scrollPopupToTop(el){
+        el.scrollTo(0,0);
+        console.log(el.scrollTop);
+    }
     function openPopup(popup){
         popup.classList.add("active");
     }
@@ -524,6 +576,7 @@ function cookieSearch(item){
     if(userAgree){
         let userAgreePopup = new ClosePopup(userAgree)
     }
+
     if(auth) {
         let authPopup = new ClosePopup(auth);
         let authPopupSections = auth.querySelectorAll(".auth-popup__body");
@@ -541,6 +594,9 @@ function cookieSearch(item){
                 }, 500);
             }
         })
+    }
+    if(docPopup){
+        let docPopupclose = new ClosePopup(docPopup,(function(){scrollPopupToTop(docPopupBody)}));
     }
 })();
 (function(){

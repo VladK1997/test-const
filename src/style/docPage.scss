@@ -1,0 +1,108 @@
+.docPage{
+  &__greet{
+    display: flex;
+    img{
+      margin-left: auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+  &__docWrap{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__text{
+    margin-right: 16px;
+    padding: 16px;
+    padding-right: 0;
+    background-color: $main-blue;
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: 0.04em;
+    line-height: 2;
+    border-radius: 5px 0 0 5px;
+    max-width: 750px;
+    position: relative;
+    &:after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 120px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url(./img/documentsAngle.png);
+      content: '';
+    }
+    p{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__item{
+    min-width: 192px;
+    width: 20%;
+    padding: 8px 16px;
+
+  }
+  &__docWrap{
+    margin: 0 -16px;
+    margin-top: 24px;
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .docPage{
+    &__item{
+      min-width: 176px;
+      padding: 8px;
+      width: 25%;
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .docPage{
+    &__greet{
+      display: flex;
+      flex-wrap: wrap;
+      img{
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto 0;
+      }
+    }
+    &__text{
+      max-width: none;
+      padding: 16px;
+      margin-right: 0;
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .docPage{
+    &__item{
+      min-width: 176px;
+      padding: 8px;
+      width: 33%;
+    }
+    &__text{
+      font-size: 17px;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .docPage{
+    &__item{
+      min-width: 146px;
+      padding: 8px;
+      width: 50%;
+    }
+    &__text{
+      font-size: 16px;
+    }
+  }
+}

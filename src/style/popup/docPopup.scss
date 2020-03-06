@@ -1,0 +1,45 @@
+.docPopup{
+  max-width: 976px;
+  fieldset{
+    border: none;
+    width: 100%;
+    display: block;
+    min-width: 1px;
+    padding-bottom: 64px;
+  }
+  &__body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @extend %scrollBar;
+    min-height: 200px;
+  }
+  &__botOptions-wrap{
+    display: flex;
+    align-items: center;
+    background-color: $main-grey;
+    justify-content: space-between;
+  }
+  &__botOptions{
+    .cust-btn{
+      flex-shrink: 0;
+    }
+    .socials{
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      .cust-btn{
+        margin:0 8px;
+      }
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .docPopup{
+    &__botOptions{
+      .socials{
+        .cust-btn{
+          margin:8px;
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,11 @@
   &--rounded{
     border-radius: 50px;
   }
-
+  &--tap{
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
   &--soft-round{
     border-radius: 3px;
   }
@@ -82,6 +86,14 @@
   &--third{
     background-color: $main-grey;
     color: #fff;
+    &:hover{
+      color: #fff;
+      background-color: $main-blue;
+    }
+  }
+  &--forth{
+    background-color: $main-light-grey;
+    color: $main-medium-grey;
     &:hover{
       color: #fff;
       background-color: $main-blue;

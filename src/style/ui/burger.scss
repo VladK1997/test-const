@@ -1,8 +1,17 @@
-.burger{
-  display: none;
+%burgerSMLine{
+  &:nth-of-type(1) {
+    transform: translateX(20%) rotate(45deg) scaleX(0.88);
+  }
+  &:nth-of-type(2) {
+    transform: scaleX(0);
+  }
+
+  &:nth-of-type(3) {
+    transform-origin: left bottom;
+    transform:translateX(20%) rotate(-45deg) scaleX(0.88);
+  }
 }
-@media all and (max-width: $small-tablet-width){
-  .burger{
+.burger{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,6 +19,11 @@
     height: 40px;
     padding: 8px;
     margin: auto 0;
+   &--sm{
+     width: 40px;
+     height: 32px;
+   }
+
     &__line{
       width: 100%;
       transition: 0.3s;
@@ -32,5 +46,28 @@
   }
   .body-night .burger{
     filter: invert(100%);
+  }
+.active > .burger{
+ .burger {
+   &__line {
+     &:nth-of-type(1) {
+       transform: rotate(45deg) scaleX(0.93);
+     }
+     &:nth-of-type(2) {
+       transform: scaleX(0);
+     }
+
+     &:nth-of-type(3) {
+       transform-origin: left bottom;
+       transform: rotate(-45deg) scaleX(0.93);
+     }
+   }
+ }
+}
+.active > .burger.burger--sm {
+  .burger {
+    &__line {
+      @extend %burgerSMLine;
+    }
   }
 }

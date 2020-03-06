@@ -5,6 +5,9 @@
   left: 0;
   right: 0;
   z-index: 9999999;
+  .burger{
+    display: none;
+  }
   &__nav{
     background-color: $main-blue;
   }
@@ -33,7 +36,9 @@
   .header {
     max-height: 56px;
     background-color: $main-blue;
-
+    .burger{
+      display: flex;
+    }
     &__logo{
       margin:0 auto;
     }
