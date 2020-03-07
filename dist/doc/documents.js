@@ -2,6 +2,7 @@ docPagedocuments = [
     {
         id: 'ufhf12',
         title: 'Договір оренди квартири',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
         content: '<form enctype="multipart/form-data" class="well form-horizontal" name="ads=1" action="" method="post" id="ads">\n' +
             '     <input type="hidden" name="route" value="ads">\n' +
             '\t<input type="hidden" name="action" value="post">\n' +
@@ -476,26 +477,34 @@ docPagedocuments = [
     },
     {
         id: 'ufhf13',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
+
         title:'',
         content:'',
     },
     {
         id: 'ufhf14',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
+
         title:'',
         content:'',
     },
     {
         id: 'ufhf15',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
+
         title:'',
         content:'',
     },
     {
         id: 'ufhf16',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
         title:'',
         content:'',
     },
     {
         id: 'ufhf17',
+        pdfLink:'https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf',
         title:'',
         content:'',
     }

@@ -160,7 +160,6 @@ let vWidth = window.innerWidth;
                                 '<img src="'+ img +'">' +
                                 '<div class="item-slider-preview__del" data-del-img></div>'+
                                 '</div>'
-                            console.log(photoRead);
                             updateSlider();
                         }
                     },i * 50)
@@ -168,7 +167,6 @@ let vWidth = window.innerWidth;
                 }
 
             }
-            console.log(wrap);
             setTimeout(function(){
                 wrap.style.background = 'none';
             },0)
@@ -430,7 +428,6 @@ function cookieSearch(item){
     let retItem;
     array.forEach(function(el){
         if(el.match(item)) retItem = el;
-        console.log(array,el,item);
     });
     if(retItem){
         return retItem.match(/=[a-zA-Z0-9]*/)[0].match(/[a-zA-Z0-9]*$/)[0];
@@ -498,6 +495,7 @@ function cookieSearch(item){
         var docContainer = docPopup.querySelector('.docPopup__doc');
         var docTitle = docPopup.querySelector('.popup__title');
         var docPopupBody = docPopup.querySelector('.docPopup__body');
+        var docPrintBtn = docPopup.querySelector('[data-docPrint]');
         var openedID;
         if(vWidth < 1101){
             var docArrow = docPopup.querySelector('.popup__botOptions-btn');
@@ -505,7 +503,6 @@ function cookieSearch(item){
                 docArrow.classList.toggle('active');
             })
         }
-
     }
     let ClosePopup = function (popup,callBack) {
         let self = this;
@@ -542,7 +539,6 @@ function cookieSearch(item){
         if(e.target.hasAttribute(docPopupOpenBtnAttr) && docPopup){
             e.preventDefault();
             openPopup(docPopup);
-            console.log(docPagedocuments);
             for(let i = 0,l = docPagedocuments.length; i < l; i++){
                 if(docPagedocuments[i].id == e.target.dataset.docpopup && openedID != docPagedocuments[i].id){
                     if(docPagedocuments[i].content){
@@ -555,6 +551,9 @@ function cookieSearch(item){
                     }else{
                         docTitle.innerText = 'Документ ' + docPagedocuments[i].id;
                     }
+                    if(docPagedocuments[i].pdfLink){
+                        docPrintBtn.href = docPagedocuments[i].pdfLink;
+                    }
 
                     break;
                 }
@@ -565,7 +564,6 @@ function cookieSearch(item){
     });
     function scrollPopupToTop(el){
         el.scrollTo(0,0);
-        console.log(el.scrollTop);
     }
     function openPopup(popup){
         popup.classList.add("active");
@@ -599,6 +597,7 @@ function cookieSearch(item){
         let docPopupclose = new ClosePopup(docPopup,(function(){scrollPopupToTop(docPopupBody)}));
     }
 })();
+
 (function(){
     let currentItem = null;
     window.addEventListener("click",function(e){
@@ -665,11 +664,9 @@ function generatePassword() {
             let wrap = block.parentNode
             wrap.classList.remove("err");
             wrap.classList.remove("suc");
-            console.log(block);
             self.formCheckArray = self.formCheckArray.filter(function (thisItem) {
                 return thisItem != block;
             });
-            console.log(self.formCheckArray);
         }
         self.checkEmail = function(item){
             //email validation
@@ -695,7 +692,6 @@ function generatePassword() {
                 } else {
                     item.parentNode.classList.add("suc");
                     self.formCheckArray.push(item);
-                    console.log(self.formCheckArray);
                 }
                 //end text fields validation
             },500)
@@ -760,7 +756,6 @@ function generatePassword() {
         }
          self.thisForm.addEventListener("click", function (e) {
              if(e.target.hasAttribute("data-check-required")){
-                 console.log(e.target);
                  self.checkCheck(e.target);
              }
          })
@@ -785,7 +780,6 @@ function generatePassword() {
                      self.inputArray[i].parentNode.classList.add('err');
                  }
              }
-             console.log(self.formCheckArray, self.inputArray.length);
              if (self.formCheckArray.length == self.inputArray.length) {
                  alert("congratulations");
              }
@@ -874,9 +868,7 @@ function addPhotos(item) {
         fileAllowed = false;
         msg.innerHTML = "Вы загружаете <strong>" + files[0].type.split('/')[0] + "</strong><br> Загружайте изображение";
     }
-    console.log("photo");
     if (fileAllowed) {
-        console.log("photo");
         setTimeout(function(){
             photoRead.readAsDataURL(files[0]);
             photoRead.onload = function(){
@@ -898,9 +890,9 @@ function addPhotos(item) {
     window.addEventListener("click",function(e){
         let item = e.target;
         for(let i = items.length, l = 0; i > l; i--){
-            console.log(item == items[i]);
+
             if(item.hasAttribute("data-stepItem") && !item.classList.contains('active')){
-                console.log(items[i - 1]);
+
                 if(item == items[i] && items[i-1].classList.contains('active')){
                     item.classList.add("active");
                 }
@@ -930,7 +922,6 @@ if(wrapExfiles){
         }
         wrap.insertAdjacentHTML("beforeend",outputHtml);
         item.value = null;
-        console.log(item.files[0])
     }
 }
 function delFile(file) {
@@ -940,7 +931,6 @@ function delFile(file) {
     let tel = document.getElementById("showTel");
     let telShowed = false;
     window.addEventListener("click",function (e) {
-        console.log(e.target);
         if(e.target.hasAttribute("data-showTel")){
             tel.classList.add('active');
             telShowed = true;
