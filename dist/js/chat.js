@@ -59,14 +59,20 @@
                 files = [];
                 fileWrap.classList.remove('active');
                 fileWrap.innerHTML="";
-                if(window.innerHeight < chatBlock.getBoundingClientRect().bottom+70) {
-                    window.scrollTo(0, scrollToEl-680);
-                    for(let i = 0,l = 36;i< l ;i++){
-                        window.requestAnimationFrame(function () {
-                            setTimeout(function () {
-                                window.scrollTo(0, scrollToEl-680+20*i);
-                            },7*i);
-                        })
+                console.log(chatBlock.getBoundingClientRect().bottom - window.innerHeight+33 > 71);
+                if(chatBlock.getBoundingClientRect().bottom > window.innerHeight) {
+                    if(chatBlock.getBoundingClientRect().bottom - window.innerHeight+33 > 150) {
+                        window.scrollTo(0, scrollToEl - 680);
+                        for (let i = 0, l = 36; i < l; i++) {
+                            window.requestAnimationFrame(function () {
+                                setTimeout(function () {
+                                    window.scrollTo(0, scrollToEl - 680 + 20 * i);
+                                }, 7 * i);
+                            })
+                        }
+                    }else{
+                        console.log('ok');
+                        window.scrollTo(0, scrollToEl);
                     }
 
 
@@ -108,9 +114,5 @@
 
     }
 })();
-document.addEventListener('DOMContentLoaded',function () {
-
-
-})
 
 

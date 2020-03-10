@@ -9,6 +9,7 @@
 body{
   font-size: 16px;
   line-height: 1;
+  overflow-x: hidden;
   font-family: 'SourceSansPro',sans-serif;
 }
 ::selection{
@@ -45,7 +46,7 @@ button{
 }
 .page{
   padding-top: 72px;
-  overflow: hidden;
+
 }
 .icon{
   width: 16px;

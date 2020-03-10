@@ -6,7 +6,6 @@
     <title>Сообшения</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/first-style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/font.css">
     <link rel="stylesheet" href="dist/app.css">
@@ -175,6 +174,8 @@
     </nav>
 </div>
 <div class="page">
+
+
     <div class="container container--lg">
         <main class="user-content">
             <div class="user-content__user-menu">
@@ -272,10 +273,12 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at aut dolores eos, explicabo harum hic impedit incidunt ipsum libero, maiores minima modi nisi rerum sit soluta ullam voluptas voluptates!
                             <span class="chat__msg-time">11.05</span>
                         </p>
+
                     </div>
+
                     <form action="/" class="chat__answer chat-answer" id="chatForm">
                         <div class="chat-answer__files-wrap exFile exFile--row"></div>
-                        <textarea placeholder="Написать..." oninput="auto_grow(this)"></textarea>
+                        <label class="chat-answer__text"><textarea placeholder="Написать..." oninput="auto_grow(this)"></textarea></label>
                         <button type="submit" class="chat-answer__send cust-btn--clear"></button>
                         <label class="chat-answer__file">
                             <input type="file" multiple>
@@ -289,6 +292,7 @@
         </main>
     </div>
 </div>
+
 <div class="container container--lg">
     <div class="d-flex u-margin-fly-40 flex-wrap">
         <div class="u-margin-right-auto">
@@ -301,6 +305,8 @@
         </div>
     </div>
 </div>
+
+<div style="min-height: 900px"></div>
 <footer class="footer">
     <div class="container container--lg">
         <div class="footer__wrap">
