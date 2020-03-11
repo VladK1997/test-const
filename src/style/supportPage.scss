@@ -1,0 +1,98 @@
+.supportPage{
+  &__greet{
+    max-width: 850px;
+    margin: 80px auto 48px;
+    position: relative;
+    p{
+      text-align: center;
+      padding: 32px 112px;
+      background-color: $main-green;
+      line-height: 1.8;
+      font-size: 20px;
+      @extend %futuraTitle;
+      border-radius: 20px;
+    }
+  }
+  &__greet-img{
+    position: absolute;
+    max-width: 216px;
+    &--1{
+      bottom: 0;
+      right: 100%;
+      transform: translateX(50%);
+    }
+    &--2{
+      bottom: 100%;
+      left: 100%;
+      transform: translate(-60%,50%);
+    }
+  }
+  &__faq{
+    margin: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__faq-img{
+    max-width: 500px;
+    width: 38%;
+    min-width: 300px;
+  }
+  &__faq-list{
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 500px;
+    li span{
+      @extend %futuraTitle;
+    }
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .supportPage{
+    &__greet{
+      &:after{
+        clear: both;
+        content: "";
+      }
+      p{
+        font-size: 18px;
+        padding: 32px;
+      }
+    }
+    &__faq-list{
+      font-size: 18px;
+    }
+    &__greet-img{
+      max-width: 160px;
+      &--1{
+        display: inline;
+        position: static;
+        float: left;
+        transform: translate(0);
+      }
+      &--2{
+        transform: translate(-100%,50%);
+      }
+    }
+
+  }
+}
+@media all and(max-width: 700px){
+  .supportPage{
+    &__faq-img{
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth){
+  .supportPage{
+    &__greet{
+      p{
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}

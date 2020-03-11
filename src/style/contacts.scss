@@ -54,6 +54,7 @@
   }
   &__form{
     visibility: hidden;
+    background-color: $main-blue;
     max-width: 800px;
     overflow: hidden;
     max-height: 0;
@@ -62,6 +63,7 @@
     border-radius: 10px;
     padding: 16px;
     border: 1px solid $main-grey;
+    background-image: url("img/noise.png");
     &.active{
       visibility: visible;
       margin: 40px auto;
@@ -70,6 +72,7 @@
       position: relative;
     }
     button{
+      margin-top: 16px;
       display: block;
       margin-left: auto;
       padding: 8px 16px;
@@ -104,19 +107,29 @@
   }
   &__input{
     display: flex;
-    padding: 8px 8px;
+    justify-content: space-between;
+    padding: 8px 0;
+    padding-right: 0;
+    align-items: center;
     width: 100%;
-    border-bottom: 1px solid $main-grey;
+
     span{
       white-space: nowrap;
+      color: #fff;
+      min-width: 8%;
     }
     input{
+      color: #000;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 8px 16px;
       outline: none;
       margin-left: 16px;
+      width: 2%;
       font-size: 18px;
-      background: none;
       flex-grow: 1;
       border: none;
+
     }
   }
   &__other-contact{

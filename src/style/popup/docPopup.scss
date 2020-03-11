@@ -15,7 +15,6 @@
   }
   &__botOptions-wrap{
     display: flex;
-    align-items: center;
     background-color: $main-grey;
     justify-content: space-between;
   }
@@ -34,6 +33,9 @@
 }
 @media all and(max-width: $mobileXsWidth){
   .docPopup{
+    &__print{
+      margin-top: 8px;
+    }
     &__botOptions{
       .socials{
         .cust-btn{

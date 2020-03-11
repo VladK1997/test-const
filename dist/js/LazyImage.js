@@ -13,24 +13,26 @@
     }
         document.addEventListener("DOMContentLoaded", function () {
             var e = [].slice.call(document.querySelectorAll("img.lazy"));
-            console.log(e.length);
+
             if ("IntersectionObserver" in window) {
                 let t = new IntersectionObserver(function (e, n) {
                         e.forEach(function (e) {
-                            if (e.isIntersecting) {
-                                let n = e.target;
-                                if(webpEnable && n.dataset.webpsrc && n.dataset.webpsrc.length > 0){
-                                    n.setAttribute("src", n.dataset.webpsrc)
-                                }else{
-                                    n.setAttribute("src", n.dataset.src)
+                                if (e.isIntersecting) {
+                                    let n = e.target;
+                                    if(n.hasAttribute('data-src')) {
+                                        if (webpEnable && n.dataset.webpsrc && n.dataset.webpsrc.length > 0) {
+                                            n.setAttribute("src", n.dataset.webpsrc)
+                                        } else {
+                                            n.setAttribute("src", n.dataset.src)
+                                        }
+                                    }
+                                    setTimeout(function () {
+                                        n.classList.remove("lazy-out");
+                                        n.removeAttribute('data-src');
+                                        n.removeAttribute('data-webpsrc');
+                                        t.unobserve(n);
+                                    }, 0)
                                 }
-                                setTimeout(function () {
-                                    n.classList.remove("lazy-out");
-                                    n.removeAttribute('data-src');
-                                    n.removeAttribute('data-webpsrc');
-                                    t.unobserve(n);
-                                },0)
-                            }
                         })
                     }
                 );

@@ -13,6 +13,8 @@
 </head>
 <body>
 <div class="d-none">
+    <svg id="mail-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.577 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+    <svg id="tel-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
     <svg id="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path fill="currentColor" d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path>
     </svg>
@@ -173,143 +175,177 @@
         </nav>
     </div>
     <div class="container container--lg">
-        <div class="docPage">
-            <div class="docPage__greet">
-                <div class="docPage__text">
-                    <p>
-                        Для максимальной безопасности сделки, настоятельно
-                        рекомендуем ознакомиться с примерами договоров
-                        аренды и оказания услуг.
-                        Помните, ничто не сможет вас обезопасить от
-                        недобросовестных людей лучше, чем официальный
-                        документ.
+        <div class="supportPage">
+            <div class="supportPage__greet">
+                <p>
+                    Мы всегда рады вам помочь, ведь задача нашей команды
+                    – обеспечить комфорт на страничках нашего сайта.
+                    Если у вас появился вопрос, мы с радостью на него ответим.
+                    Связаться со службой поддержки можно через онлайн-чат.
+                    (в правом нижнем углу монитора)
+                    <img class="lazy lazy-out supportPage__greet-img supportPage__greet-img--1" data-src="dist/img/sup1.png">
+                    Также вы можете заказать звонок и мы свяжемся с вами
+                    через 30 секунд.
+                    ( в левом нижнем углу монитора)
+
+                </p>
+                <img class="lazy lazy-out supportPage__greet-img supportPage__greet-img--2" data-src="dist/img/dron.png">
+            </div>
+            <p class="text text-lg text-center text-h">
+                Мы подготовили для вас ответы на самые популярные вопросы,
+                быть может, вы найдёте ответы тут :
+            </p>
+            <div class="supportPage__faq">
+                <ul class="supportPage__faq-list cust-list cust-list--ol">
+                    <li><span>Почему OLZ?</span></li>
+                    <li><span>Что такое OLZ?</span></li>
+                    <li><span>Как подать объявление?</span></li>
+                    <li><span>Как редактировать объявление?</span></li>
+                    <li><span>Методы авторизации.</span></li>
+                    <li><span>Почему OLZ?</span></li>
+                    <li><span>Что такое OLZ?</span></li>
+                    <li><span>Как подать объявление?</span></li>
+                    <li><span>Как редактировать объявление?</span></li>
+                    <li><span>Методы авторизации.</span></li>
+                </ul>
+                <img class="supportPage__faq-img lazy lazy-out" data-src="dist/img/sup2.png">
+            </div>
+            <div class="page-pagin">
+                <a href="#" class="page-pagin__btn">
+                    <svg style="transform: rotate(180deg)"><use xlink:href="#round-arrow"></use></svg>
+                </a>
+                <div class="page-pagin__number-wrap">
+                    <a href="#" class="page-pagin__number">1</a>
+                    <a href="#" class="page-pagin__number">2</a>
+                    <a href="#" class="page-pagin__number">3</a>
+                    <a href="#" class="page-pagin__number">4</a>
+                    <a href="#" class="page-pagin__number">5</a>
+                    <a href="#" class="page-pagin__number">6</a>
+                    <a href="#" class="page-pagin__number">7</a>
+                    <a href="#" class="page-pagin__number">8</a>
+                    <a href="#" class="page-pagin__number">9</a>
+                    <a href="#" class="page-pagin__number">10</a>
+                    <a href="#" class="page-pagin__number">11</a>
+                    <a href="#" class="page-pagin__number">12</a>
+                    <a href="#" class="page-pagin__number">13</a>
+                    <label class="page-pagin__input">
+                        <input type="text" class="cust-input__field" maxlength="3" placeholder="..." data-link="" data-max="12" onkeyup="goTo(this)">
+                    </label>
+                </div>
+                <a href="#" class="page-pagin__btn">
+                    <svg><use xlink:href="#round-arrow"></use></svg>
+                </a>
+            </div>
+            <div class="container container--sm">
+                <p class="u-margin-fly-24 text-center text text-lh-md text-lg text-bg text-bg--secBlue">
+                    Мы всегда заботимся о комфорте наших пользователей, потому наша служба поддержки работает в любом удобном для Вас формате.
+                </p>
+                <div>
+                    <p class="contacts__item">
+                        <i class="icon operator">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 69.6 69.6" enable-background="new 0 0 69.6 69.6" xml:space="preserve">
+                        <g>
+                            <circle fill="#1BA2FC" cx="34.8" cy="34.8" r="34.8"/>
+                        </g>
+                                <g>
+                            <path fill="#FFFFFF" d="M35.3,12L35.3,12c1.6,0,2.9,1.3,2.9,2.9v11c0,1.6-1.3,2.9-2.9,2.9l0,0c-1.6,0-2.9-1.3-2.9-2.9V15   C32.4,13.3,33.7,12,35.3,12L35.3,12z"/>
+                                    <path fill="#FFFFFF" d="M13.1,28.2L13.1,28.2c0.5-1.6,2.2-2.4,3.7-1.9l10.4,3.4c1.6,0.5,2.4,2.2,1.9,3.7l0,0   c-0.5,1.6-2.2,2.4-3.7,1.9L15,31.9C13.4,31.4,12.6,29.8,13.1,28.2L13.1,28.2z"/>
+                                    <path fill="#FFFFFF" d="M21.5,54.4L21.5,54.4c-1.3-1-1.6-2.8-0.6-4.1l6.4-8.9c1-1.3,2.8-1.6,4.1-0.6l0,0c1.3,1,1.6,2.8,0.6,4.1   l-6.4,8.9C24.8,55.1,22.8,55.4,21.5,54.4L21.5,54.4z"/>
+                                    <path fill="#FFFFFF" d="M49.1,54.4L49.1,54.4c-1.3,1-3.1,0.6-4.1-0.6L38.6,45c-1-1.3-0.6-3.1,0.6-4.1l0,0c1.3-1,3.1-0.6,4.1,0.6   l6.4,8.9C50.7,51.6,50.4,53.5,49.1,54.4L49.1,54.4z"/>
+                                    <path fill="#FFFFFF" d="M57.6,28.2L57.6,28.2c0.5,1.6-0.4,3.3-1.9,3.7l-10.4,3.4c-1.6,0.5-3.3-0.4-3.7-1.9l0,0   c-0.5-1.6,0.4-3.3,1.9-3.7l10.4-3.4C55.5,25.9,57.1,26.7,57.6,28.2L57.6,28.2z"/>
+                        </g>
+                    </svg>
+                        </i>
+                        +380672316012
+                        <a href="tel:+380672316012" class="contacts__btn cust-btn text-sm text--up">
+                            <i class="icon icon--md icon--mr ">
+                                <svg><use xlink:href="#tel-icon"></use></svg>
+                            </i>
+                            вызов
+                        </a>
                     </p>
-                    <p>
-                        Зразки договорів, представлені нижче, на рідній
-                        державній мові, згідно з вимогами законодавства.
-                        Джерело : WEB-ресурси.
+                    <p class="contacts__item">
+                        <i class="icon operator">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="378pt" height="380pt" viewBox="0 0 378 380" version="1.1">
+                                <g id="surface1">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(90.196078%,0%,0%);fill-opacity:1;" d="M 119.441406 14.328125 C 166.90625 -4.589844 222.195312 -3.28125 268.394531 18.691406 C 255.230469 16.691406 241.839844 18.199219 228.808594 20.402344 C 193.417969 27.085938 159.785156 43.738281 133.496094 68.476562 C 108.289062 93.253906 90.625 126.128906 85.636719 161.300781 C 82.335938 186.222656 85.394531 212.363281 96.578125 235.046875 C 108.101562 258.847656 128.386719 278.367188 152.835938 288.441406 C 176.394531 298.410156 203.722656 298.300781 227.585938 289.402344 C 263.390625 276.261719 289.117188 240.78125 292.058594 202.875 C 293.910156 178.03125 287.867188 151.601562 271.175781 132.546875 C 255.242188 113.894531 231.9375 103.621094 208.617188 97.773438 C 207.367188 74.773438 218.203125 52.050781 235.386719 37.09375 C 244.929688 28.488281 256.773438 23.003906 269.019531 19.492188 L 269.949219 19.171875 C 305.007812 35.984375 334.796875 63.710938 353.777344 97.75 C 370.039062 126.730469 378.519531 160.125 377.679688 193.390625 C 377.519531 236.40625 361.441406 278.996094 333.878906 311.886719 C 307.816406 343.253906 271.363281 365.816406 231.632812 374.851562 C 191.796875 384.042969 148.9375 380.078125 111.65625 363.148438 C 75.175781 346.855469 44.269531 318.53125 24.609375 283.691406 C 8.253906 254.738281 -0.398438 221.355469 0.320312 188.050781 C 0.398438 146.554688 15.132812 105.378906 40.859375 72.929688 C 61.410156 47.019531 88.671875 26.417969 119.441406 14.328125 Z M 119.441406 14.328125 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 228.808594 20.402344 C 241.839844 18.199219 255.230469 16.691406 268.394531 18.691406 L 270.285156 19.011719 L 269.019531 19.492188 C 256.773438 23.003906 244.929688 28.488281 235.386719 37.09375 C 218.203125 52.050781 207.367188 74.773438 208.617188 97.773438 C 231.9375 103.621094 255.242188 113.894531 271.175781 132.546875 C 287.867188 151.601562 293.910156 178.03125 292.058594 202.875 C 289.117188 240.78125 263.390625 276.261719 227.585938 289.402344 C 203.722656 298.300781 176.394531 298.410156 152.835938 288.441406 C 128.386719 278.367188 108.101562 258.847656 96.578125 235.046875 C 85.394531 212.363281 82.335938 186.222656 85.636719 161.300781 C 90.625 126.128906 108.289062 93.253906 133.496094 68.476562 C 159.785156 43.738281 193.417969 27.085938 228.808594 20.402344 Z M 228.808594 20.402344 "/>
+                                </g>
+                            </svg>
+                        </i>
+                        +380503456817
+                        <a href="tel:+380503456817" class="contacts__btn cust-btn text-sm text--up">
+                            <i class="icon icon--md icon--mr ">
+                                <svg><use xlink:href="#tel-icon"></use></svg>
+                            </i>
+                            вызов
+                        </a>
+                    </p>
+                    <p class="contacts__item">
+                        <i class="icon operator">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 69.7 69.7" style="enable-background:new 0 0 69.7 69.7;" xml:space="preserve">
+                        <path id="SVGID_3_" d="M0,34.8c0,19.2,15.6,34.8,34.8,34.8c19.2,0,34.8-15.6,34.8-34.8C69.7,15.6,54.1,0,34.8,0    C15.6,0,0,15.6,0,34.8"/>
+                                <path style="overflow:visible;fill:#034EA1;" d="M0,34.8c0,19.2,15.6,34.8,34.8,34.8c19.2,0,34.8-15.6,34.8-34.8C69.7,15.6,54.1,0,34.8,0    C15.6,0,0,15.6,0,34.8"/>
+                                <clipPath id="SVGID_1_">
+                            <use xlink:href="#SVGID_3_" style="overflow:visible;"/>
+                        </clipPath>
+                                <rect y="0" class="" width="69.7" style='clip-path:url(#SVGID_1_)' fill="#034EA1" height="69.7"/>
+                                <path fill="#FFCA05" d="M6,34.8c0-16,12.9-28.9,28.9-28.9c16,0,28.9,12.9,28.9,28.9c0,16-12.9,28.9-28.9,28.9c-3.2,0-6.2-0.5-9-1.4  c2.1-11.9,9.6-21.6,19.5-25.8c1.2,1.4,2.9,2.2,4.9,2.2c3.5,0,6.4-2.9,6.4-6.4c0-3.5-2.9-6.4-6.4-6.4c-3.5,0-6.4,2.9-6.4,6.4  c-12.7,3.8-23,12.7-28.2,24.1c-1.7-1.5-3.1-3.1-4.4-5c0.3-11.1,5.8-20.8,14-26.5c1.2,1.3,2.9,2.2,4.8,2.2c3.5,0,6.4-2.9,6.4-6.4  c0-3.6-2.9-6.4-6.4-6.4c-3.5,0-6.4,2.9-6.4,6.4c0,0.2,0,0.4,0,0.6c-7.6,2.7-13.9,8-17.6,14.8C6,35.6,6,35.2,6,34.8"/>
+                    </svg>
+                        </i>
+                        +380930868879
+                        <a href="tel:+380930868879" class="contacts__btn cust-btn text-sm text--up">
+                            <i class="icon icon--md icon--mr ">
+                                <svg><use xlink:href="#tel-icon"></use></svg>
+                            </i>
+                            вызов
+                        </a>
                     </p>
                 </div>
-                <img class="lazy lazy-out" data-src="dist/img/docPage.png">
-            </div>
-            <div class="docPage__docWrap">
-                <div class="docPage__item">
-                    <div class="tapBtn" data-docPopup="ufhf12">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Договір оренди квартири
-                        </p>
-                    </div>
+                <div class="callback u-margin-fly-16">
+                    <p class="text text-md text-center">ОСТАВЬТЕ ЗАПРОС НА ЗВОНОК и мы вас наберём в течении 30-ти секунд.</p>
+                    <p class="contacts__text-small text text-sm text-center">В левом нижнем углу вашего экрана</p>
+                    <button class="u-margin-side-auto u-margin-top-16 cust-btn cust-btn--rounded cust-btn--third cust-btn--md">Позвоните мне</button>
                 </div>
-                <div class="docPage__item" >
-                    <div class="tapBtn" data-docPopup="ufhf13">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Условия и правила проката инструмента
-                        </p>
+                <p class="text-center text-lg text-bg text-bg--secBlue u-margin-fly-16">
+                    Вы можете обратиться в наш ОНЛАЙН – ЧАТ
+                </p>
+                <p class=" text text-center">В левом нижнем углу вашего экрана</p>
+                <button class="u-margin-side-auto u-margin-top-16 cust-btn cust-btn--rounded cust-btn--third cust-btn--md">Начать ЧАТ</button>
+                <p class="text-center text-lg text-bg text-bg--secBlue u-margin-fly-16">
+                    Отправьте письмо нам на електронную почту, а  мы ответим на все
+                    интересующие Вас вопросы.
+                </p>
+                <div class="contacts__contact-block">
+                    <div class="d-flex align-items-center">
+                        <p class="text text-md">info@olz.com.ua</p>
+                        <button class="cust-btn contacts__contact-btn" id="feedBackBtn">
+                            <i class="icon icon--md">
+                                <svg>
+                                    <use xlink:href="#mail-icon"></use>
+                                </svg>
+                            </i>
+                            Написать
+                        </button>
                     </div>
-                </div>
-                <div class="docPage__item" >
-                    <div class="tapBtn" data-docPopup="ufhf14">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Договір оренди обладнання
-                        </p>
-                    </div>
-                </div>
-                <div class="docPage__item" >
-                    <div class="tapBtn" data-docPopup="ufhf15">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Договір прокату
-                        </p>
-                    </div>
-                </div>
-                <div class="docPage__item">
-                    <div class="tapBtn" data-docPopup="ufhf16">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Акт наданих послуг
-                        </p>
-                    </div>
-                </div>
-                <div class="docPage__item">
-                    <div class="tapBtn" data-docPopup="ufhf17">
-                        <div class="tapBtn__icon">
-                            <svg><use href="#doc-icon"></use></svg>
-                        </div>
-                        <p class="tapBtn__title">
-                            Договір оренди житлового приміщення
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container container--lg">
-        <p class="articles__readMore">Читайте также...</p>
-        <div class="articles__slider-wrap">
-            <div class="articles__slider-prev slider-nav-prev"></div>
-            <div class="advert__articles articles swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                    <div class="articles__item swiper-slide">
-                        <a href="#" class="articles__img" style="background-image: url('dist/img/artice.jpg')"></a>
-                        <div class="articles__info">
-                            <p class="articles__title">BMW против Mercedes</p>
-                            <p class="articles__text">Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины Для легенды, но только один победитель. Авторитетные машины</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="articles__pag cust-bul cust-bul--secondary"></div>
-            </div>
-            <div class="articles__slider-next slider-nav-next"></div>
-        </div>
-        <div class="advert__banner banner banner--2">
-            <div class="row">
-                <div class="col col-md-6 col-12">
-                    <div class="banner__item banner__item--large"></div>
-                </div>
-                <div class="col col-md-6 col-sm-12 d-flex flex-wrap">
-                    <div class="banner__item banner__item--medium">
-                        <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
-                    </div>
-                    <div class="d-flex flex-wrap w-100 u-margin-top-auto">
-                        <div class="banner__item banner__item--small">
-                            <p class="banner__temp-text">Вашей рекламе тут было бы уютно...</p>
-                        </div>
-                        <div class="banner__item banner__item--small"></div>
-                    </div>
+                    <form class="contacts__form" id="feedBackForm">
+                        <label class="contacts__input">
+                            <span>Имя :</span>
+                            <input type="text">
+                        </label>
+                        <label class="contacts__input">
+                            <span>Email :</span>
+                            <input type="text">
+                        </label>
+                        <label class="contacts__input">
+                            <span>Тема :</span>
+                            <input type="text">
+                        </label>
+                        <label>
+                            <textarea></textarea>
+                        </label>
+                        <button type="submit">Отправить</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -614,7 +650,7 @@
                     </div>
                 </div>
                 <div class="popup__botOptions-wrap docPopup__botOptions-wrap">
-                    <a href="https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf" data-docPrint class="docPopup__print cust-btn cust-btn--forth cust-btn--soft-round cust-btn--tap">
+                    <a href="https://www.globalgreyebooks.com/ebooks/herman-melville/moby-dick/moby-dick.pdf" data-docPrint class="cust-btn cust-btn--forth cust-btn--soft-round cust-btn--tap">
                         <svg><use xlink:href="#print-icon"></use></svg>
                     </a>
                     <div class="socials">
@@ -623,6 +659,11 @@
                                 <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
                             </svg>
                         </a>
+                        <div class="cust-btn cust-btn--forth cust-btn--soft-round cust-btn--tap">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                            </svg>
+                        </div>
                         <a href=" https://www.instagram.com/olz.com.ua/?hl=ru" target="_blank" class="cust-btn cust-btn--forth cust-btn--soft-round cust-btn--tap">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>

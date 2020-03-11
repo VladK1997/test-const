@@ -79,6 +79,12 @@
       color: $main-blue;
     }
   }
+  &-bg{
+    padding: 16px 24px;
+    &--secBlue{
+      background-color: $second-blue;
+    }
+  }
   &--nowrap{
     white-space: nowrap;
   }
