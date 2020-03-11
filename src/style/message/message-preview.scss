@@ -4,8 +4,12 @@
   position: relative;
   border: 1px solid $main-border-color;
   border-top: 0;
+  color: $main-grey;
   &:first-child{
     border-top: 1px solid $main-border-color;
+  }
+  span{
+    display: block;
   }
   &__status{
     display: none;
@@ -49,6 +53,9 @@
     color: inherit;
     overflow: hidden;
     font-size: 14px;
+    display: block;
+    line-height: 1.7;
+    margin-top: 8px;
     white-space: nowrap;
     flex-shrink: 1;
     &:after{
@@ -70,6 +77,9 @@
     display: block;
     align-self: center;
     margin: 0 auto;
+  }
+  &--new &__date{
+    margin-bottom: 4px;
   }
   &--new &__text{
     &:after{

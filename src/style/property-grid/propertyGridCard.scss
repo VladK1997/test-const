@@ -26,8 +26,17 @@
 
 .casaroyal-property-listing-time {
   float: right;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #848484;
 }
-
+.casaroyal-property-agent-name{
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #848484;
+}
 .property-grid-content {
   width: 100%;
   float: left;
@@ -37,6 +46,8 @@
   z-index: 9999;
   text-align: left;
 }
+
+
 .property-price {
   width: 100%;
   float: left;

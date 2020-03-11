@@ -438,8 +438,8 @@ function cookieSearch(item){
     let body = document.getElementsByTagName("html")[0];
     let btns = document.querySelectorAll('[data-lightmode]');
     let darkMode;
-    if(cookieSearch('darkMode') == 'true'){
-        // turnOn();
+    if(sessionStorage.getItem('darkMode') && sessionStorage.getItem('darkMode')== 'true'){
+        turnOn();
     }
     window.addEventListener("click",function(e){
         if(e.target.hasAttribute("data-lightmode")){
@@ -464,14 +464,18 @@ function cookieSearch(item){
         });
         btns.forEach(el => el.classList.add('active'));
         body.classList.toggle("body-night");
-        document.cookie = "darkMode=true;expires=session"
+        if(sessionStorage.getItem('darkMode')){
+            sessionStorage.setItem('darkMode', 'true');
+        }
         darkMode = true;
     }
     function turnOff() {
         darkMode = false;
         body.classList.toggle("body-night");
         btns.forEach(el => el.classList.remove('active'));
-        document.cookie = "darkMode=false;"
+        if(sessionStorage.getItem('darkMode')){
+            sessionStorage.setItem('darkMode', 'false');
+        }
         DarkReader.disable();
     }
 })();
