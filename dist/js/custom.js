@@ -439,7 +439,7 @@ function cookieSearch(item){
     let btns = document.querySelectorAll('[data-lightmode]');
     let darkMode;
     if(cookieSearch('darkMode') == 'true'){
-        turnOn();
+        // turnOn();
     }
     window.addEventListener("click",function(e){
         if(e.target.hasAttribute("data-lightmode")){
@@ -464,11 +464,11 @@ function cookieSearch(item){
         });
         btns.forEach(el => el.classList.add('active'));
         body.classList.toggle("body-night");
-        document.cookie = "darkMode=true;"
-        darkMode=true;
+        document.cookie = "darkMode=true;expires=session"
+        darkMode = true;
     }
     function turnOff() {
-        darkMode=false;
+        darkMode = false;
         body.classList.toggle("body-night");
         btns.forEach(el => el.classList.remove('active'));
         document.cookie = "darkMode=false;"
