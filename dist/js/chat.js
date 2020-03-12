@@ -5,6 +5,7 @@
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual'
         }
+        let delbtns = chatForm.querySelectorAll('.exFile__del');
         var currentdate = new Date();
         let start = chatBlock.offsetHeight - window.innerHeight + 300;
         window.scrollTo(0,start);
@@ -15,6 +16,14 @@
         let fileWrap = chatForm.querySelector('.chat-answer__files-wrap');
         let textWrap = chatForm.querySelector("textarea");
         let dateExist = false;
+        window.addEventListener('click',function (e) {
+            let target = e.target;
+            if(target.hasAttribute('data-delmsg')){
+                files = files.filter(function(item) {
+                    return item.name !== target.parentNode.querySelector('input[type="hidden"').placeholder
+                })
+            }
+        })
         chatForm.addEventListener("submit",function(e){
             e.preventDefault();
             let filesHtml = "";
@@ -97,8 +106,8 @@
                 outputFileHtml += '<p class="exFile__item '+myClass+'"><i class="icon icon--md">' +
                     '<svg><use xlink:href="#doc-icon"></use></svg></i>'+
                     '<span title="'+item.files[i].name+'">'+item.files[i].name+'</span>'+
-                    '<input type="hidden" value="'+item.files[i]+'">'+
-                    '<span class="exFile__del" onclick="delFile(this)"></span>' +
+                    '<input type="hidden" placeholder="'+item.files[i].name+'" value="'+item.files[i]+'">'+
+                    '<span class="exFile__del" onclick="delFile(this)" data-delmsg></span>' +
                     '</p>';
             }
             fileWrap.classList.add('active');
@@ -112,7 +121,9 @@
         });
 
 
+
     }
+
 })();
 
 
