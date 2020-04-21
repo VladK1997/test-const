@@ -5,7 +5,7 @@
  *
  */
 var vWidth = window.innerWidth;
-alert(window);
+console.log(window);
 (function () {
     var articles = document.querySelector('.articles');
     var cardsslider = document.querySelectorAll('[data-cardslider]');
