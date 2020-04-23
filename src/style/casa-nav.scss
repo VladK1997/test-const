@@ -37,10 +37,10 @@
 }
 
 .casaroyal-property-nav ul li a.active,.casaroyal-property-nav ul li a:hover {
-  border-bottom: solid 2px #2a41e8;
-  color: #2a41e8
+  border-bottom: solid 2px $main-blue;
+  color: $main-blue
 }
 
 .casaroyal-property-nav ul li a.active svg,.casaroyal-property-nav ul li a:hover svg {
-  fill: #2a41e8
+  fill: $main-blue
 }

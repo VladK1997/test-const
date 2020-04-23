@@ -57,7 +57,7 @@
 }
 
 .property-grid-view .property-grid-item .property-grid-title-v2 a:hover {
-  color: #0015d3;
+  color: $main-blue;
 }
 
 .property-grid-view .property-grid-image,
@@ -70,5 +70,10 @@
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 70%;
-  background-color: #0015d3;
+  background-color: $main-blue;
+}
+@media (min-width: 1100px) {
+  .property-grid-view .property-grid-image:hover a:after {
+    opacity: 0.7;
+  }
 }

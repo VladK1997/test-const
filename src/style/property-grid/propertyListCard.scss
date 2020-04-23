@@ -31,7 +31,7 @@
   text-decoration: none;
 }
 .property-list-view .property-grid-item .property-grid-item-title a:hover h4 {
-  color: #0015d3;
+  color: $main-blue;
 }
 .property-list-view .property-grid-item .property-grid-image {
   float: left;
@@ -58,7 +58,7 @@
   right: 0;
   z-index: 2;
   opacity: 0;
-  background-color: #0015d3;
+  background-color: $main-blue;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -117,7 +117,7 @@
   transition: all 0.2s ease;
 }
 .property-list-content a:hover h4.property-grid-title {
-  color: #0015d3;
+  color: $main-blue;
 }
 .property-list-view .property-grid-item .property-grid-content:hover {
   -webkit-transition: all 0.2s ease;
