@@ -715,7 +715,7 @@ function generatePassword() {
     var FormValid = function FormValid(form) {
         var self = this;
         self.thisForm = form;
-        self.passwordArray = self.thisForm.querySelectorAll("input[type='password'}");
+        self.passwordArray = self.thisForm.querySelectorAll("input[type='password']");
         self.inputArray = self.thisForm.querySelectorAll("input[data-required]");
         self.message = self.thisForm.querySelectorAll(".cust-input__mesg");
         self.formCheckArray = []; // if length of formCheckArray will be equal to all inputs which are included in form form will be sent
