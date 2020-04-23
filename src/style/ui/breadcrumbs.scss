@@ -1,0 +1,52 @@
+.breadcrumbs{
+  display: flex;
+  padding: 16px 0;
+  a{
+    &.active,&:hover{
+      &:after,&:before{
+        background-color: $main-blue;
+      }
+      color: #fff;
+      background-color: $main-blue;
+    }
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: #000;
+    background-color: $main-light-grey;
+    padding: 4px 8px;
+    margin: 0 4px;
+    transition: 0.3s;
+    @extend %futuraTitle;
+    &:after,&:before{
+      transition: 0.3s;
+      width: 4px;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      border-radius: 0 3px 3px 0;
+      transform: translate(-50%,-50%) skew(10deg);
+      background-color: $main-light-grey;
+      content:"";
+    }
+    &:before{
+      left: auto;
+      transform: translate(50%,-50%) skew(10deg);
+      right: 100%;
+      border-radius: 3px 0 0 3px;
+    }
+    &:first-child {
+      margin-left: 0;
+      &:before {
+        transform: translate(50%,-50%) skew(0);
+      }
+    }
+    &:last-child{
+      &:after{
+        transform: translate(-50%,-50%) skew(0);
+      }
+    }
+  }
+}
