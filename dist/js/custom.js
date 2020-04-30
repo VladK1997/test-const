@@ -505,12 +505,11 @@ function cookieSearch(item) {
             return el.classList.add('active');
         });
         body.classList.toggle("body-night");
-
-        if (sessionStorage.getItem('darkMode')) {
+        if(!darkMode){
             sessionStorage.setItem('darkMode', 'true');
+            darkMode = true;
         }
 
-        darkMode = true;
     }
 
     function turnOff() {
@@ -519,11 +518,7 @@ function cookieSearch(item) {
         btns.forEach(function (el) {
             return el.classList.remove('active');
         });
-
-        if (sessionStorage.getItem('darkMode')) {
-            sessionStorage.setItem('darkMode', 'false');
-        }
-
+        sessionStorage.setItem('darkMode', 'false');
         DarkReader.disable();
     }
 })();
