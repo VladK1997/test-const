@@ -658,7 +658,7 @@ function cookieSearch(item) {
 
 (function () {
     var currentItem = null;
-    document.addEventListener("click touchstart", function (e) {
+    function n(){
         target = e.target.parentNode
         /*(".main-catg-item")*/
         ;
@@ -682,7 +682,9 @@ function cookieSearch(item) {
         }
 
         ;
-    });
+    }
+    document.addEventListener("touchstart",n)
+    document.addEventListener("click",n)
 })();
 
 function generatePassword() {
