@@ -17,6 +17,7 @@
     &:after{
       position: absolute;
       top: 50%;
+      pointer-events: none;
       right: 16px;
       transform: translateY(-50%);
       display: block;
