@@ -90,8 +90,7 @@
   .nav{
     &__item{
       height: auto;
-      justify-content: flex-start;
-      flex-wrap: wrap;
+      display: block;
       &:nth-of-type(n){
         margin-right: 0;
       }

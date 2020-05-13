@@ -662,7 +662,9 @@ function cookieSearch(item) {
         target = e.target.parentNode
         /*(".main-catg-item")*/
         ;
-
+        console.log(target);
+        console.log(e.target);
+        console.log(e.target.hasAttribute("data-categ"));
         if (e.target.hasAttribute("data-categ")) {
             if (target == currentItem) {
                 currentItem.classList.remove("active");
