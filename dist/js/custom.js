@@ -658,7 +658,7 @@ function cookieSearch(item) {
 
 (function () {
     var currentItem = null;
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click touch", function (e) {
         target = e.target.parentNode
         /*(".main-catg-item")*/
         ;
