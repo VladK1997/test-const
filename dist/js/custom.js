@@ -658,7 +658,7 @@ function cookieSearch(item) {
 
 (function () {
     var currentItem = null;
-    function n(){
+    function n(e){
         target = e.target.parentNode
         /*(".main-catg-item")*/
         ;
@@ -683,8 +683,15 @@ function cookieSearch(item) {
 
         ;
     }
-    document.addEventListener("touchstart",n)
-    document.addEventListener("click",n)
+
+    if(vWidth > 1100){
+        document.addEventListener("click",n)
+    }else{
+        document.addEventListener("touchstart",function (e) {
+            n(e);
+        })
+    }
+
 })();
 
 function generatePassword() {
