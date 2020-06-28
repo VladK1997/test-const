@@ -116,8 +116,8 @@ console.log(window);
             spaceBetween: 4,
             on: {
                 click: function click(e) {
-                    itemSlider.slideTo(this.clickedIndex - 1);
-
+                    itemSlider.slideTo(this.clickedIndex);
+                    console.log(this.clickedIndex);
                     if (e.target.hasAttribute('data-del-img')) {
                         deleteImg(this.clickedIndex);
                     }
@@ -1006,20 +1006,6 @@ function addPhotos(item) {
     }
 })();
 
-(function () {
-    var items = document.querySelectorAll("[data-stepItem]");
-    window.addEventListener("click", function (e) {
-        var item = e.target;
-
-        for (var i = items.length, l = 0; i > l; i--) {
-            if (item.hasAttribute("data-stepItem") && !item.classList.contains('active')) {
-                if (item == items[i] && items[i - 1].classList.contains('active')) {
-                    item.classList.add("active");
-                }
-            }
-        }
-    });
-})();
 
 var wrapExfiles = document.getElementById('exFiles');
 

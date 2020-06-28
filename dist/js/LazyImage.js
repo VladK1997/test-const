@@ -13,7 +13,6 @@
     }
         document.addEventListener("DOMContentLoaded", function () {
             var e = [].slice.call(document.querySelectorAll("img.lazy"));
-
             if ("IntersectionObserver" in window) {
                 let t = new IntersectionObserver(function (e, n) {
                         e.forEach(function (e) {

@@ -26,7 +26,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    background: linear-gradient($main-light-grey,$main-light-grey);
+    //background: linear-gradient($main-light-grey,$main-light-grey);
     span{
       background-color: #fff;
       width:  70%;
@@ -43,20 +43,16 @@
     margin-left: -10px;
     flex-grow: 1;
     height: 48px;
+    color:#fff;
     font-size: 18px;
     align-items: center;
     display: flex;
-    color: #000;
     background: linear-gradient($main-light-grey,$main-light-grey);
     border-radius: 0 3px 3px 0;
   }
-  &.active &__number, &.active &__title-text{
+  &__number, &__title-text{
     background: linear-gradient(#4ab85a,#41ed93);
-    color:#fff;
     transition: 0.5s;
-  }
-  &.active &__number{
-    color: #000;
   }
 
   &__body{
@@ -66,11 +62,8 @@
     padding: 24px 72px;
     border: 1px solid $main-border-color;
     border-radius: 5px;
-    pointer-events: none;
   }
-  &.active &__body{
-    pointer-events: auto;
-  }
+
   &__map{
 
     max-width: 600px;
