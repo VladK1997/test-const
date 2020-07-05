@@ -50,7 +50,7 @@
     left: 0;
     visibility: hidden;
     opacity: 0;
-    z-index: 1;
+    z-index: 10;
     margin-left: 15px;
     transition: 0.1s;
     background-color: lighten($main-light-grey,10);

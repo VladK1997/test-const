@@ -1034,9 +1034,17 @@ function delFile(file) {
 }
 
 (function () {
-    var tel = document.getElementById("showTel");
+    // var tel = document.getElementById("showTel");
     var telShowed = false;
-    window.addEventListener("click", function (e) {
+    if(!isMobile){
+        window.addEventListener("click",showTel);
+    }
+    else{
+        window.addEventListener("touchstart",showTel);
+    }
+    function showTel(e){
+        console.log(isMobile);
+        var tel = e.target.closest('.advert__hidden-tel');
         if (e.target.hasAttribute("data-showTel")) {
             tel.classList.add('active');
             telShowed = true;
@@ -1044,7 +1052,7 @@ function delFile(file) {
             tel.classList.remove('active');
             telShowed = false;
         }
-    });
+    }
 })();
 
 (function () {
@@ -1121,14 +1129,23 @@ function goTo(item) {
 (function () {
     var opened = false;
     var btn;
-    window.addEventListener('click', function (e) {
+    function toggleActive(e){
         if (e.target.hasAttribute('data-toggleActive') && !opened) {
             e.target.classList.toggle('active');
             btn = e.target;
             opened = true;
-        } else if (opened) {
+            console.log(e.target);
+        } else if (e.target.hasAttribute('data-toggleActive') && opened) {
             btn.classList.remove('active');
             opened = false;
         }
-    });
+    }
+
+    if(!isMobile){
+        window.addEventListener("click",toggleActive);
+    }
+    else{
+        window.addEventListener("touchstart",toggleActive);
+    }
+
 })();
